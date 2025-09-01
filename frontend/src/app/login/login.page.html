@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="main-grid">
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+
+      <ion-col size="12" size-md="6" class="ion-text-center logo-container">
+      </ion-col>
+
+      <ion-col size="12" size-md="5" class="form-container">
+        <div class="form-wrapper">
+          <h2>Login</h2>
+          
+          <form (ngSubmit)="login()">
+            <ion-item lines="none">
+              <ion-label position="stacked">Email</ion-label>
+              <ion-input type="email" placeholder="seuemail@email.com"></ion-input>
+            </ion-item>
+            
+            <ion-item lines="none">
+              <ion-label position="stacked">Senha</ion-label>
+              <ion-input type="password" placeholder="********"></ion-input>
+            </ion-item>
+
+            <div class="ion-text-end forgot-password">
+              <a href="#">Esqueci minha senha?</a>
+            </div>
+
+            <ion-button expand="block" type="submit" class="login-button">
+              Entrar
+            </ion-button>
+          </form>
+          
+          <div class="separator">OU</div>
+
+          <ion-button expand="block" class="google-login-button">
+            <ion-icon slot="start" name="logo-google"></ion-icon>
+            Entrar com o Google
+          </ion-button>
+
+          <div class="ion-text-center signup-link">
+            <p>Não possui conta? <a href="#">Cadastre-se</a></p>
+          </div>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <div class="footer-credits">
+    Uma criação de programadores independentes: Isaque P. Lino & Pedro L. Baschoni
+  </div>
+
+</ion-content>
