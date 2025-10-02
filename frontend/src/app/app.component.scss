@@ -1,0 +1,117 @@
+/*
+=================================================================
+ CÓDIGO FINAL - EFEITO PAINEL FLUTUANTE COM ANIMAÇÃO CUSTOMIZADA
+=================================================================
+Estratégia:
+1. O menu é 'overlay' (não empurra a tela por padrão).
+2. A animação da tela principal ('ion-router-outlet') é feita
+   manualmente via CSS usando a classe 'ion-app.menu-open'.
+3. O seletor usa o ID '#main-content' para garantir a força (especificidade)
+   e aplicar a animação corretamente.
+*/
+
+// --- ESTILOS GLOBAIS E DO MENU ---
+
+// Fundo da aplicação que aparece durante a animação.
+ion-app {
+  --background: #121212;
+}
+
+// Configurações do menu e do fundo (backdrop).
+ion-menu {
+  --background: transparent;
+  --box-shadow: none;
+  --backdrop-opacity: 0.6;
+  --backdrop-background: #000;
+}
+
+// Estilo do painel flutuante do menu.
+ion-menu::part(container) {
+  margin: 12px;
+  border-radius: 16px;
+  height: calc(100% - 24px);
+  background: #1e1e1e;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+// --- ANIMAÇÃO DA TELA PRINCIPAL ---
+
+// Prepara a tela principal para animar suavemente (principalmente ao fechar o menu).
+ion-router-outlet#main-content {
+  transition: 0.4s cubic-bezier(0.1, 0.7, 0.3, 1);
+}
+
+// Quando o menu está aberto, aplica esta animação na tela principal.
+ion-app.menu-open ion-router-outlet#main-content {
+  // Empurra a tela para a direita e encolhe um pouco para dar profundidade.
+  transform: translateX(265px) scale(0.92);
+
+  // Arredonda os cantos da tela principal para que ela vire um "card".
+  border-radius: 16px;
+
+  // Adiciona uma sombra para destacar o "card" da tela principal.
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+// --- ESTILOS INTERNOS DO MENU (TEMA ESCURO) ---
+
+ion-menu ion-toolbar {
+  --background: transparent;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --border-width: 0 0 1px 0;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile .user-info {
+  ion-label {
+    color: #ffffff;
+    font-weight: 600;
+  }
+  p {
+    color: #aaaaaa;
+    margin: 0;
+  }
+}
+
+ion-menu ion-content {
+  --background: transparent;
+}
+
+ion-menu ion-list {
+  background: transparent;
+  padding-top: 20px;
+}
+
+ion-menu ion-item {
+  --background: transparent;
+  --color: #aaaaaa;
+  --padding-start: 20px;
+  --inner-padding-end: 20px;
+  --border-radius: 8px;
+  margin: 0 16px 8px;
+
+  ion-label {
+    font-weight: 500;
+  }
+}
+
+ion-menu ion-item.selected {
+  --background: var(--ion-color-primary);
+  --color: #ffffff;
+}
+
+.logout-list {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 10px;
+}

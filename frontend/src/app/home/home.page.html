@@ -1,20 +1,93 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
     <ion-title>
-      Blank
+      CineVault
     </ion-title>
+
+    <ion-searchbar placeholder="Buscar filmes, séries..."></ion-searchbar>
+
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class="main-content-grid">
+    <ion-row>
+      <ion-col size="12">
+        <h1 class="welcome-message">Olá, Usuário! 👋</h1>
+        <p class="subtitle">Confira as novidades na sua coleção.</p>
+      </ion-col>
+    </ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-row>
+      <ion-col size="6" size-md="3">
+        <ion-card class="summary-card">
+          <ion-card-content>
+            <ion-icon name="film-outline" color="primary"></ion-icon>
+            <h2>128</h2>
+            <p>Filmes na Coleção</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6" size-md="3">
+        <ion-card class="summary-card">
+          <ion-card-content>
+            <ion-icon name="tv-outline" color="secondary"></ion-icon>
+            <h2>32</h2>
+            <p>Séries Acompanhando</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6" size-md="3">
+        <ion-card class="summary-card">
+          <ion-card-content>
+            <ion-icon name="time-outline" color="tertiary"></ion-icon>
+            <h2>1.240</h2>
+            <p>Horas Assistidas</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6" size-md="3">
+        <ion-card class="summary-card">
+          <ion-card-content>
+            <ion-icon name="star-outline" color="warning"></ion-icon>
+            <h2>85</h2>
+            <p>Avaliações Feitas</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <h2 class="section-title">Adicionados Recentemente</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="recently-added-grid">
+      <ion-col size="4" size-md="2">
+        <div class="movie-poster">
+          <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Poster de Filme">
+          <div class="poster-title">Duna: Parte 2</div>
+        </div>
+      </ion-col>
+      <ion-col size="4" size-md="2">
+        <div class="movie-poster">
+          <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Poster de Filme">
+          <div class="poster-title">Oppenheimer</div>
+        </div>
+      </ion-col>
+      <ion-col size="4" size-md="2">
+        <div class="movie-poster">
+          <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Poster de Filme">
+          <div class="poster-title">Anatomia de uma Queda</div>
+        </div>
+      </ion-col>
+      </ion-row>
+
+  </ion-grid>
 </ion-content>
