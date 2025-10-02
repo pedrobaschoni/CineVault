@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonCol, IonRow, IonGrid, IonItem, IonLabel, IonInput, IonButton, IonIcon } from '@ionic/angular/standalone';
 
 @Component({
@@ -8,7 +9,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonCol, IonRow, IonGrid, I
   templateUrl: './cadastro.page.html',
   styleUrls: ['./cadastro.page.scss'],
   standalone: true,
-  imports: [IonIcon, IonButton, IonInput, IonLabel, IonItem, IonGrid, IonRow, IonCol, IonContent, IonHeader, CommonModule, FormsModule]
+  imports:  [RouterModule, IonIcon, IonButton, IonInput, IonLabel, IonItem, IonGrid, IonRow, IonCol, IonContent, IonHeader, CommonModule, FormsModule]
 })
 export class CadastroPage implements OnInit {
 

@@ -152,9 +152,9 @@ ion-content {
 .footer-credits {
   position: absolute;     
   bottom: 15px;            
-  right: 20px;            
+  left: 20px;              /* mudou de right para left */
   font-size: 0.75rem;      
   color: rgba(255, 255, 255, 0.5); 
-  text-align: right;       
+  text-align: left;        /* alinhamento à esquerda */
   max-width: 300px;        
 }

@@ -1,13 +1,11 @@
-<ion-header [translucent]="true">
-
-</ion-header>
+<ion-header [translucent]="true"></ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-grid class="main-grid">
     <ion-row class="ion-justify-content-center ion-align-items-center">
 
       <ion-col size="12" size-md="6" class="ion-text-center logo-container">
-        </ion-col>
+      </ion-col>
 
       <ion-col size="12" size-md="5" class="form-container">
         <div class="form-wrapper">
@@ -47,7 +45,9 @@
           </ion-button>
 
           <div class="ion-text-center signup-link">
-            <p>Já possui uma conta? <a href="#">Faça Login</a></p>
+            <p>Já possui uma conta? 
+              <a [routerLink]="['/login']">Faça Login</a>
+            </p>
           </div>
         </div>
       </ion-col>

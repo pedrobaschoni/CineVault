@@ -41,8 +41,7 @@ import {
     IonRow,
     IonCol,
     IonCard,
-    IonCardContent,
-    IonButton // <<< E ADICIONE AQUI
+    IonCardContent
   ],
 })
 export class HomePage {

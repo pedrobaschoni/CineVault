@@ -1,46 +1,50 @@
 /* Fundo geral */
 ion-content {
   --background: #121212;
-  padding: 12px;
 }
 
-/* Header flutuante arredondado */
-ion-header {
-  background: transparent;
-  margin: 12px; /* afasta das bordas */
-  border-radius: 16px; /* arredondado em cima e embaixo */
-  overflow: hidden; /* garante que o conteúdo siga o arredondamento */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-}
-
-ion-toolbar {
+/* Nova barra de navegação preta no topo do conteúdo */
+.nav-toolbar {
   --background: #1e1e1e;
   --color: #ffffff;
   --border-width: 0;
-  padding: 0 8px;
+  min-height: 60px;
+  padding: 0 16px;
 }
 
-/* Botões do header */
-ion-toolbar ion-buttons ion-button {
-  --background: transparent;
-  --color: #fff;
-  border-radius: 50%;
-  transition: background 0.3s ease;
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  img {
+    height: 50px;
+    width: auto;
+  }
 }
 
-ion-toolbar ion-buttons ion-button:hover {
-  --background: rgba(255,255,255,0.08);
+/* Classe do exemplo para criar o espaçamento lateral em telas grandes */
+.web-padding {
+  width: 100%;
+  padding: 0 15%; /* O espaçamento lateral */
 }
 
-/* Searchbar mais integrada */
-ion-searchbar {
+/* Media query para remover o espaçamento em telas de celular */
+@media screen and (max-width: 768px) {
+  .web-padding {
+    padding: 0 12px; /* Mantém um padding mínimo em telas menores */
+  }
+}
+
+/* Estilo para a barra de busca, agora dentro do conteúdo */
+.content-searchbar {
   --background: #2a2a2a;
   --border-radius: 12px;
   --color: #fff;
   --placeholder-color: #888;
   --icon-color: #888;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-top: 24px;
 }
 
 /* Mensagens de boas-vindas */
@@ -64,7 +68,7 @@ ion-searchbar {
   margin: 28px 16px 12px;
 }
 
-/* Cards de resumo */
+/* Cards de resumo (sem alteração) */
 .summary-card {
   --background: #1e1e1e;
   border-radius: 16px;
@@ -80,27 +84,12 @@ ion-searchbar {
 .summary-card ion-card-content {
   text-align: center;
   padding: 24px 12px;
+  ion-icon { font-size: 2.5rem; margin-bottom: 8px; }
+  h2 { font-size: 2rem; font-weight: 700; color: #ffffff; margin: 0; }
+  p { font-size: 0.9rem; color: #aaaaaa; margin: 4px 0 0 0; }
 }
 
-.summary-card ion-card-content ion-icon {
-  font-size: 2.5rem;
-  margin-bottom: 8px;
-}
-
-.summary-card ion-card-content h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0;
-}
-
-.summary-card ion-card-content p {
-  font-size: 0.9rem;
-  color: #aaaaaa;
-  margin: 4px 0 0 0;
-}
-
-/* Adicionados Recentemente */
+/* Adicionados Recentemente (sem alteração) */
 .movie-poster {
   cursor: pointer;
   position: relative;
@@ -108,40 +97,38 @@ ion-searchbar {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-}
 
-.movie-poster img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-.movie-poster .poster-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
-  color: #fff;
-  padding: 16px 8px 8px 8px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 0 0 12px 12px;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+  .poster-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    color: #fff;
+    padding: 16px 8px 8px 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 0 0 12px 12px;
+  }
 }
 
 .movie-poster:hover {
   transform: scale(1.06);
   box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+  .poster-title {
+    opacity: 1;
+  }
 }
 
-.movie-poster:hover .poster-title {
-  opacity: 1;
-}
-
-/* Grid Principal */
+/* Grid Principal (sem alteração) */
 .main-content-grid {
   padding: 0 8px;
 }
