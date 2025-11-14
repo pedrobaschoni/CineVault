@@ -1,0 +1,661 @@
+[00:00:00.893] Server  LOG      ✓ Ready in 579ms
+[00:00:01.857] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/movie-card.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/movie-card.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:04.121] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/movie-card.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/movie-card.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:04.122] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:04.122] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/movie-card.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/movie-card.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:04.122] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:04.122] Browser ERROR   uncaughtError: Error: ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/movie-card.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/movie-card.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:05.088] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/movie-card.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/movie-card.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:05.256] Browser ERROR   uncaughtError: Error: ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/movie-card.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/movie-card.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:05.397] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/movie-card.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/movie-card.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:05.397] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:05.397] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/movie-card.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/movie-card.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:05.397] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:27.693] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/moviecard.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/moviecard.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:27.694] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/moviecard.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/moviecard.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:27.695] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:27.695] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:27.844] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
+Module not found: Can't resolve '../../styles/moviecard.css'
+  10 | import '../../styles/header.css'; 
+  11 | import '../../styles/sidebar.css';
+> 12 | import '../../styles/moviecard.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 |
+  14 | const HomePage = () => {
+  15 |     // Estado que controla se a sidebar está aberta ou fechada
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:27.844] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:28.196] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:28.196] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:28.342] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:30.090] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:30.290] Browser ERROR   uncaughtError: Error: ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:30.442] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:30.442] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:16.637] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
+Module not found: Can't resolve '../styles/moviecard.css'
+   5 | import Image from 'next/image';
+   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
+>  7 | import '../styles/moviecard.css'; // Importa o CSS do card
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Props do Card
+  10 | interface MovieCardProps {
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:43.580] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:44.709] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/iconeescuro.png" "received" null
+[00:01:44.754] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=Stranger" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:01:45.441] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=Jujutsu" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:01:45.469] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=3+Corpos" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:01:45.480] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=Mad+Max" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:01:45.485] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=Duna+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:01:45.842] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=AOT" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.

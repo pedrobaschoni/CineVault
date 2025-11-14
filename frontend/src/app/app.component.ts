@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
@@ -15,7 +15,10 @@ import {
   IonIcon, 
   IonLabel, 
   IonRouterOutlet,
-  IonAvatar
+  IonAvatar,
+  IonSplitPane,
+  IonButtons,
+  IonButton
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons'; // Função para registrar ícones
 import { homeOutline, filmOutline, tvOutline, starOutline, listOutline, settingsOutline, logOutOutline } from 'ionicons/icons';
@@ -39,7 +42,10 @@ import { homeOutline, filmOutline, tvOutline, starOutline, listOutline, settings
     IonIcon, 
     IonLabel, 
     IonRouterOutlet,
-    IonAvatar
+    IonAvatar,
+    IonSplitPane,
+    IonButtons,
+    IonButton
   ],
 })
 export class AppComponent {
@@ -53,6 +59,8 @@ export class AppComponent {
     { title: 'Configurações', url: '/settings', icon: 'settings-outline' }
   ];
 
+  @ViewChild('menu') menu: any;
+
   constructor(private router: Router) {
     // Registra os ícones para que possam ser usados
     addIcons({ homeOutline, filmOutline, tvOutline, starOutline, listOutline, settingsOutline, logOutOutline });
@@ -64,12 +72,7 @@ export class AppComponent {
     this.router.navigate(['/login']); // Exemplo: redireciona para a tela de login
   }
 
-  onMenuOpen() {
-    document.querySelector('ion-app')?.classList.add('menu-open');
+  closeMenu() {
+    this.menu?.close();
   }
-
-  onMenuClose() {
-    document.querySelector('ion-app')?.classList.remove('menu-open');
-  }
-
 }

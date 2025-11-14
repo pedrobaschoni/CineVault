@@ -1,0 +1,205 @@
+.home-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #0a0e27; /* Preto */
+  color: #ffffff;
+}
+
+.home-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.home-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  /* A transição de margem não é mais necessária */
+  /* O layout flex vai cuidar do "empurrão" */
+}
+
+.home-content.sidebar-open {
+  margin-left: 0;
+}
+
+.home-content.sidebar-closed {
+  margin-left: 0;
+}
+
+.home-section {
+  max-width: 100%;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.home-ranking {
+  width: 280px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+  min-height: calc(100vh - 60px);
+}
+
+.ranking-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.ranking-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.ranking-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ranking-tab {
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.ranking-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.ranking-tab.active {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+/* Scrollbar customizado */
+.home-content::-webkit-scrollbar,
+.home-ranking::-webkit-scrollbar {
+  width: 8px;
+}
+
+.home-content::-webkit-scrollbar-track,
+.home-ranking::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.home-content::-webkit-scrollbar-thumb,
+.home-ranking::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.home-content::-webkit-scrollbar-thumb:hover,
+.home-ranking::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer */
+.home-footer {
+  padding: 1.5rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  .home-ranking {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-content {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .home-ranking {
+    width: 100%;
+    padding: 1rem;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: auto;
+    max-height: 200px;
+    overflow-x: auto;
+  }
+
+  .ranking-tabs {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .ranking-tab {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+  .home-content {
+    padding: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.75rem;
+  }
+}

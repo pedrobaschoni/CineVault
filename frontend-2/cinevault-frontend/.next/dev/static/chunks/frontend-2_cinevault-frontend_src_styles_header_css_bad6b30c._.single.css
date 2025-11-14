@@ -1,0 +1,116 @@
+/* [project]/frontend-2/cinevault-frontend/src/styles/header.css [app-client] (css) */
+.header {
+  z-index: 100;
+  background: #0a0e27;
+  border-bottom: 1px solid #ffffff1a;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 8px #0000004d;
+}
+
+.header-left {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.header-logo {
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.header-title {
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-nav {
+  flex: 1;
+  justify-content: center;
+  gap: 2rem;
+  display: flex;
+}
+
+.nav-item {
+  color: #fffc;
+  cursor: pointer;
+  font-size: .95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.nav-item:hover {
+  color: #fff;
+}
+
+.header-right {
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.search-btn, .theme-btn {
+  color: #fffc;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: .5rem;
+  font-size: 1.2rem;
+  transition: color .2s;
+}
+
+.search-btn:hover, .theme-btn:hover {
+  color: #fff;
+}
+
+.login-btn {
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #fff9;
+  border-radius: 4px;
+  padding: .6rem 1.2rem;
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.login-btn:hover {
+  background: #ffffff1a;
+  border-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .header-nav {
+    order: 3;
+    gap: 1rem;
+    width: 100%;
+    font-size: .85rem;
+  }
+
+  .header-right {
+    gap: 1rem;
+  }
+
+  .login-btn {
+    padding: .5rem 1rem;
+    font-size: .8rem;
+  }
+}
+
+/*# sourceMappingURL=frontend-2_cinevault-frontend_src_styles_header_css_bad6b30c._.single.css.map*/

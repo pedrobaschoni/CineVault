@@ -17,7 +17,7 @@ import {
   IonCol,
   IonCard,
   IonCardContent,
-  IonButton // <<< ADICIONE AQUI
+  IonButton
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -41,7 +41,8 @@ import {
     IonRow,
     IonCol,
     IonCard,
-    IonCardContent
+    IonCardContent,
+    IonButton
   ],
 })
 export class HomePage {

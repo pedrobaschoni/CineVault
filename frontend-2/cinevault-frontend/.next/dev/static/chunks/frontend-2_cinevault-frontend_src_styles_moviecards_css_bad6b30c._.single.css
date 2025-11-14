@@ -1,0 +1,176 @@
+/* [project]/frontend-2/cinevault-frontend/src/styles/moviecards.css [app-client] (css) */
+.movie-card {
+  cursor: pointer;
+  background-color: #1a1a1a;
+  border: 1px solid #e5091433;
+  border-radius: 10px;
+  flex-direction: column;
+  transition: all .3s;
+  display: flex;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  border-color: #e50914;
+  transform: translateY(-8px)scale(1.05);
+  box-shadow: 0 12px 24px #e509144d;
+}
+
+.movie-poster-container {
+  aspect-ratio: 2 / 3;
+  background-color: #2d2d2d;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-poster {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform .3s;
+}
+
+.movie-placeholder {
+  color: #666;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.placeholder-icon {
+  opacity: .5;
+  font-size: 60px;
+}
+
+.movie-card:hover .movie-poster {
+  transform: scale(1.1);
+}
+
+.movie-overlay {
+  opacity: 0;
+  background: #0009;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.play-button {
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  transition: all .3s;
+  display: flex;
+  box-shadow: 0 4px 12px #e5091466;
+}
+
+.play-button:hover {
+  background-color: #b20710;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px #e5091499;
+}
+
+.movie-type {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  x-shadow: 0 2px 8px #e509144d;
+  background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.movie-info {
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  padding: 12px;
+  display: flex;
+}
+
+.movie-title {
+  text-align: center;
+  color: #fff;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-height: 2.6em;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.3;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.movie-rating {
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  display: flex;
+}
+
+.stars {
+  color: gold;
+  font-size: 14px;
+}
+
+.rating-value {
+  color: #b0b0b0;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .movie-card {
+    border-radius: 8px;
+  }
+
+  .play-button {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    border-radius: 6px;
+  }
+
+  .movie-type {
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+
+  .movie-title {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=frontend-2_cinevault-frontend_src_styles_moviecards_css_bad6b30c._.single.css.map*/

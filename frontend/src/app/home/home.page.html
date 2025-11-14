@@ -1,95 +1,208 @@
 <ion-header [translucent]="true">
-  </ion-header>
+</ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="home-container">
+    <!-- Header Top com Logo e Menu -->
+    <ion-toolbar class="nav-toolbar">
+      <ion-buttons slot="start">
+        <ion-menu-button class="menu-button"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="header-logo">
+        <img src="assets/images/iconeescuro.png" alt="CineVault Logo">
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-button class="icon-button">
+          <ion-icon name="search-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
 
-  <ion-toolbar class="nav-toolbar">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title class="header-logo">
-      <img src="assets/images/iconeescuro.png" alt="CineVault Logo">
-    </ion-title>
-    
-  </ion-toolbar>
+    <!-- Menu de Navegação Horizontal -->
+    <div class="nav-tabs">
+      <div class="nav-tab active">Home</div>
+      <div class="nav-tab">Gêneros</div>
+      <div class="nav-tab">Pedidos</div>
+      <div class="nav-tab">Sobre</div>
+    </div>
 
-  <div class="web-padding">
+    <div class="content-wrapper">
+      <!-- Conteúdo Principal -->
+      <div class="main-content">
+        <ion-searchbar class="content-searchbar" placeholder="Buscar filmes, séries..."></ion-searchbar>
 
-    <ion-searchbar class="content-searchbar" placeholder="Buscar filmes, séries..."></ion-searchbar>
-
-    <ion-grid class="main-content-grid">
-      <ion-row>
-        <ion-col size="12">
+        <div class="welcome-section">
           <h1 class="welcome-message">Olá, Usuário! 👋</h1>
           <p class="subtitle">Confira as novidades na sua coleção.</p>
-        </ion-col>
-      </ion-row>
+        </div>
 
-      <ion-row>
-        <ion-col size="6" size-md="3">
-          <ion-card class="summary-card">
-            <ion-card-content>
-              <ion-icon name="film-outline" color="primary"></ion-icon>
-              <h2>128</h2>
-              <p>Filmes na Coleção</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="6" size-md="3">
-          <ion-card class="summary-card">
-            <ion-card-content>
-              <ion-icon name="tv-outline" color="secondary"></ion-icon>
-              <h2>32</h2>
-              <p>Séries Acompanhando</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="6" size-md="3">
-          <ion-card class="summary-card">
-            <ion-card-content>
-              <ion-icon name="time-outline" color="tertiary"></ion-icon>
-              <h2>1.240</h2>
-              <p>Horas Assistidas</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="6" size-md="3">
-          <ion-card class="summary-card">
-            <ion-card-content>
-              <ion-icon name="star-outline" color="warning"></ion-icon>
-              <h2>85</h2>
-              <p>Avaliações Feitas</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
+        <!-- Cards de Resumo -->
+        <ion-grid class="summary-grid">
+          <ion-row>
+            <ion-col size="12" size-sm="6" size-md="3">
+              <ion-card class="summary-card">
+                <ion-card-content>
+                  <ion-icon name="film-outline" color="primary"></ion-icon>
+                  <h2>128</h2>
+                  <p>Filmes na Coleção</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col size="12" size-sm="6" size-md="3">
+              <ion-card class="summary-card">
+                <ion-card-content>
+                  <ion-icon name="tv-outline" color="secondary"></ion-icon>
+                  <h2>32</h2>
+                  <p>Séries Acompanhando</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col size="12" size-sm="6" size-md="3">
+              <ion-card class="summary-card">
+                <ion-card-content>
+                  <ion-icon name="time-outline" color="tertiary"></ion-icon>
+                  <h2>1.240</h2>
+                  <p>Horas Assistidas</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+            <ion-col size="12" size-sm="6" size-md="3">
+              <ion-card class="summary-card">
+                <ion-card-content>
+                  <ion-icon name="star-outline" color="warning"></ion-icon>
+                  <h2>85</h2>
+                  <p>Avaliações Feitas</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
-      <ion-row>
-        <ion-col size="12">
-          <h2 class="section-title">Adicionados Recentemente</h2>
-        </ion-col>
-      </ion-row>
+        <!-- Últimas Atualizações -->
+        <div class="section">
+          <h2 class="section-title">Últimas Atualizações</h2>
+          <ion-grid class="movies-grid">
+            <ion-row>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Duna: Parte 2">
+                  <div class="poster-title">Duna: Parte 2</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Oppenheimer">
+                  <div class="poster-title">Oppenheimer</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Anatomia de uma Queda">
+                  <div class="poster-title">Anatomia de uma Queda</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/nTvM4mPbpRIGOptjcezRCFmqQqT.jpg" alt="Barbie">
+                  <div class="poster-title">Barbie</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/aKL4OhdqHXcVK15pVHsUqOb5Eya.jpg" alt="Killers of the Flower Moon">
+                  <div class="poster-title">Killers of the Flower Moon</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/2oHs8KgzZtkXbxvZSCu6C5fhp8S.jpg" alt="Elemental">
+                  <div class="poster-title">Elemental</div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
 
-      <ion-row class="recently-added-grid">
-        <ion-col size="4" size-md="2">
-          <div class="movie-poster">
-            <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Poster de Filme">
-            <div class="poster-title">Duna: Parte 2</div>
+        <!-- Em Alta -->
+        <div class="section">
+          <h2 class="section-title">Em Alta</h2>
+          <ion-grid class="movies-grid">
+            <ion-row>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/aKL4OhdqHXcVK15pVHsUqOb5Eya.jpg" alt="Killers of the Flower Moon">
+                  <div class="poster-title">Killers of the Flower Moon</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/2oHs8KgzZtkXbxvZSCu6C5fhp8S.jpg" alt="Elemental">
+                  <div class="poster-title">Elemental</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/nTvM4mPbpRIGOptjcezRCFmqQqT.jpg" alt="Barbie">
+                  <div class="poster-title">Barbie</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Duna: Parte 2">
+                  <div class="poster-title">Duna: Parte 2</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Oppenheimer">
+                  <div class="poster-title">Oppenheimer</div>
+                </div>
+              </ion-col>
+              <ion-col size="6" size-sm="4" size-md="3" size-lg="2">
+                <div class="movie-poster">
+                  <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Anatomia de uma Queda">
+                  <div class="poster-title">Anatomia de uma Queda</div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+
+      <!-- Sidebar de Ranking -->
+      <aside class="ranking-sidebar">
+        <div class="ranking-box">
+          <h3 class="ranking-title">Ranking</h3>
+          <div class="ranking-tabs">
+            <button class="tab-button active">Hoje</button>
+            <button class="tab-button">Semana</button>
+            <button class="tab-button">Mês</button>
+            <button class="tab-button">Geral</button>
           </div>
-        </ion-col>
-        <ion-col size="4" size-md="2">
-          <div class="movie-poster">
-            <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Poster de Filme">
-            <div class="poster-title">Oppenheimer</div>
+          <div class="ranking-list">
+            <div class="ranking-item">
+              <span class="rank-position">1</span>
+              <span class="rank-title">The Godfather</span>
+            </div>
+            <div class="ranking-item">
+              <span class="rank-position">2</span>
+              <span class="rank-title">Oppenheimer</span>
+            </div>
+            <div class="ranking-item">
+              <span class="rank-position">3</span>
+              <span class="rank-title">Duna: Parte 2</span>
+            </div>
+            <div class="ranking-item">
+              <span class="rank-position">4</span>
+              <span class="rank-title">Barbie</span>
+            </div>
+            <div class="ranking-item">
+              <span class="rank-position">5</span>
+              <span class="rank-title">Killers of the Flower Moon</span>
+            </div>
           </div>
-        </ion-col>
-        <ion-col size="4" size-md="2">
-          <div class="movie-poster">
-            <img src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Poster de Filme">
-            <div class="poster-title">Anatomia de uma Queda</div>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+        </div>
+      </aside>
+    </div>
   </div>
 </ion-content>

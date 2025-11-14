@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/frontend-2/cinevault-frontend/src/app/home/page.module.css"],"sourcesContent":[".container {\r\n  display: flex;\r\n  height: 100vh;\r\n  background: #1a1a1a;\r\n  color: #fff;\r\n}\r\n\r\n.mainContent {\r\n  flex: 1;\r\n  padding: 2rem;\r\n  overflow-y: auto;\r\n}\r\n\r\n.mainContent h1 {\r\n  font-size: 2rem;\r\n  margin-bottom: 1.5rem;\r\n  color: #ffffff;\r\n}\r\n\r\n.movieGrid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));\r\n  gap: 1.5rem;\r\n}\r\n\r\n/* Responsividade */\r\n@media (max-width: 768px) {\r\n  .container {\r\n    flex-direction: column;\r\n  }\r\n\r\n  .mainContent {\r\n    padding: 1rem;\r\n  }\r\n\r\n  .movieGrid {\r\n    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));\r\n    gap: 1rem;\r\n  }\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;;;AAOA;;;;;;AAMA;;;;;;AAMA;;;;;;AAOA;EACE;;;;EAIA;;;;EAIA"}}]
+}

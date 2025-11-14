@@ -1,0 +1,199 @@
+/* [project]/frontend-2/cinevault-frontend/src/styles/home.css [app-client] (css) */
+.home-layout {
+  color: #fff;
+  background: #0a0e27;
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+.home-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.home-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.home-content.sidebar-open, .home-content.sidebar-closed {
+  margin-left: 0;
+}
+
+.home-section {
+  max-width: 100%;
+}
+
+.section-title {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.movie-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+}
+
+.home-ranking {
+  background: #ffffff0d;
+  border-left: 1px solid #ffffff1a;
+  width: 280px;
+  min-height: calc(100vh - 60px);
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.ranking-card {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #ffffff14;
+  border: 1px solid #ffffff1a;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.ranking-card h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.ranking-tabs {
+  flex-direction: column;
+  gap: .75rem;
+  display: flex;
+}
+
+.ranking-tab {
+  color: #ffffffb3;
+  cursor: pointer;
+  text-align: left;
+  background: none;
+  border: 1px solid #fff3;
+  border-radius: 4px;
+  padding: .75rem 1rem;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: all .2s;
+}
+
+.ranking-tab:hover {
+  color: #fff;
+  background: #ffffff1a;
+  border-color: #fff6;
+}
+
+.ranking-tab.active {
+  color: #fff;
+  background: #ffffff26;
+  border-color: #ffffff80;
+}
+
+.home-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.home-ranking::-webkit-scrollbar {
+  width: 8px;
+}
+
+.home-content::-webkit-scrollbar-track {
+  background: #ffffff0d;
+}
+
+.home-ranking::-webkit-scrollbar-track {
+  background: #ffffff0d;
+}
+
+.home-content::-webkit-scrollbar-thumb {
+  background: #fff3;
+  border-radius: 4px;
+}
+
+.home-ranking::-webkit-scrollbar-thumb {
+  background: #fff3;
+  border-radius: 4px;
+}
+
+.home-content::-webkit-scrollbar-thumb:hover {
+  background: #ffffff4d;
+}
+
+.home-ranking::-webkit-scrollbar-thumb:hover {
+  background: #ffffff4d;
+}
+
+.home-footer {
+  color: #fff9;
+  text-align: center;
+  background: #0000004d;
+  border-top: 1px solid #ffffff1a;
+  padding: 1.5rem 2rem;
+  font-size: .85rem;
+}
+
+@media (max-width: 1024px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+
+  .home-ranking {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .home-ranking {
+    border-top: 1px solid #ffffff1a;
+    border-left: none;
+    width: 100%;
+    min-height: auto;
+    max-height: 200px;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .ranking-tabs {
+    flex-direction: row;
+    gap: .5rem;
+  }
+
+  .ranking-tab {
+    flex: 1;
+    padding: .5rem .75rem;
+    font-size: .8rem;
+  }
+
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-content {
+    padding: .75rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: .75rem;
+  }
+}
+
+/*# sourceMappingURL=frontend-2_cinevault-frontend_src_styles_home_css_bad6b30c._.single.css.map*/

@@ -3,93 +3,330 @@ ion-content {
   --background: #121212;
 }
 
-/* Nova barra de navegação preta no topo do conteúdo */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Header melhorado */
 .nav-toolbar {
   --background: #1e1e1e;
   --color: #ffffff;
-  --border-width: 0;
+  --border-width: 0 0 1px 0;
+  --border-color: rgba(255, 255, 255, 0.1);
   min-height: 60px;
   padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  flex: 1;
 
   img {
-    height: 50px;
+    height: 45px;
     width: auto;
   }
 }
 
-/* Classe do exemplo para criar o espaçamento lateral em telas grandes */
-.web-padding {
-  width: 100%;
-  padding: 0 15%; /* O espaçamento lateral */
+.menu-button {
+  font-size: 24px;
+  color: #ffffff;
 }
 
-/* Media query para remover o espaçamento em telas de celular */
-@media screen and (max-width: 768px) {
-  .web-padding {
-    padding: 0 12px; /* Mantém um padding mínimo em telas menores */
+.icon-button {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* Menu de Navegação Horizontal */
+.nav-tabs {
+  display: flex;
+  background: #1e1e1e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-x: auto;
+  padding: 0 16px;
+  gap: 24px;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
   }
 }
 
-/* Estilo para a barra de busca, agora dentro do conteúdo */
+.nav-tab {
+  padding: 12px 0;
+  color: #aaaaaa;
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &.active {
+    color: #ffffff;
+    border-bottom-color: var(--ion-color-primary);
+  }
+}
+
+/* Container com layout flexível */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  gap: 0;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 24px 20px;
+}
+
+/* Sidebar de Ranking - Compacta e Bonita */
+.ranking-sidebar {
+  width: 280px;
+  background: #1e1e1e;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 12px;
+  overflow-y: auto;
+  display: none;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ranking-sidebar {
+    display: block;
+  }
+  .main-content {
+    padding: 24px 30px;
+  }
+}
+
+.ranking-box {
+  background: #272727;
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ranking-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.ranking-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+  }
+}
+
+.tab-button {
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: #aaaaaa;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.tab-button.active {
+  background: var(--ion-color-primary);
+  border-color: var(--ion-color-primary);
+  color: #ffffff;
+}
+
+.tab-button:hover {
+  border-color: var(--ion-color-primary);
+  color: var(--ion-color-primary);
+}
+
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.2s ease;
+}
+
+.ranking-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.rank-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--ion-color-primary);
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.rank-title {
+  font-size: 0.85rem;
+  color: #ffffff;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+/* Searchbar */
 .content-searchbar {
   --background: #2a2a2a;
   --border-radius: 12px;
   --color: #fff;
   --placeholder-color: #888;
   --icon-color: #888;
-  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
-/* Mensagens de boas-vindas */
+/* Welcome Section */
+.welcome-section {
+  margin-bottom: 24px;
+}
+
 .welcome-message {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
-  margin: 24px 16px 4px;
+  margin: 0 0 8px 0;
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #aaaaaa;
-  margin: 0 16px;
+  margin: 0;
 }
 
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #f0f0f0;
-  margin: 28px 16px 12px;
+/* Summary Grid */
+.summary-grid {
+  padding: 0;
+  margin-bottom: 32px;
 }
 
-/* Cards de resumo (sem alteração) */
 .summary-card {
   --background: #1e1e1e;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
   border: 1px solid #2e2e2e;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0;
 }
 
 .summary-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
 }
 
 .summary-card ion-card-content {
   text-align: center;
-  padding: 24px 12px;
-  ion-icon { font-size: 2.5rem; margin-bottom: 8px; }
-  h2 { font-size: 2rem; font-weight: 700; color: #ffffff; margin: 0; }
-  p { font-size: 0.9rem; color: #aaaaaa; margin: 4px 0 0 0; }
+  padding: 20px 16px;
+  
+  ion-icon {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 8px 0 4px 0;
+  }
+  
+  p {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    margin: 0;
+  }
 }
 
-/* Adicionados Recentemente (sem alteração) */
+/* Sections */
+.section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+/* Movies Grid */
+.movies-grid {
+  padding: 0;
+}
+
 .movie-poster {
   cursor: pointer;
   position: relative;
@@ -97,23 +334,26 @@ ion-content {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  aspect-ratio: 2/3;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
     border-radius: 12px;
   }
+  
   .poster-title {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.5), transparent);
     color: #fff;
-    padding: 16px 8px 8px 8px;
-    font-size: 0.95rem;
-    font-weight: 500;
+    padding: 20px 12px 12px 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: 0 0 12px 12px;
@@ -121,14 +361,54 @@ ion-content {
 }
 
 .movie-poster:hover {
-  transform: scale(1.06);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+  transform: scale(1.08);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  
   .poster-title {
     opacity: 1;
   }
 }
 
-/* Grid Principal (sem alteração) */
-.main-content-grid {
-  padding: 0 8px;
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .main-content {
+    padding: 20px 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 16px 12px;
+  }
+  
+  .welcome-message {
+    font-size: 1.6rem;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+  
+  .nav-tabs {
+    padding: 0 12px;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .summary-card ion-card-content {
+    padding: 16px 12px;
+    
+    ion-icon {
+      font-size: 1.8rem;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+    }
+    
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }
