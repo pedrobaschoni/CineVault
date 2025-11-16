@@ -1,0 +1,278 @@
+/* src/styles/ranking.css */
+
+.ranking-container {
+  position: sticky;
+  top: 100px;
+  z-index: 50;
+
+  width: 300px;
+  max-height: 85vh;
+  
+  /* --- EFEITO GLASSMORPHISM --- */
+  background: var(--special-glass-bg);
+  box-shadow: 0 8px 32px 0 var(--special-shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid var(--special-glass-border);
+
+  padding: 1.5rem;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.ranking-container.minimized {
+  /* Mantido apenas por compatibilidade, não utilizado após simplificação */
+  width: auto;
+  height: auto;
+  max-height: 100px;
+  padding: 0.75rem 1rem;
+  overflow: hidden;
+}
+
+/* Scrollbar customizado */
+.ranking-container::-webkit-scrollbar {
+  width: 8px;
+}
+.ranking-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ranking-container::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  opacity: 0.6;
+  border-radius: 4px;
+}
+.ranking-container::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+.ranking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ranking-header h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.ranking-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+.ranking-toggle-btn:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.ranking-container.minimized .ranking-header {
+  margin-bottom: 0;
+}
+
+
+/* --- NOVOS ESTILOS PARA FILTROS --- */
+.ranking-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "time type"
+    "genre genre";
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group-full {
+  grid-area: genre;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 0.6rem 0.5rem;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-hover);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: var(--select-arrow); /* Variável de Seta! */
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.2em 1.2em;
+  padding-right: 2rem;
+}
+
+.filter-group select:hover {
+  border-color: var(--border-hover);
+}
+
+.filter-group select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 8px var(--shadow-color);
+}
+/* --- FIM DOS NOVOS FILTROS --- */
+
+
+/* --- LISTA DO RANKING --- */
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border-hover);
+  padding-top: 1.5rem;
+}
+
+.no-results-message {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: var(--bg-secondary);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.ranking-item:hover {
+  transform: scale(1.03);
+  background-color: var(--border-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.ranking-item.is-top-one {
+  background: var(--bg-top-one); /* Variável de Gradiente! */
+  border: 1px solid var(--accent-color);
+}
+
+.rank-pos {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  width: 25px;
+  text-align: center;
+}
+.is-top-one .rank-pos {
+  color: var(--special-gold);
+  font-size: 1.3rem;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.rank-poster img {
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.rank-info {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.rank-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+
+.rank-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}
+
+.rank-stats .star-icon {
+  color: var(--special-gold);
+  font-size: 0.8rem;
+}
+
+.rank-stats .rating-value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.rank-trend {
+  font-size: 0.9rem;
+}
+
+.trend-up {
+  color: var(--special-green);
+  filter: drop-shadow(0 0 3px rgba(76, 175, 80, 0.5));
+}
+.trend-down {
+  color: var(--accent-color);
+  filter: drop-shadow(0 0 3px rgba(229, 9, 20, 0.5));
+}
+.trend-neutral {
+  color: var(--text-tertiary);
+}
+
+/* --- Responsividade (Ranking) --- */
+@media (max-width: 768px) {
+  .ranking-container {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin-top: 1.5rem;
+    height: auto;
+    max-height: 500px;
+    border-left: 1px solid var(--special-glass-border);
+  }
+  
+  .ranking-filters {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "time type"
+      "genre genre";
+  }
+}

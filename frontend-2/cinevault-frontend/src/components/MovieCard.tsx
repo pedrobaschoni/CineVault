@@ -22,7 +22,8 @@ const MovieCard: React.FC<MovieCardProps> = ({ title, posterUrl, type, rating })
           <Image
             src={posterUrl}
             alt={`Poster de ${title}`}
-            fill // 'fill' faz a imagem cobrir o container
+            fill
+            unoptimized
             sizes="(max-width: 768px) 33vw, (max-width: 1024px) 20vw, 15vw"
             className="movie-poster"
           />

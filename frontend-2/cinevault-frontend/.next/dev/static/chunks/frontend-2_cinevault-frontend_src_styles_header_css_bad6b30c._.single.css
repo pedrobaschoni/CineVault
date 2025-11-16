@@ -1,54 +1,89 @@
 /* [project]/frontend-2/cinevault-frontend/src/styles/header.css [app-client] (css) */
 .header {
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--accent-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
   z-index: 100;
-  background: #0a0e27;
-  border-bottom: 1px solid #ffffff1a;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
   padding: 1rem 2rem;
+  transition: background-color .3s;
   display: flex;
   position: sticky;
   top: 0;
-  box-shadow: 0 2px 8px #0000004d;
 }
 
 .header-left {
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   display: flex;
 }
 
 .header-logo {
   border-radius: 4px;
-  width: 40px;
-  height: 40px;
-}
-
-.header-title {
-  color: #fff;
-  letter-spacing: 2px;
-  font-size: 1.5rem;
-  font-weight: bold;
+  width: 75px;
+  height: 50px;
 }
 
 .header-nav {
   flex: 1;
   justify-content: center;
   gap: 2rem;
+  height: 100%;
   display: flex;
 }
 
 .nav-item {
-  color: #fffc;
+  color: var(--text-secondary);
   cursor: pointer;
+  align-items: center;
   font-size: .95rem;
   font-weight: 500;
   text-decoration: none;
   transition: color .2s;
+  display: flex;
+  position: relative;
 }
 
 .nav-item:hover {
-  color: #fff;
+  color: var(--accent-color);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  background-color: var(--bg-secondary);
+  z-index: 1;
+  border-top: 2px solid var(--accent-color);
+  border-radius: 4px;
+  min-width: 160px;
+  padding: .5rem 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 8px 16px #00000080;
+}
+
+.nav-item:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: var(--text-secondary);
+  padding: 12px 16px;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: all .2s;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--accent-color);
+  color: var(--text-primary);
 }
 
 .header-right {
@@ -58,7 +93,7 @@
 }
 
 .search-btn, .theme-btn {
-  color: #fffc;
+  color: var(--text-secondary);
   cursor: pointer;
   background: none;
   border: none;
@@ -68,49 +103,90 @@
 }
 
 .search-btn:hover, .theme-btn:hover {
-  color: #fff;
+  color: var(--accent-color);
 }
 
-.login-btn {
-  color: #fff;
-  cursor: pointer;
-  background: none;
-  border: 1px solid #fff9;
-  border-radius: 4px;
-  padding: .6rem 1.2rem;
-  font-size: .9rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all .2s;
+.user-menu {
+  margin-left: 1rem;
 }
 
-.login-btn:hover {
-  background: #ffffff1a;
-  border-color: #fff;
+.user-menu .dropdown-content {
+  left: auto;
+  right: 0;
+}
+
+.user-profile {
+  color: var(--text-secondary);
+  align-items: center;
+  gap: .5rem;
+  transition: color .2s;
+  display: flex;
+}
+
+.user-profile:hover {
+  color: var(--accent-color);
+}
+
+.user-icon {
+  font-size: 1.4rem;
 }
 
 @media (max-width: 768px) {
   .header {
-    flex-wrap: wrap;
-    gap: 1rem;
     padding: 1rem;
   }
 
   .header-nav {
-    order: 3;
-    gap: 1rem;
-    width: 100%;
-    font-size: .85rem;
+    display: none;
   }
 
   .header-right {
-    gap: 1rem;
+    flex: 1;
+    justify-content: flex-end;
   }
 
-  .login-btn {
-    padding: .5rem 1rem;
-    font-size: .8rem;
+  .user-menu span {
+    display: none;
   }
+}
+
+.submenu-item {
+  position: relative;
+}
+
+.submenu-item > a {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.submenu-chevron {
+  opacity: .6;
+  margin-left: 1rem;
+  font-size: .7rem;
+}
+
+.submenu-content {
+  background-color: var(--bg-secondary);
+  border-top: 2px solid var(--accent-color);
+  border-radius: 4px;
+  min-width: 160px;
+  margin-left: 5px;
+  padding: .5rem 0;
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: 100%;
+  box-shadow: 0 8px 16px #00000080;
+}
+
+.submenu-item:hover > .submenu-content {
+  display: block;
+}
+
+.submenu-item:hover > a {
+  background-color: var(--accent-color);
+  color: var(--text-primary);
 }
 
 /*# sourceMappingURL=frontend-2_cinevault-frontend_src_styles_header_css_bad6b30c._.single.css.map*/

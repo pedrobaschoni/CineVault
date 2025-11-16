@@ -3202,7 +3202,15 @@ function AppContainer({ children }) {
                                             }),
                                             ("TURBOPACK compile-time value", {
                                                 "protocol": ("TURBOPACK compile-time value", "https"),
-                                                "hostname": ("TURBOPACK compile-time value", "**")
+                                                "hostname": ("TURBOPACK compile-time value", "image.tmdb.org")
+                                            }),
+                                            ("TURBOPACK compile-time value", {
+                                                "protocol": ("TURBOPACK compile-time value", "https"),
+                                                "hostname": ("TURBOPACK compile-time value", "placehold.co")
+                                            }),
+                                            ("TURBOPACK compile-time value", {
+                                                "protocol": ("TURBOPACK compile-time value", "https"),
+                                                "hostname": ("TURBOPACK compile-time value", "images.pexels.com")
                                             })
                                         ]),
                                         "localPatterns": ("TURBOPACK compile-time value", [

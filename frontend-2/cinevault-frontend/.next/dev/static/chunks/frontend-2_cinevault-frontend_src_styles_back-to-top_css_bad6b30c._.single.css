@@ -1,0 +1,29 @@
+/* [project]/frontend-2/cinevault-frontend/src/styles/back-to-top.css [app-client] (css) */
+.back-to-top-btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  z-index: 90;
+  opacity: 1;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: opacity .3s, transform .3s;
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transform: scale(1);
+}
+
+.back-to-top-btn:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=frontend-2_cinevault-frontend_src_styles_back-to-top_css_bad6b30c._.single.css.map*/

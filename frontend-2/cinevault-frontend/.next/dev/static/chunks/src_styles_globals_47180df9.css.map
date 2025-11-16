@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Codra/Desktop/CineVault/frontend-2/cinevault-frontend/src/styles/globals.css"],"sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml, body {\n  /* Você pode querer mudar a fonte para 'Inter', 'Roboto' ou 'Montserrat' para um look mais moderno */\n  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n  background-color: #0f0f0f;\n  color: #ffffff;\n  /* Garante que o body ocupe pelo menos 100% da altura */\n  min-height: 100vh; \n}\n\nh1, h2, h3, h4, h5, h6 {\n  margin: 0;\n  color: #ffffff;\n}\n\na {\n  text-decoration: none;\n  color: inherit;\n}\n\nbutton {\n  font-family: inherit;\n  cursor: pointer;\n}\n\ninput, textarea, select {\n  font-family: inherit;\n}"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;;;;AASA;;;;;AAKA;;;;;AAKA;;;;;AAKA"}}]
-}

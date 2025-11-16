@@ -1,15 +1,1262 @@
-[00:00:00.893] Server  LOG      ✓ Ready in 579ms
-[00:00:01.857] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/movie-card.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/movie-card.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
+[00:00:00.912] Server  LOG      ✓ Ready in 586ms
+[00:00:02.342] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.817] Server  LOG      ✓ Compiled in 5ms
+[00:00:23.241] Browser WARN    Image with src "https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:29.673] Server  LOG      ✓ Compiled in 6ms
+[00:03:58.053] Server  LOG      ✓ Compiled in 9ms
+[00:03:59.117] Browser ERROR   ./frontend-2/cinevault-frontend/src/styles/home.css:14:1
+Parsing CSS source code failed
+  12 |   overflow: hidden;
+  13 |   position: relative; /* <-- Adicionado para contexto */a
+> 14 | }
+     | ^
+  15 |
+  16 | .home-content {
+  17 |   flex: 1;
+
+Unexpected end of input
+
+Import trace:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/styles/home.css [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:04:08.058] Server  LOG      ✓ Compiled in 3ms
+[00:04:09.095] Browser ERROR   ./frontend-2/cinevault-frontend/src/styles/home.css:14:1
+Parsing CSS source code failed
+  12 |   overflow: hidden;
+  13 |   position: relative; /* <-- Adicionado para contexto */a
+> 14 | }
+     | ^
+  15 |
+  16 | .home-content {
+  17 |   flex: 1;
+
+Unexpected end of input
+
+Import trace:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/styles/home.css [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:04:54.805] Server  LOG      ✓ Compiled in 3ms
+[00:05:29.840] Server  LOG      ✓ Compiled in 3ms
+[00:06:11.988] Server  LOG      ✓ Compiled in 6ms
+[00:06:22.957] Server  LOG      ✓ Compiled in 3ms
+[00:08:33.405] Server  LOG      ✓ Compiled in 16ms
+[00:20:15.188] Server  LOG      ✓ Compiled in 13ms
+[00:21:06.988] Server  LOG      ✓ Compiled in 13ms
+[00:27:27.269] Server  LOG      ✓ Compiled in 35ms
+[00:28:41.744] Server  LOG      ✓ Compiled in 7ms
+[00:33:32.067] Server  LOG      ✓ Compiled in 13ms
+[00:35:26.538] Server  LOG      ✓ Compiled in 4ms
+[00:37:35.582] Server  LOG      ✓ Compiled in 30ms
+[00:38:55.746] Server  LOG      ✓ Compiled in 6ms
+[00:40:13.591] Server  LOG      ✓ Compiled in 5ms
+[00:40:36.973] Server  LOG      ✓ Compiled in 4ms
+[00:40:45.221] Server  LOG      ✓ Compiled in 4ms
+[00:40:49.605] Server  LOG      ✓ Compiled in 2ms
+[00:40:53.315] Server  LOG      ✓ Compiled in 5ms
+[00:40:57.527] Server  LOG      ✓ Compiled in 27ms
+[00:41:52.222] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+[00:41:52.222] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+[00:41:52.222] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+[00:41:57.562] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+[00:41:57.562] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+[00:41:57.562] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import trace:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+[00:41:59.190] Server  LOG      ✓ Compiled in 23ms
+[00:42:00.130] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:00.130] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:00.130] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:03.840] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:03.840] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:03.840] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:20.158] Server  LOG      ✓ Compiled in 4ms
+[00:42:21.109] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:21.109] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:21.109] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:28.062] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:28.062] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:28.062] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:42.464] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
 
 
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+
+
+./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+
+
+./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+
+[00:42:43.870] Browser ERROR   uncaughtError: Error: ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+
+[00:42:44.046] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:44.046] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:44.046] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:44.046] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:44.046] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:44.046] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:44.918] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+
+
+./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+
+
+./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+
+[00:42:45.124] Browser ERROR   uncaughtError: Error: ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+
+[00:42:45.277] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:45.277] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:45.277] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:45.277] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:17
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                 ^^^^^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `createContext`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:45.277] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:44
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                            ^^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:42:45.277] Browser ERROR   ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx:1:55
+Ecmascript file had an error
+> 1 | import React, { createContext, useContext, useEffect, useState } from 'react';
+    |                                                       ^^^^^^^^
+  2 |
+  3 | interface ThemeContextProps {
+  4 |   theme: 'light' | 'dark';
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Server Component:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx
+    ./frontend-2/cinevault-frontend/src/app/layout.tsx
+
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[00:43:13.408] Server  LOG      ✓ Compiled in 17ms
+[00:43:13.959] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:43:22.383] Browser WARN    Image with src "https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:43:22.383] Browser WARN    Image with src "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?w=300&h=450&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:44:03.762] Server  LOG      ✓ Compiled in 2ms
+[00:44:41.571] Server  LOG      ✓ Compiled in 2ms
+[00:49:03.662] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./frontend-2/cinevault-frontend/src/context/ThemeContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:49:03.927] Server  LOG      ✓ Compiled in 10ms
+[00:49:04.179] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:31.536] Server  LOG      ✓ Compiled in 16ms
+[00:49:32.478] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/layout.tsx:6:10
+Ecmascript file had an error
+  4 |
+  5 | import '../styles/globals.css';
+> 6 | import { ThemeProvider } from '../context/ThemeContext';
+    |          ^^^^^^^^^^^^^
+  7 |
+  8 | export const metadata: Metadata = {
+  9 |   title: 'CineVault',
+
+the name `ThemeProvider` is defined multiple times
+[00:49:40.464] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:47.886] Server  LOG      ✓ Compiled in 4ms
+[00:49:49.879] Browser WARN    Image with src "https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:52:22.312] Server  LOG      ✓ Compiled in 10ms
+[00:52:33.651] Server  LOG      ✓ Compiled in 6ms
+[00:52:53.955] Server  LOG      ✓ Compiled in 4ms
+[00:53:05.859] Server  LOG      ✓ Compiled in 9ms
+[00:53:09.586] Server  LOG      ✓ Compiled in 7ms
+[00:53:10.318] Server  LOG      ✓ Compiled in 8ms
+[00:53:21.510] Server  LOG      ✓ Compiled in 5ms
+[00:56:40.168] Server  LOG      ✓ Compiled in 9ms
+[00:56:42.200] Server  LOG      ✓ Compiled in 12ms
+[00:57:01.178] Server  LOG      ✓ Compiled in 10ms
+[00:57:12.383] Server  LOG      ✓ Compiled in 13ms
+[00:57:26.484] Server  LOG      ✓ Compiled in 8ms
+[01:13:52.820] Server  LOG      ✓ Compiled in 12ms
+[01:13:53.840] Browser ERROR   uncaughtError: ReferenceError: recentMovies is not defined
+[01:14:54.979] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:14:55.002] Server  LOG      ✓ Compiled in 21ms
+[01:14:55.211] Server  ERROR   C:\Users\Codra\Desktop\CineVault\frontend-2\cinevault-frontend\.next\dev\server\chunks\ssr\frontend-2_cinevault-frontend_src_a7b6b6fc._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:14:55.214] Server  ERROR    ⨯ ReferenceError: recentMovies is not defined
+[01:14:55.490] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:14:56.329] Browser ERROR   uncaughtError: ReferenceError: recentMovies is not defined
+[01:16:07.673] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:16:07.675] Server  LOG      ✓ Compiled in 29ms
+[01:16:08.153] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:16:10.043] Browser WARN    Image with src "https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:16:10.043] Browser WARN    Image with src "https://images.pexels.com/photos/7974/pexels-photo.jpg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:16:10.043] Browser WARN    Image with src "https://images.pexels.com/photos/3760522/pexels-photo-3760522.jpeg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:16:10.043] Browser WARN    Image with src "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:16:10.370] Server  LOG      ✓ Compiled in 8ms
+[01:16:12.595] Browser WARN    Image with src "https://images.pexels.com/photos/3760270/pexels-photo-3760270.jpeg?w=300&h=450&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:16:12.595] Browser WARN    Image with src "https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:17:26.174] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:18:04.215] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:18:04.382] Browser WARN    Image with src "https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:18:04.382] Browser WARN    Image with src "https://images.pexels.com/photos/7974/pexels-photo.jpg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:18:04.382] Browser WARN    Image with src "https://images.pexels.com/photos/3760522/pexels-photo-3760522.jpeg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:18:04.382] Browser WARN    Image with src "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:24:38.508] Server  LOG      ✓ Compiled in 14ms
+[01:24:45.848] Server  LOG      ✓ Compiled in 13ms
+[01:24:56.947] Server  LOG      ✓ Compiled in 8ms
+[01:25:00.986] Server  LOG      ✓ Compiled in 25ms
+[01:25:22.655] Server  LOG      ✓ Compiled in 9ms
+[01:25:26.192] Server  LOG      ✓ Compiled in 9ms
+[01:25:28.657] Server  LOG      ✓ Compiled in 15ms
+[01:25:45.962] Server  LOG      ✓ Compiled in 18ms
+[01:25:46.990] Server  LOG      ✓ Compiled in 14ms
+[01:26:31.428] Server  LOG      ✓ Compiled in 27ms
+[01:28:47.861] Server  LOG      ✓ Compiled in 9ms
+[01:28:48.929] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/AboutModal.tsx:49:13
+Parsing ecmascript source code failed
+  47 |             alt="CineVault Logo" 
+  48 |             width={} 
+> 49 |             height={80} 
+     |             ^^^^^^
+  50 |           />
+  51 |           <h2>Bem-vindo ao CineVault!</h2>
+  52 |           <p className="modal-slogan">Seu cofre de entretenimento.</p>
+
+Expected '</', got 'height'
+
+Import traces:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/components/AboutModal.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend-2/cinevault-frontend/src/components/AboutModal.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[01:28:50.916] Server  LOG      ✓ Compiled in 7ms
+[01:33:56.139] Server  LOG      ✓ Compiled in 15ms
+[01:34:06.999] Server  LOG      ✓ Compiled in 6ms
+[01:34:08.030] Browser ERROR   ./frontend-2/cinevault-frontend/src/styles/about-modal.css:256:17
+Parsing CSS source code failed
+  254 |   font-weight: 600;
+  255 | }
+> 256 | .stats-table td:
+      |                 ^
+
+Unexpected end of input
+
+Import trace:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/styles/about-modal.css [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[01:34:24.223] Server  LOG      ✓ Compiled in 4ms
+[01:34:59.686] Server  LOG      ✓ Compiled in 7ms
+[01:35:01.054] Server  LOG      ✓ Compiled in 7ms
+[01:35:15.565] Server  LOG      ✓ Compiled in 9ms
+[01:36:52.588] Server  LOG      ✓ Compiled in 7ms
+[01:36:53.619] Browser ERROR   ./frontend-2/cinevault-frontend/src/styles/about-modal.css:97:24
+Parsing CSS source code failed
+   95 | }
+   96 | .modal-header img {
+>  97 |   //border-radius: 12px;
+      |                        ^
+   98 |   margin-bottom: 1rem;
+   99 |   //box-shadow: 0 4px 15px var(--special-shadow);
+  100 | }
+
+Unexpected token Semicolon
+
+Import trace:
+  Client Component Browser:
+    ./frontend-2/cinevault-frontend/src/styles/about-modal.css [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/components/Header.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
+    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[01:41:02.696] Server  LOG      ✓ Compiled in 11ms
+[01:41:11.080] Server  LOG      ✓ Compiled in 8ms
+[01:41:30.589] Server  LOG      ✓ Compiled in 9ms
+[01:42:10.415] Server  LOG      ✓ Compiled in 10ms
+[01:42:20.373] Server  LOG      ✓ Compiled in 8ms
+[01:42:23.793] Server  LOG      ✓ Compiled in 30ms
+[01:44:00.104] Server  LOG      ✓ Compiled in 9ms
+[01:47:24.406] Server  LOG      ✓ Compiled in 28ms
+[01:47:35.059] Server  LOG      ✓ Compiled in 15ms
+[01:47:38.539] Server  LOG      ✓ Compiled in 11ms
+[01:47:40.894] Server  LOG      ✓ Compiled in 12ms
+[01:47:43.459] Server  LOG      ✓ Compiled in 9ms
+[01:47:57.222] Server  LOG      ✓ Compiled in 9ms
+[01:48:00.944] Server  LOG      ✓ Compiled in 12ms
+[01:48:11.309] Server  LOG      ✓ Compiled in 9ms
+[01:48:30.785] Server  LOG      ✓ Compiled in 11ms
+[01:48:31.825] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:308:32
+Parsing ecmascript source code failed
+  306 |                 <h3 className="subsection-title">Top 5 Docs</h3>
+  307 |                 {topRatedWeek.documentarios.map(item => (
+> 308 |           _       <div className="top-rated-item" key={item.id}>
+      |                                ^^^^^^^^^
+  309 |                     <span className="top-rated-pos">{item.pos}</span>
+  310 |                     <Image src={item.posterUrl} alt={item.title} width={40} height={60} unoptimized />
+  311 |                     <span className="top-rated-title">{item.title}</span>
+
+Expected '</', got 'className'
 
 Import traces:
   Client Component Browser:
@@ -19,46 +1266,18 @@ Import traces:
   Client Component SSR:
     ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
     ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[01:48:38.361] Server  LOG      ✓ Compiled in 7ms
+[01:48:39.387] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:308:32
+Parsing ecmascript source code failed
+  306 |                 <h3 className="subsection-title">Top 5 Docs</h3>
+  307 |                 {topRatedWeek.documentarios.map(item => (
+> 308 |           _       <div className="top-rated-item" key={item.id}>
+      |                                ^^^^^^^^^
+  309 |                     <span className="top-rated-pos">{item.pos}</span>
+  310 |                     <Image src={item.posterUrl} alt={item.title} width={40} height={60} unoptimized />
+  311 |                     <span className="top-rated-title">{item.title}</span>
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-
-./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:04.121] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/movie-card.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/movie-card.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
+Expected '</', got 'className'
 
 Import traces:
   Client Component Browser:
@@ -68,83 +1287,63 @@ Import traces:
   Client Component SSR:
     ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
     ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[01:49:21.472] Server  LOG      ✓ Compiled in 10ms
+[01:50:04.781] Server  LOG      ✓ Compiled in 13ms
+[01:53:00.205] Server  LOG      ✓ Compiled in 6ms
+[01:53:16.190] Server  LOG      ✓ Compiled in 5ms
+[01:54:18.396] Server  LOG      ✓ Compiled in 5ms
+[01:54:40.613] Server  LOG      ✓ Compiled in 4ms
+[01:55:05.348] Server  LOG      ✓ Compiled in 10ms
+[01:59:11.602] Server  LOG      ✓ Compiled in 14ms
+[01:59:13.230] Server  LOG      ✓ Compiled in 14ms
+[01:59:24.214] Server  LOG      ✓ Compiled in 30ms
+[01:59:56.497] Server  ERROR   Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[01:59:56.570] Server  ERROR   C:\Users\Codra\Desktop\CineVault\frontend-2\cinevault-frontend\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:59:56.571] Server  ERROR   C:\Users\Codra\Desktop\CineVault\frontend-2\cinevault-frontend\.next\dev\server\chunks\ssr\frontend-2_cinevault-frontend_src_640e6bb0._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:59:56.572] Server  ERROR   C:\Users\Codra\Desktop\CineVault\frontend-2\cinevault-frontend\.next\dev\server\chunks\ssr\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[01:59:56.575] Server  ERROR    ⨯ TypeError: Cannot read properties of null (reading 'useState')
+[01:59:56.588] Server  LOG      ✓ Compiled in 20ms
+[01:59:56.847] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:59:57.660] Browser ERROR   uncaughtError: Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+[02:00:08.437] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:00:08.437] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./frontend-2/cinevault-frontend/src/app/home/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[02:00:08.438] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:00:08.809] Server  LOG      ✓ Compiled in 27ms
+[02:00:09.116] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:00:09.933] Browser WARN    Image with src "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:00:09.933] Browser WARN    Image with src "https://images.pexels.com/photos/7974/pexels-photo.jpg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:00:09.933] Browser WARN    Image with src "https://images.pexels.com/photos/3760522/pexels-photo-3760522.jpeg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:00:09.933] Browser WARN    Image with src "https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:00:25.542] Server  LOG      ✓ Compiled in 18ms
+[02:00:29.100] Browser WARN    Image with src "https://images.pexels.com/photos/3760270/pexels-photo-3760270.jpeg?w=300&h=450&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:00:29.100] Browser WARN    Image with src "https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:01:54.675] Server  LOG      ✓ Compiled in 15ms
+[02:02:02.357] Server  LOG      ✓ Compiled in 10ms
+[02:02:07.561] Server  LOG      ✓ Compiled in 11ms
+[02:02:26.616] Server  LOG      ✓ Compiled in 18ms
+[02:02:28.603] Server  LOG      ✓ Compiled in 8ms
+[02:04:17.979] Server  LOG      ✓ Compiled in 26ms
+[02:04:19.003] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:22:8
+Ecmascript file had an error
+  20 | import ImdbCarousel from '../../components/ImdbCarousel'; // (Verifique o caminho)
+  21 | import '../../styles/imdb-carousel.css'; // (Verifique o caminho)
+> 22 | import BackToTopButton from '../../components/BackToTopButton'; 
+     |        ^^^^^^^^^^^^^^^
+  23 | import '../../styles/back-to-top.css';
+  24 |
+  25 | // Componente do Carrossel (Últimas Atualizações / Em Destaques)
 
-https://nextjs.org/docs/messages/module-not-found
-[00:00:04.122] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:04.122] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/movie-card.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/movie-card.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:04.122] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:04.122] Browser ERROR   uncaughtError: Error: ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/movie-card.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/movie-card.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
-
-
+the name `BackToTopButton` is defined multiple times
 
 Import traces:
   Client Component Browser:
@@ -154,21 +1353,17 @@ Import traces:
   Client Component SSR:
     ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
     ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
+[02:04:22.148] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:22:8
+Ecmascript file had an error
+  20 | import ImdbCarousel from '../../components/ImdbCarousel'; // (Verifique o caminho)
+  21 | import '../../styles/imdb-carousel.css'; // (Verifique o caminho)
+> 22 | import BackToTopButton from '../../components/BackToTopButton'; 
+     |        ^^^^^^^^^^^^^^^
+  23 | import '../../styles/back-to-top.css';
+  24 |
+  25 | // Componente do Carrossel (Últimas Atualizações / Em Destaques)
 
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:05.088] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/movie-card.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/movie-card.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
-
-
+the name `BackToTopButton` is defined multiple times
 
 Import traces:
   Client Component Browser:
@@ -178,484 +1373,35 @@ Import traces:
   Client Component SSR:
     ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
     ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-
-./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:05.256] Browser ERROR   uncaughtError: Error: ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/movie-card.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/movie-card.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:05.397] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/movie-card.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/movie-card.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:05.397] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:05.397] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/movie-card.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/movie-card.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:05.397] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:27.693] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/moviecard.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/moviecard.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:27.694] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/moviecard.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/moviecard.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:27.695] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:27.695] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:27.844] Browser ERROR   ./frontend-2/cinevault-frontend/src/app/home/page.tsx:12:1
-Module not found: Can't resolve '../../styles/moviecard.css'
-  10 | import '../../styles/header.css'; 
-  11 | import '../../styles/sidebar.css';
-> 12 | import '../../styles/moviecard.css';
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  13 |
-  14 | const HomePage = () => {
-  15 |     // Estado que controla se a sidebar está aberta ou fechada
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:27.844] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:28.196] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:28.196] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:28.342] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:30.090] Server  ERROR    ⨯ ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:30.290] Browser ERROR   uncaughtError: Error: ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-[00:00:30.442] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:00:30.442] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:01:16.637] Browser ERROR   ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx:7:1
-Module not found: Can't resolve '../styles/moviecard.css'
-   5 | import Image from 'next/image';
-   6 | import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
->  7 | import '../styles/moviecard.css'; // Importa o CSS do card
-     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   8 |
-   9 | // Props do Card
-  10 | interface MovieCardProps {
-
-Import traces:
-  Client Component Browser:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component Browser]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./frontend-2/cinevault-frontend/src/components/MovieCard.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Client Component SSR]
-    ./frontend-2/cinevault-frontend/src/app/home/page.tsx [Server Component]
-
-https://nextjs.org/docs/messages/module-not-found
-[00:01:43.580] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:44.709] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/iconeescuro.png" "received" null
-[00:01:44.754] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=Stranger" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:01:45.441] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=Jujutsu" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:01:45.469] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=3+Corpos" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:01:45.480] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=Mad+Max" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:01:45.485] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=Duna+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:01:45.842] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x450/e50914/ffffff?text=AOT" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[02:08:27.750] Server  LOG      ✓ Compiled in 14ms
+[02:08:28.885] Server  LOG      ✓ Compiled in 11ms
+[02:08:29.291] Server  LOG      ✓ Compiled in 12ms
+[02:09:31.730] Server  LOG      ✓ Compiled in 29ms
+[02:09:34.764] Server  LOG      ✓ Compiled in 12ms
+[02:09:37.442] Server  LOG      ✓ Compiled in 22ms
+[02:09:47.786] Server  LOG      ✓ Compiled in 11ms
+[02:10:01.855] Server  LOG      ✓ Compiled in 6ms
+[02:10:08.138] Server  LOG      ✓ Compiled in 7ms
+[02:10:32.930] Server  LOG      ✓ Compiled in 12ms
+[02:10:40.575] Server  LOG      ✓ Compiled in 5ms
+[02:10:44.079] Server  LOG      ✓ Compiled in 5ms
+[02:11:15.866] Server  LOG      ✓ Compiled in 6ms
+[02:11:42.669] Server  LOG      ✓ Compiled in 5ms
+[02:11:44.760] Server  LOG      ✓ Compiled in 6ms
+[02:11:50.223] Server  LOG      ✓ Compiled in 7ms
+[02:12:08.699] Server  LOG      ✓ Compiled in 4ms
+[02:14:55.440] Server  LOG      ✓ Compiled in 23ms
+[02:15:04.637] Server  LOG      ✓ Compiled in 26ms
+[02:15:15.666] Server  LOG      ✓ Compiled in 20ms
+[02:15:17.411] Server  LOG      ✓ Compiled in 40ms
+[02:15:31.277] Server  LOG      ✓ Compiled in 20ms
+[02:15:59.441] Server  LOG      ✓ Compiled in 4ms
+[02:16:04.712] Server  LOG      ✓ Compiled in 4ms
+[02:16:09.006] Server  LOG      ✓ Compiled in 14ms
+[02:16:10.059] Server  LOG      ✓ Compiled in 4ms
+[02:16:18.534] Server  LOG      ✓ Compiled in 4ms
+[02:18:22.264] Server  LOG      ✓ Compiled in 13ms
+[02:18:30.985] Server  LOG      ✓ Compiled in 4ms
+[02:18:38.843] Server  LOG      ✓ Compiled in 24ms
+[02:18:45.037] Server  LOG      ✓ Compiled in 14ms
+[02:20:21.951] Server  LOG      ✓ Compiled in 30ms

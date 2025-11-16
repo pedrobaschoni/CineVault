@@ -1,4 +1,60 @@
 /* [project]/frontend-2/cinevault-frontend/src/styles/globals.css [app-client] (css) */
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #111;
+  --text-primary: #fff;
+  --text-secondary: #aaa;
+  --text-tertiary: #888;
+  --border-color: #222;
+  --border-hover: #333;
+  --accent-color: #e50914;
+  --accent-hover: #b20710;
+  --shadow-color: #e509144d;
+  --special-gold: gold;
+  --special-green: #4caf50;
+  --special-yellow: #ffc107;
+  --special-glass-bg: #1119;
+  --special-glass-border: #e5091433;
+  --special-shadow: #0000005e;
+  --bg-overlay: #0009;
+  --text-overlay: #fff;
+  --scrollbar-track: #ffffff0d;
+  --scrollbar-thumb: #fff3;
+  --scrollbar-thumb-hover: #ffffff4d;
+  --bg-placeholder: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  --bg-top-one: linear-gradient(135deg, #e5091426 0%, #1e1e1e80 100%);
+  --select-arrow: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22%23aaa%22%3E%3Cpath%20d%3D%22M5.293%207.293a1%201%200%20011.414%200L10%2010.586l3.293-3.293a1%201%200%20111.414%201.414l-4%204a1%201%200%2001-1.414%200l-4-4a1%201%200%20010-1.414z%22%20%2F%3E%3C%2Fsvg%3E");
+}
+
+body.light {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #fff;
+  --bg-tertiary: #fff;
+  --text-primary: #222;
+  --text-secondary: #555;
+  --text-tertiary: #777;
+  --border-color: #ddd;
+  --border-hover: #ccc;
+  --accent-color: #e50914;
+  --accent-hover: #b20710;
+  --shadow-color: #e5091433;
+  --special-gold: gold;
+  --special-green: #4caf50;
+  --special-yellow: #ffc107;
+  --special-glass-bg: #ffffffb3;
+  --special-glass-border: #e509141a;
+  --special-shadow: #0000001a;
+  --bg-overlay: #ffffffb3;
+  --text-overlay: #333;
+  --scrollbar-track: #0000000d;
+  --scrollbar-thumb: #0000004d;
+  --scrollbar-thumb-hover: #00000080;
+  --bg-placeholder: linear-gradient(135deg, #fff 0%, #eee 100%);
+  --bg-top-one: linear-gradient(135deg, #e509141a 0%, #ffffff80 100%);
+  --select-arrow: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22%23555%22%3E%3Cpath%20d%3D%22M5.293%207.293a1%201%200%20011.414%200L10%2010.586l3.293-3.293a1%201%200%20111.414%201.414l-4%204a1%201%200%2001-1.414%200l-4-4a1%201%200%20010-1.414z%22%20%2F%3E%3C%2Fsvg%3E");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,14 +62,15 @@
 }
 
 html, body {
-  color: #fff;
-  background-color: #0f0f0f;
+  background-color: var(--bg-primary);
   min-height: 100vh;
+  color: var(--text-primary);
   font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color .3s, color .3s;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #fff;
+  color: inherit;
   margin: 0;
 }
 

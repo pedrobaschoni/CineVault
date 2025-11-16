@@ -1,3 +1,103 @@
+/* src/styles/globals.css */
+
+/* :root é o seu tema padrão (Dark Mode)
+*/
+:root {
+  /* 1. Cores de Fundo */
+  --bg-primary: #121212;         /* Fundo principal (home-layout) */
+  --bg-secondary: #1a1a1a;       /* Fundo de cards (launch-card, ranking-item) */
+  --bg-tertiary: #111111;       /* Fundo de outros cards (header, movie-card, feed) */
+
+  /* 2. Cores de Texto */
+  --text-primary: #ffffff;       /* Texto principal (branco) */
+  --text-secondary: #aaaaaa;     /* Texto cinza (subtítulos, datas) */
+  --text-tertiary: #888888;      /* Texto mais apagado (feed-actions, stats) */
+
+  /* 3. Cores de Borda */
+  --border-color: #222222;       /* Cor da borda padrão */
+  --border-hover: #333333;       /* Borda de subsection-title */
+
+  /* 4. Cores de Destaque (Accent) */
+  --accent-color: #e50914;      /* Seu vermelho */
+  --accent-hover: #b20710;      /* Seu vermelho escuro */
+  --shadow-color: rgba(229, 9, 20, 0.3);
+
+  /* 5. Cores Especiais */
+  --special-gold: #ffd700;
+  --special-green: #4caf50;
+  --special-yellow: #ffc107;
+
+  /* 6. Cores de UI (Glassmorphism, Overlays, etc) */
+  --special-glass-bg: rgba(17, 17, 17, 0.6);
+  --special-glass-border: rgba(229, 9, 20, 0.2);
+  --special-shadow: rgba(0, 0, 0, 0.37);
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+  --text-overlay: #ffffff;
+  
+  /* 7. Scrollbars */
+  --scrollbar-track: rgba(255, 255, 255, 0.05);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.2);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.3);
+
+  /* 8. Fundos de Gradiente */
+  --bg-placeholder: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  --bg-top-one: linear-gradient(135deg, rgba(229, 9, 20, 0.15) 0%, rgba(30, 30, 30, 0.5) 100%);
+  
+  /* 9. Seta do Select (Dropdown) */
+  --select-arrow: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22%23aaa%22%3E%3Cpath%20d%3D%22M5.293%207.293a1%201%200%20011.414%200L10%2010.586l3.293-3.293a1%201%200%20111.414%201.414l-4%204a1%201%200%2001-1.414%200l-4-4a1%201%200%20010-1.414z%22%20%2F%3E%3C%2Fsvg%3E');
+}
+
+/* Quando o <body> tiver a classe .light,
+  use estas variáveis no lugar.
+*/
+body.light {
+  /* 1. Cores de Fundo */
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #ffffff;
+
+  /* 2. Cores de Texto */
+  --text-primary: #222222;
+  --text-secondary: #555555;
+  --text-tertiary: #777777;
+
+  /* 3. Cores de Borda */
+  --border-color: #dddddd;
+  --border-hover: #cccccc;
+
+  /* 4. Cores de Destaque (Accent) */
+  /* (Mantidas as mesmas, mas a sombra é mais suave) */
+  --accent-color: #e50914;
+  --accent-hover: #b20710;
+  --shadow-color: rgba(229, 9, 20, 0.2);
+  
+  /* 5. Cores Especiais (Mantidas) */
+  --special-gold: #ffd700;
+  --special-green: #4caf50;
+  --special-yellow: #ffc107;
+
+  /* 6. Cores de UI (Glassmorphism, Overlays, etc) */
+  --special-glass-bg: rgba(255, 255, 255, 0.7);
+  --special-glass-border: rgba(229, 9, 20, 0.1);
+  --special-shadow: rgba(0, 0, 0, 0.1);
+  --bg-overlay: rgba(255, 255, 255, 0.7);
+  --text-overlay: #333333;
+  
+  /* 7. Scrollbars */
+  --scrollbar-track: rgba(0, 0, 0, 0.05);
+  --scrollbar-thumb: rgba(0, 0, 0, 0.3);
+  --scrollbar-thumb-hover: rgba(0, 0, 0, 0.5);
+
+  /* 8. Fundos de Gradiente */
+  --bg-placeholder: linear-gradient(135deg, #ffffff 0%, #eeeeee 100%);
+  --bg-top-one: linear-gradient(135deg, rgba(229, 9, 20, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
+  
+  /* 9. Seta do Select (Dropdown) */
+  --select-arrow: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22%23555%22%3E%3Cpath%20d%3D%22M5.293%207.293a1%201%200%20011.414%200L10%2010.586l3.293-3.293a1%201%200%20111.414%201.414l-4%204a1%201%200%2001-1.414%200l-4-4a1%201%200%20010-1.414z%22%20%2F%3E%3C%2Fsvg%3E');
+}
+
+/* --- ESTILOS GLOBAIS --- */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,17 +105,18 @@
 }
 
 html, body {
-  /* Você pode querer mudar a fonte para 'Inter', 'Roboto' ou 'Montserrat' para um look mais moderno */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0f0f0f;
-  color: #ffffff;
-  /* Garante que o body ocupe pelo menos 100% da altura */
-  min-height: 100vh; 
+  min-height: 100vh;
+  /* Aplica as cores de fundo e texto globais */
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Removemos a cor hardcoded de h1-h6 */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  color: #ffffff;
+  color: inherit; /* Herda a cor do body */
 }
 
 a {

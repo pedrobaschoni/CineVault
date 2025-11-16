@@ -1,3 +1,4 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
   images: {
@@ -12,7 +13,15 @@ module.exports = {
       },
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'image.tmdb.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
       },
     ],
   },

@@ -1,0 +1,35 @@
+/* src/styles/back-to-top.css */
+
+.back-to-top-btn {
+  position: fixed; /* Fixo na tela */
+  bottom: 30px;
+  right: 30px;
+  
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  
+  font-size: 1.2rem;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Sombra e Z-index */
+  box-shadow: 0 4px 12px var(--shadow-color);
+  z-index: 90; /* Acima do Ranking (50), abaixo do Header (100) */
+  
+  /* Animação de entrada/saída */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1; /* A visibilidade será controlada pelo React */
+  transform: scale(1);
+}
+
+.back-to-top-btn:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.1); /* Efeito de zoom no hover */
+}

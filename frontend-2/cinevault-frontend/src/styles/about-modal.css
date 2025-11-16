@@ -1,0 +1,313 @@
+/* src/styles/about-modal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  background: var(--special-glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 700px; /* Um pouco maior para o novo conteúdo */
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 10px 40px var(--special-shadow);
+  animation: slideIn 0.4s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Scrollbar do Modal */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: 4px;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.modal-close-btn:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* --- Novos Estilos --- */
+
+.modal-quote {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-hover);
+  margin: 1.5rem 0;
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  /* Removemos a borda de baixo, o HR faz isso */
+}
+.modal-header img {
+  margin-bottom: 1rem;
+}
+.modal-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+.modal-slogan {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.modal-body {
+  /* ... */
+}
+
+.modal-body h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-hover);
+  padding-bottom: 0.75rem;
+}
+.modal-body h3:first-child {
+  margin-top: 0;
+}
+
+.modal-body h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modal-intro {
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.modal-intro strong {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Lista "Como Funciona" */
+.how-it-works-list {
+  list-style: none;
+  counter-reset: steps; /* Inicia o contador */
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+.how-it-works-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 3rem; /* Espaço para o número */
+  margin-bottom: 1.5rem;
+}
+.how-it-works-list li::before {
+  content: counter(steps); /* Exibe o contador */
+  counter-increment: steps; /* Incrementa o contador */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--accent-color);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.how-it-works-list li div {
+  display: flex;
+  flex-direction: column;
+}
+.how-it-works-list li strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+.how-it-works-list li span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Lista "Por que usar" */
+.modal-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--bg-tertiary);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+.modal-features-list .icon {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+.modal-features-list li div {
+  display: flex;
+  flex-direction: column;
+}
+.modal-features-list li strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+.modal-features-list li span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Tabela de Estatísticas */
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.stats-table td,
+.stats-table th {
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+.stats-table th {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.stats-table td:last-child {
+  font-weight: 700;
+  text-align: right;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+/* Lista do Roadmap */
+.roadmap-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+.roadmap-list li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+.roadmap-list li .fa {
+  color: var(--accent-color);
+}
+
+/* Nota de Transparência */
+.transparency-note {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  background-color: var(--bg-tertiary);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-color);
+  line-height: 1.6;
+  margin-top: 1.5rem;
+}
+.transparency-note strong {
+  color: var(--text-secondary);
+}
+
+/* Botão CTA (Call to Action) */
+.modal-cta-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.2s ease;
+}
+.modal-cta-btn:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.02);
+}

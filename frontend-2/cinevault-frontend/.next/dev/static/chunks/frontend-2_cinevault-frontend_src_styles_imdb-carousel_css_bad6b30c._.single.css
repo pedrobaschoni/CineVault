@@ -1,0 +1,313 @@
+/* [project]/frontend-2/cinevault-frontend/src/styles/imdb-carousel.css [app-client] (css) */
+.imdb-carousel-container {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  height: 500px;
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-panel {
+  color: #fff;
+  flex: 0 0 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background-image {
+  object-fit: cover;
+  object-position: center 60%;
+  opacity: .8;
+  z-index: 1;
+}
+
+.hero-overlay-gradient {
+  z-index: 2;
+  background: linear-gradient(to top, #000c, #0000);
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero-nav-btn {
+  z-index: 10;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: #0006;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all .2s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-nav-btn:hover {
+  background-color: var(--accent-color);
+}
+
+.hero-nav-btn.prev {
+  left: 20px;
+}
+
+.hero-nav-btn.next {
+  right: 20px;
+}
+
+.hero-poster {
+  z-index: 5;
+  width: 150px;
+  box-shadow: 0 4px 15px var(--special-shadow);
+  border-radius: 4px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  overflow: hidden;
+}
+
+.hero-poster img {
+  display: block;
+}
+
+.hero-poster-add-btn {
+  background-color: var(--bg-overlay);
+  color: var(--text-primary);
+  cursor: pointer;
+  opacity: .8;
+  border: none;
+  border-bottom-right-radius: 4px;
+  padding: 6px 8px;
+  font-size: .8rem;
+  transition: all .2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-poster-add-btn:hover {
+  opacity: 1;
+  background-color: var(--accent-color);
+}
+
+.hero-content {
+  z-index: 4;
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 190px;
+  right: 20px;
+}
+
+.hero-play-btn {
+  border: 2px solid var(--text-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+  background-color: #0000;
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  transition: all .2s;
+}
+
+.hero-play-btn:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.hero-video-duration {
+  color: var(--text-secondary);
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.hero-video-title {
+  color: #fff;
+  margin: .25rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.hero-video-description {
+  color: var(--text-secondary);
+  margin-bottom: .75rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero-social-stats {
+  color: var(--text-secondary);
+  gap: 1.5rem;
+  font-size: .9rem;
+  display: flex;
+}
+
+.hero-social-stats span {
+  align-items: center;
+  gap: .4rem;
+  display: flex;
+}
+
+.playlist-panel {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  flex-direction: column;
+  flex: 0 0 30%;
+  padding: 1rem;
+  display: flex;
+  overflow-y: auto;
+}
+
+.playlist-title {
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.playlist-items {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-hover) transparent;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.playlist-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.playlist-items::-webkit-scrollbar-thumb {
+  background-color: var(--border-hover);
+  border-radius: 3px;
+}
+
+.playlist-item {
+  cursor: pointer;
+  border: 1px solid #0000;
+  border-radius: 4px;
+  gap: .75rem;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  transition: background-color .2s;
+  display: flex;
+}
+
+.playlist-item:hover {
+  background-color: var(--bg-secondary);
+}
+
+.playlist-item.active {
+  background-color: var(--bg-secondary);
+  border-color: var(--accent-color);
+}
+
+.playlist-thumbnail {
+  border-radius: 4px;
+  flex-shrink: 0;
+  width: 100px;
+  height: 75px;
+  position: relative;
+  overflow: hidden;
+}
+
+.playlist-thumbnail img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.playlist-thumb-overlay {
+  background-color: var(--bg-overlay);
+  color: var(--text-primary);
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  transition: opacity .2s;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.playlist-item:hover .playlist-thumb-overlay {
+  opacity: 1;
+}
+
+.playlist-duration {
+  color: #fff;
+  background-color: #000000b3;
+  border-radius: 2px;
+  padding: 2px 4px;
+  font-size: .7rem;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.playlist-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.playlist-video-title {
+  color: var(--text-primary);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: .9rem;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.playlist-video-description {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: .2rem 0;
+  font-size: .8rem;
+  overflow: hidden;
+}
+
+.playlist-social-stats {
+  color: var(--text-tertiary);
+  gap: 1rem;
+  font-size: .75rem;
+  display: flex;
+}
+
+.playlist-social-stats span {
+  align-items: center;
+  gap: .3rem;
+  display: flex;
+}
+
+.playlist-explore {
+  text-align: right;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  margin-top: 1rem;
+  padding-top: .5rem;
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+}
+
+.playlist-explore:hover {
+  color: var(--accent-color);
+}
+
+/*# sourceMappingURL=frontend-2_cinevault-frontend_src_styles_imdb-carousel_css_bad6b30c._.single.css.map*/
