@@ -75,16 +75,6 @@ const HomePage = () => {
   const ultimasAtualizacoesVideos = [
     {
       id: 1,
-      heroImage: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop', // Imagem de fundo
-      posterUrl: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop', // Poster do filme
-      videoTitle: "'Fallout' Returns Dec. 17",
-      videoDescription: 'Watch the Season 2 Trailer',
-      duration: '2:38',
-      likes: 1100,
-      comments: 774,
-    },
-    {
-      id: 2,
       heroImage: 'https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       posterUrl: 'https://images.pexels.com/photos/7974/pexels-photo.jpg?w=300&h=450&fit=crop',
       videoTitle: 'Wuthering Heights',
@@ -92,6 +82,16 @@ const HomePage = () => {
       duration: '2:44',
       likes: 206,
       comments: 87,
+    },
+    {
+      id: 2,
+      heroImage: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop', // Imagem de fundo
+      posterUrl: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop', // Poster do filme
+      videoTitle: "'Fallout' Returns Dec. 17",
+      videoDescription: 'Watch the Season 2 Trailer',
+      duration: '2:38',
+      likes: 1100,
+      comments: 774,
     },
     {
       id: 3,

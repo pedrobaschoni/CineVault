@@ -23,11 +23,13 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "recharts": "^3.4.1"
   },
   "devDependencies": {
     "@types/node": "24.10.1",
     "@types/react": "19.2.4",
+    "@types/recharts": "^1.8.29",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "typescript": "latest"

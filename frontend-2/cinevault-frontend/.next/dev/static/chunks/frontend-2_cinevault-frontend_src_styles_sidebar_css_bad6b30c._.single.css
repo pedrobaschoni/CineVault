@@ -1,0 +1,126 @@
+/* [project]/frontend-2/cinevault-frontend/src/styles/sidebar.css [app-client] (css) */
+.sidebar {
+  background: var(--bg-placeholder);
+  border-right: 2px solid var(--accent-color);
+  z-index: 99;
+  width: 250px;
+  height: calc(100vh - 70px);
+  box-shadow: 4px 0 15px var(--special-shadow);
+  transition: width .3s, padding .3s, opacity .3s, background .3s;
+  position: sticky;
+  top: 70px;
+  overflow: hidden;
+}
+
+.sidebar.closed {
+  opacity: 0;
+  border-right: none;
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar-overlay {
+  background-color: var(--bg-overlay);
+  z-index: 998;
+  display: none;
+  position: fixed;
+  inset: 0;
+}
+
+.sidebar-header {
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  gap: 15px;
+  padding: 25px 20px;
+  display: flex;
+}
+
+.sidebar-logo {
+  min-width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 2px 4px var(--shadow-color));
+}
+
+.sidebar-title {
+  color: var(--accent-color);
+  white-space: nowrap;
+  letter-spacing: 1px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.sidebar-nav {
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 10px;
+  display: flex;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  border-left: 3px solid #0000;
+  border-radius: 8px;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  transition: all .3s;
+  display: flex;
+}
+
+.nav-link:hover {
+  background-color: var(--special-glass-border);
+  border-left-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+.nav-icon {
+  text-align: center;
+  min-width: 24px;
+  font-size: 20px;
+}
+
+.nav-text {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: none;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  opacity: .6;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=frontend-2_cinevault-frontend_src_styles_sidebar_css_bad6b30c._.single.css.map*/

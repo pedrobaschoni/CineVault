@@ -66,7 +66,7 @@ const AboutModal = ({ onClose })=>{
                     className: "modal-header",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            src: "/images/iconeescuro.png",
+                            src: "/images/iconeclaro.png",
                             alt: "CineVault Logo",
                             width: 100,
                             height: 80
@@ -825,7 +825,7 @@ const Header = ()=>{
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "header-left",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    src: theme === 'dark' ? "/images/iconeescuro.png" : "/images/iconeclaro.png",
+                    src: theme === 'dark' ? "/images/iconeclaro.png" : "/images/iconeclaro.png",
                     alt: "CineVault Logo",
                     width: 100,
                     height: 100,
@@ -2974,16 +2974,6 @@ const HomePage = ()=>{
     const ultimasAtualizacoesVideos = [
         {
             id: 1,
-            heroImage: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop',
-            posterUrl: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop',
-            videoTitle: "'Fallout' Returns Dec. 17",
-            videoDescription: 'Watch the Season 2 Trailer',
-            duration: '2:38',
-            likes: 1100,
-            comments: 774
-        },
-        {
-            id: 2,
             heroImage: 'https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
             posterUrl: 'https://images.pexels.com/photos/7974/pexels-photo.jpg?w=300&h=450&fit=crop',
             videoTitle: 'Wuthering Heights',
@@ -2991,6 +2981,16 @@ const HomePage = ()=>{
             duration: '2:44',
             likes: 206,
             comments: 87
+        },
+        {
+            id: 2,
+            heroImage: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop',
+            posterUrl: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop',
+            videoTitle: "'Fallout' Returns Dec. 17",
+            videoDescription: 'Watch the Season 2 Trailer',
+            duration: '2:38',
+            likes: 1100,
+            comments: 774
         },
         {
             id: 3,

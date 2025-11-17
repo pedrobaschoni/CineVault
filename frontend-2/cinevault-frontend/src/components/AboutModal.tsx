@@ -59,7 +59,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ onClose }) => {
 
         <div className="modal-header">
           <Image
-            src="/images/iconeescuro.png" // Mude o tamanho aqui se quiser
+            src="/images/iconeclaro.png" // Mude o tamanho aqui se quiser
             alt="CineVault Logo"
             width={100}
             height={80}

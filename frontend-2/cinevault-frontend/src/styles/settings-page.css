@@ -1,0 +1,231 @@
+/* src/styles/settings-page.css */
+
+.settings-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.settings-page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.settings-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+/* --- Menu Lateral (Navegação) --- */
+.settings-nav {
+  flex: 0 0 260px; /* Largura fixa */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.settings-nav .nav-link:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.settings-nav .nav-link.active {
+  background: var(--accent-color);
+  color: #ffffff;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+/* --- Conteúdo Principal --- */
+.settings-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Reutiliza o .profile-card, mas com padding maior */
+.settings-content .profile-card {
+  padding: 2.5rem 3rem;
+}
+
+.settings-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.settings-section p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-hover);
+  padding-bottom: 1.5rem;
+}
+
+/* Reutiliza os estilos de formulário da página de editar */
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px var(--shadow-color);
+}
+
+/* --- Zona de Perigo (Delete) --- */
+.danger-zone {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--accent-color);
+  border-left: 4px solid var(--accent-color);
+  background: linear-gradient(to right, var(--special-glass-border), transparent);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+.danger-zone h4 {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.danger-zone p {
+  border-bottom: none;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.delete-btn {
+  background: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.delete-btn:hover {
+  background: var(--accent-hover);
+}
+
+/* --- Toggle Switch "Gourmet" --- */
+.toggle-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-hover);
+}
+.toggle-item:last-child {
+  border-bottom: none;
+}
+.toggle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.toggle-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.toggle-description {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+}
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border-color);
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .settings-layout {
+    flex-direction: column;
+  }
+  .settings-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    flex: 0 0 auto;
+    padding-bottom: 1rem;
+  }
+  .settings-nav .nav-link {
+    white-space: nowrap;
+  }
+}

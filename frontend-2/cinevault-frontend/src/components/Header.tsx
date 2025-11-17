@@ -27,7 +27,7 @@ const Header: React.FC = () => {
     <header className="header" style={{ position: 'relative', zIndex: 100 }}>
       <div className="header-left">
         <Image
-          src={theme === 'dark' ? "/images/iconeescuro.png" : "/images/iconeclaro.png"}
+          src={theme === 'dark' ? "/images/iconeclaro.png" : "/images/iconeclaro.png"}
           alt="CineVault Logo"
           width={100}
           height={100}

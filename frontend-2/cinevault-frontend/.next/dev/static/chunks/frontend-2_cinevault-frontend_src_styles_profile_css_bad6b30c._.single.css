@@ -1,0 +1,290 @@
+/* [project]/frontend-2/cinevault-frontend/src/styles/profile.css [app-client] (css) */
+.profile-layout {
+  background: var(--bg-primary);
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+.profile-container {
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  display: flex;
+}
+
+.profile-section-title {
+  color: var(--text-primary);
+  border-left: 4px solid var(--accent-color);
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.card-title {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.profile-sidebar {
+  flex-direction: column;
+  flex: 0 0 340px;
+  gap: 2rem;
+  display: flex;
+}
+
+.profile-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all .3s;
+  box-shadow: 0 4px 12px #0000001a;
+}
+
+.profile-card:hover {
+  border-color: var(--border-hover);
+}
+
+.user-info {
+  text-align: center;
+}
+
+.profile-avatar {
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.profile-name {
+  color: var(--text-primary);
+  margin-bottom: .25rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.profile-username {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  display: block;
+}
+
+.profile-bio {
+  color: var(--text-primary);
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: .95rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.edit-profile-btn {
+  width: 100%;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem;
+  font-size: .95rem;
+  font-weight: 600;
+  transition: all .2s;
+  display: inline-flex;
+}
+
+.edit-profile-btn:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  background: var(--bg-secondary);
+}
+
+.stats-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  display: grid;
+}
+
+.stat-item {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  padding: 1.25rem 1rem;
+  display: flex;
+}
+
+.stat-icon {
+  color: var(--accent-color);
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+}
+
+.stat-value {
+  color: var(--text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.stat-genres {
+  color: var(--text-primary);
+  text-align: center;
+  font-size: .85rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.chart-card {
+  padding: 1.5rem;
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+.profile-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.timeline {
+  flex-direction: column;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.timeline-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  transition: all .3s;
+  display: flex;
+}
+
+.timeline-item:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 20px var(--shadow-color);
+  transform: translateY(-4px);
+}
+
+.timeline-poster {
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+  width: 80px;
+  height: 120px;
+}
+
+.timeline-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.timeline-header {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: .5rem;
+  display: flex;
+}
+
+.timeline-title {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.timeline-date {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  margin-left: 1rem;
+  font-size: .85rem;
+}
+
+.timeline-rating {
+  color: var(--special-gold);
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.timeline-comment {
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent-color);
+  background: var(--bg-tertiary);
+  border-radius: 0 4px 4px 0;
+  padding: 1rem;
+  font-size: .95rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .profile-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .profile-sidebar {
+    flex: none;
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-poster {
+    width: 100px;
+    height: 150px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    gap: .5rem;
+  }
+}
+
+/*# sourceMappingURL=frontend-2_cinevault-frontend_src_styles_profile_css_bad6b30c._.single.css.map*/
