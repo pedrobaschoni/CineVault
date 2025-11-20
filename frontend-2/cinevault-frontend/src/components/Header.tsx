@@ -1,7 +1,6 @@
 // src/components/Header.tsx
 'use client';
 
-// 1. IMPORTE O 'useState' E OS NOVOS ITENS
 import React, { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import Link from 'next/link';
@@ -11,15 +10,16 @@ import {
   FaMoon,
   FaUserCircle,
   FaChevronRight, // Adicionado para sub-menus
+  FaLock // Opcional: Ícone de cadeado para o cofre (se quiser usar)
 } from 'react-icons/fa';
 import '../styles/header.css'; // Importa o CSS
-import AboutModal from './AboutModal'; // 1. IMPORTE O MODAL (verifique o caminho)
-import '../styles/about-modal.css'; // 1. IMPORTE O CSS DO MODAL (verifique o caminho)
+import AboutModal from './AboutModal'; // Modal Sobre
+import '../styles/about-modal.css'; // CSS do Modal
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
-  // 2. ADICIONE O ESTADO PARA O MODAL
+  // Estado para o modal "Sobre"
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
           Início
         </Link>
 
-        {/* 3. ITEM ADICIONADO PARA ABRIR O MODAL */}
+        {/* 2. Sobre o CineVault (Modal) */}
         <span 
           className="nav-item" 
           onClick={() => setIsModalOpen(true)} 
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
           Sobre o CineVault
         </span>
 
-        {/* 2. Descobrir (Novo) */}
+        {/* 3. Descobrir */}
         <div className="nav-item dropdown">
           <span>Descobrir</span>
           <div className="dropdown-content">
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* 3. Em Alta (Novo) */}
+        {/* 4. Em Alta */}
         <div className="nav-item dropdown">
           <span>Em Alta</span>
           <div className="dropdown-content">
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* 4. Categorias (Atualizado e com Sub-menus) */}
+        {/* 5. Categorias */}
         <div className="nav-item dropdown">
           <span>Categorias</span>
           <div className="dropdown-content">
@@ -157,7 +157,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* 5. Lançamentos (Novo) */}
+        {/* 6. Lançamentos */}
         <div className="nav-item dropdown">
           <span>Lançamentos</span>
           <div className="dropdown-content">
@@ -168,19 +168,25 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* 6. Minhas Listas (Atualizado) */}
+        {/* 7. MEU COFRE (Atualizado) */}
         <div className="nav-item dropdown">
-          <span>Minhas Listas</span>
-          <div className="dropdown-content">
-            <Link href="/listas/favoritos">Favoritos</Link>
+          <span>Meu Cofre</span>
+          <div className="dropdown-content" style={{ minWidth: '220px' }}>
+            
+            {/* Link Principal: Visão Geral do Cofre */}
+            <Link href="/listas/favoritos" style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+              <span style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>Abrir meu Cofre</span>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: 'normal' }}>
+                Favoritos, histórico, avaliações e resenhas
+              </span>
+            </Link>
+
+            {/* Link Secundário: Quero Ver */}
             <Link href="/listas/quero-ver">Quero Ver</Link>
-            <Link href="/listas/avaliados">Meus Avaliados</Link>
-            <Link href="/listas/resenhas">Minhas Resenhas</Link>
-            <Link href="/listas/atividade">Minha Atividade</Link>
           </div>
         </div>
 
-        {/* 7. Comunidade (Novo) */}
+        {/* 8. Comunidade */}
         <div className="nav-item dropdown">
           <span>Comunidade</span>
           <div className="dropdown-content">
@@ -204,7 +210,7 @@ const Header: React.FC = () => {
         <div className="nav-item dropdown user-menu">
           <div className="user-profile">
             <FaUserCircle className="user-icon" />
-            <span>Usuário</span> {/* Substitua pelo nome real */}
+            <span>Usuário</span>
           </div>
           <div className="dropdown-content">
             <Link href="/perfil">Meu Perfil</Link>
@@ -214,7 +220,7 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* 4. RENDERIZAÇÃO CONDICIONAL DO MODAL */}
+      {/* Renderização do Modal Sobre */}
       {isModalOpen && <AboutModal onClose={() => setIsModalOpen(false)} />}
     </header>
   );

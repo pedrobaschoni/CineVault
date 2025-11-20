@@ -1,9 +1,9 @@
 /* src/styles/settings-page.css */
 
 .settings-page-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2.5rem;
+  width: 100%;
+  padding: 2.5rem 0;
+  min-height: 100vh;
 }
 
 .settings-page-title {
@@ -11,11 +11,15 @@
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .settings-layout {
   display: flex;
   gap: 2rem;
+  width: 100%;
+  padding: 0 2.5rem;
 }
 
 /* --- Menu Lateral (Navegação) --- */
@@ -57,11 +61,17 @@
 .settings-content {
   flex: 1;
   min-width: 0;
+  width: 100%;
 }
 
-/* Reutiliza o .profile-card, mas com padding maior */
+/* Reutiliza o .profile-card, mas com padding maior e ocupa tela inteira */
 .settings-content .profile-card {
   padding: 2.5rem 3rem;
+  width: 100%;
+  min-height: calc(100vh - 200px);
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
 }
 
 .settings-section h3 {

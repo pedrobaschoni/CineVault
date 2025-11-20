@@ -1,0 +1,526 @@
+/* src/styles/watchlist.css */
+
+.watchlist-layout {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  color: var(--text-primary);
+  padding-bottom: 4rem;
+}
+
+.watchlist-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* --- 1. HEADER --- */
+.watchlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+.header-text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.header-text p { color: var(--text-secondary); }
+.header-stats span {
+  background: var(--bg-tertiary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+}
+.header-stats strong { color: var(--accent-color); }
+
+/* --- 2. TOOLBAR (Filtros) --- */
+.watchlist-toolbar {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-hover);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.filter-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.watchlist-toolbar .filter-group select,
+.watchlist-toolbar .filter-group select:hover,
+.watchlist-toolbar .sort-control select,
+.watchlist-toolbar .sort-control select:hover {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 0.6rem 1rem !important;
+  border-radius: 6px !important;
+  min-width: 140px !important;
+  cursor: pointer !important;
+  transition: 0.15s !important;
+}
+
+/* Remove a aparência nativa e aplica seta SVG customizada (mais específica) */
+.watchlist-toolbar .filter-group select,
+.watchlist-toolbar .sort-control select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23bdbdbd'><path d='M5.23 7.21a.75.75 0 011.06-.02L10 10.954l3.71-3.76a.75.75 0 111.06 1.06l-4.24 4.3a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.8rem center !important;
+  background-size: 12px 12px !important;
+  padding-right: 2.4rem !important; /* espaço para a seta */
+}
+
+/* Esconde seta padrão no IE/Edge */
+.watchlist-toolbar .filter-group select::-ms-expand,
+.watchlist-toolbar .sort-control select::-ms-expand {
+  display: none !important;
+}
+
+.watchlist-toolbar .filter-group select:focus,
+.watchlist-toolbar .sort-control select:focus {
+  outline: none !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 6px rgba(0,0,0,0.04) !important;
+}
+
+.controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort-control {
+  display: flex; align-items: center; gap: 0.8rem; color: var(--text-secondary);
+}
+.sort-control select {
+  background: transparent;
+  color: var(--text-primary);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.layout-toggle {
+  display: flex;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+}
+.layout-toggle button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  width: 36px; height: 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: 0.2s;
+}
+.layout-toggle button:hover { color: var(--text-primary); }
+.layout-toggle button.active {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+/* --- 3. CONTEÚDO (Grid/List Logic) --- */
+
+/* ITEM BASE (Comum aos dois modos) */
+.wl-item {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+  position: relative;
+}
+.wl-item:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+/* Animação de saída (Ao marcar assistido) */
+.wl-item.exiting {
+  transform: scale(0.9) translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wl-poster-wrapper {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+.wl-poster {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.wl-item:hover .wl-poster { transform: scale(1.1); }
+
+.wl-type-tag {
+  position: absolute;
+  top: 8px; left: 8px;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+}
+
+/* Badges de Prioridade */
+.priority-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.p-high { background: rgba(229, 9, 20, 0.2); color: #ff4f4f; border: 1px solid #ff4f4f; }
+.p-med { background: rgba(255, 193, 7, 0.1); color: #ffc107; border: 1px solid #ffc107; }
+.p-low { background: rgba(255, 255, 255, 0.1); color: #aaa; border: 1px solid #555; }
+
+
+/* === MODO GRID (Padrão) === */
+.watchlist-content.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.watchlist-content.grid .wl-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.watchlist-content.grid .wl-poster-wrapper {
+  width: 100%;
+  aspect-ratio: 2/3;
+}
+
+.watchlist-content.grid .wl-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.watchlist-content.grid .wl-header { margin-bottom: 0.5rem; }
+.watchlist-content.grid .wl-title {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.2rem;
+}
+.watchlist-content.grid .wl-meta {
+  display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-secondary);
+}
+.watchlist-content.grid .wl-rating { color: var(--special-gold); display: flex; align-items: center; gap: 4px; }
+
+.watchlist-content.grid .wl-details {
+  margin-bottom: 1rem;
+  flex: 1;
+}
+.watchlist-content.grid .wl-genre { display: block; font-size: 0.8rem; color: var(--text-tertiary); margin-bottom: 0.5rem; }
+.watchlist-content.grid .wl-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.watchlist-content.grid .wl-platform { font-size: 0.75rem; background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color); }
+
+.watchlist-content.grid .wl-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border-color);
+}
+.watchlist-content.grid .watched-btn {
+  flex: 1;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  transition: 0.2s;
+}
+.watchlist-content.grid .watched-btn:hover { background: var(--accent-hover); }
+.watchlist-content.grid .secondary-actions { display: flex; gap: 0.5rem; margin-left: 0.5rem; }
+.watchlist-content.grid .icon-btn {
+  background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary);
+  width: 32px; height: 32px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: 0.2s;
+}
+.watchlist-content.grid .icon-btn:hover { border-color: var(--accent-color); color: var(--accent-color); }
+
+
+/* === MODO LISTA (Horizontal) === */
+.watchlist-content.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.watchlist-content.list .wl-item {
+  display: flex;
+  flex-direction: row;
+  height: 160px; /* Altura fixa para o card */
+}
+
+.watchlist-content.list .wl-poster-wrapper {
+  width: 110px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.watchlist-content.list .wl-info {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Espalha o conteúdo */
+  gap: 2rem;
+}
+
+.watchlist-content.list .wl-header { flex: 1; }
+.watchlist-content.list .wl-title { font-size: 1.2rem; margin-bottom: 0.4rem; }
+.watchlist-content.list .wl-meta { display: flex; gap: 1rem; font-size: 0.9rem; }
+
+.watchlist-content.list .wl-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.watchlist-content.list .wl-badges { display: flex; gap: 0.8rem; align-items: center; }
+.watchlist-content.list .wl-platform { font-size: 0.85rem; background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border-color); }
+
+.watchlist-content.list .wl-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 140px;
+}
+.watchlist-content.list .watched-btn {
+  background: var(--accent-color); color: #fff; border: none; padding: 0.6rem 1rem;
+  border-radius: 6px; cursor: pointer; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+}
+.watchlist-content.list .secondary-actions { display: flex; justify-content: flex-end; gap: 0.5rem; }
+.watchlist-content.list .icon-btn {
+  background: transparent; border: none; color: var(--text-secondary); font-size: 1rem; cursor: pointer;
+}
+.watchlist-content.list .icon-btn:hover { color: var(--accent-color); }
+
+.actions-menu-wrapper {
+  position: relative;
+}
+
+.actions-dropdown {
+  position: absolute;
+  bottom: 100%; /* Abre para cima para não cortar */
+  right: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  width: 180px;
+  z-index: 50;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: fadeInMenu 0.2s ease;
+}
+
+@keyframes fadeInMenu {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-option {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.2s;
+}
+
+.menu-option:hover {
+  background: var(--bg-tertiary);
+  color: var(--accent-color);
+}
+
+.menu-option span {
+  font-size: 1rem; /* Ícone maior */
+}
+
+/* Separador dentro do menu */
+.menu-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 0.3rem 0;
+}
+
+
+/* --- 4. EMPTY STATE --- */
+.empty-state {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--text-secondary);
+  grid-column: 1 / -1; /* Ocupa toda a largura se estiver em grid */
+}
+.empty-state button {
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.empty-state button:hover { background: var(--accent-color); color: #fff; }
+
+
+/* --- 5. RECOMMENDATIONS --- */
+.recommendations-block {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+.recommendations-block h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.rec-list-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.rec-mini-card {
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--border-color);
+  transition: 0.2s;
+}
+.rec-mini-card:hover { border-color: var(--accent-color); }
+
+.rec-img-placeholder {
+  width: 50px; height: 75px;
+  background: #333;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.rec-info { flex: 1; display: flex; flex-direction: column; }
+.rec-title { font-weight: 600; font-size: 0.95rem; color: var(--text-primary); }
+.rec-rate { font-size: 0.85rem; color: var(--special-gold); margin-top: 4px; display: flex; align-items: center; gap: 4px;}
+
+.add-rec-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--accent-color);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.add-rec-btn:hover { background: var(--accent-color); color: #fff; border-color: var(--accent-color); }
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .controls-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .layout-toggle { display: none; /* Força grid ou lista no mobile se preferir, ou esconde toggle */ }
+  .watchlist-content.list .wl-item { flex-direction: column; height: auto; }
+  .watchlist-content.list .wl-poster-wrapper { width: 100%; height: 200px; }
+  .watchlist-content.list .wl-info { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .watchlist-content.list .wl-actions { width: 100%; flex-direction: row; align-items: center; justify-content: space-between;}
+}
+
+/* --- NOTIFICAÇÃO TOAST (Pop-up elegante) --- */
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a; /* Fundo escuro */
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px; /* Bordas bem redondas */
+  border: 1px solid var(--accent-color); /* Borda vermelha */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  font-size: 0.95rem;
+  font-weight: 600;
+  
+  animation: slideUpFade 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toast-icon {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  display: flex;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

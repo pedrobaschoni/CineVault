@@ -522,20 +522,24 @@ hr {
 
 /* [project]/frontend-2/cinevault-frontend/src/styles/settings-page.css [app-client] (css) */
 .settings-page-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2.5rem;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2.5rem 0;
 }
 
 .settings-page-title {
   color: var(--text-primary);
   margin-bottom: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   font-size: 2.5rem;
   font-weight: 700;
 }
 
 .settings-layout {
   gap: 2rem;
+  width: 100%;
+  padding: 0 2.5rem;
   display: flex;
 }
 
@@ -575,10 +579,16 @@ hr {
 
 .settings-content {
   flex: 1;
+  width: 100%;
   min-width: 0;
 }
 
 .settings-content .profile-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  width: 100%;
+  min-height: calc(100vh - 200px);
   padding: 2.5rem 3rem;
 }
 

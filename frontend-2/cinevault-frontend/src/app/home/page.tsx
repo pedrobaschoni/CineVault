@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import MovieCard from '../../components/MovieCard';
 import RankingSection from '../../components/RankingSection';
 import BackToTopButton from '../../components/BackToTopButton';
+import Link from 'next/link';
 import Image from 'next/image'; // Importa o Image para os avatares e posters
 import { 
   FaChevronLeft, 
@@ -47,12 +48,14 @@ const HorizontalCarousel = ({ title, movies }: { title: string, movies: any[] })
         <div className="carousel-wrapper" ref={scrollRef}>
           {movies.map(movie => (
             <div className="carousel-item" key={movie.id}>
+              <Link href={`/detalhes`} style={{ textDecoration: 'none' }}>
               <MovieCard
                 title={movie.title}
                 posterUrl={movie.posterUrl}
                 type={movie.type}
                 rating={movie.rating}
               />
+              </Link>
             </div>
           ))}
         </div>
@@ -116,6 +119,13 @@ const HomePage = () => {
   ];
 
   const todayHighlights = [
+    { 
+      id: 'arcane1', 
+      title: 'Arcane (League of Legends)', 
+      posterUrl: 'https://images.unsplash.com/photo-1535905557558-afc4877a26fc?q=80&w=600&auto=format&fit=crop', 
+      type: 'série', 
+      rating: 9.0 
+    },
     { id: 'h1', title: 'A Casa do Dragão', posterUrl: 'https://images.pexels.com/photos/3760270/pexels-photo-3760270.jpeg?w=300&h=450&fit=crop', type: 'série', rating: 8.5 },
     { id: 'h2', title: 'Mad Max: Estrada da Fúria', posterUrl: 'https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?w=300&h=450&fit=crop', type: 'filme', rating: 8.7 },
     { id: 'h3', title: 'Oppenheimer', posterUrl: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=300&h=450&fit=crop', type: 'filme', rating: 8.9 },
