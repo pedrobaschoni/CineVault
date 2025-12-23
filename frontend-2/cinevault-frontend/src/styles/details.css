@@ -7,17 +7,21 @@
   min-height: 100vh;
   padding-bottom: 4rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+  
+  /* [CORREÇÃO] Travas para impedir scroll horizontal e estouro */
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
 }
 
 /* --- 1. HERO SECTION --- */
-/* A Hero Section deve manter o texto CLARO pois está sobre uma imagem escura,
-   independente do tema do site (Light ou Dark) */
 .hero-section {
   position: relative;
   width: 100%;
@@ -35,7 +39,7 @@
   top: 0; left: 0; width: 100%; height: 100%;
   z-index: 0;
   overflow: hidden;
-  background-color: #000; /* Garante fundo preto atrás da imagem */
+  background-color: #000;
 }
 .backdrop-img {
   object-fit: cover;
@@ -46,7 +50,6 @@
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  /* O gradiente termina na cor do tema (var(--bg-primary)) para fundir com o conteúdo */
   background: linear-gradient(to bottom, 
     rgba(0,0,0,0.3) 0%, 
     rgba(0,0,0,0.6) 60%, 
@@ -58,15 +61,19 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  display: flex;
-  gap: 3rem;
   width: 100%;
+  
+  /* [CORREÇÃO CRÍTICA] Grid Layout Estável */
+  display: grid;
+  /* Coluna esquerda fixa (300px), direita ocupa o resto MAS pode encolher (minmax 0) */
+  grid-template-columns: 300px minmax(0, 1fr); 
+  gap: 3rem;
+  align-items: end; 
 }
 
 /* Coluna Esquerda (Poster) */
 .hero-left {
-  flex-shrink: 0;
-  width: 300px;
+  /* Largura controlada pelo Grid */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -81,8 +88,10 @@
   border-radius: 12px;
   display: block;
   border: 1px solid rgba(255,255,255,0.1);
+  width: 100%;
+  height: auto;
 }
-/* Glow Vermelho atrás do poster */
+/* Glow Vermelho */
 .poster-glow {
   position: absolute;
   top: 10%; left: 10%; width: 80%; height: 80%;
@@ -125,7 +134,7 @@
 }
 .hero-btn.primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
 .hero-btn.secondary {
-  background: rgba(255,255,255,0.15); /* Translúcido para funcionar no fundo escuro */
+  background: rgba(255,255,255,0.15); 
   color: #fff;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.1);
@@ -134,12 +143,14 @@
 
 /* Coluna Direita (Info) */
 .hero-right {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; 
   padding-bottom: 1rem;
-  min-width: 0; /* Correção do bug de layout */
+  
+  /* [CORREÇÃO] Impede que o conteúdo flexível force a largura */
+  min-width: 0; 
+  width: 100%;
 }
 
 .hero-meta-top {
@@ -147,6 +158,7 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
 }
 .content-tag {
   background: var(--accent-color);
@@ -172,6 +184,7 @@
   margin-bottom: 1rem;
   color: #fff;
   text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  word-wrap: break-word;
 }
 
 .hero-meta-data {
@@ -180,7 +193,7 @@
   flex-wrap: wrap;
   gap: 0.8rem;
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.8); /* Texto claro com transparência */
+  color: rgba(255, 255, 255, 0.8); 
   margin-bottom: 2rem;
 }
 .meta-rating-age {
@@ -191,7 +204,7 @@
 }
 .meta-dot { color: rgba(255, 255, 255, 0.4); }
 
-/* Botão Play Trailer Estilizado */
+/* Botão Play Trailer */
 .hero-trailer-area { margin-bottom: 2rem; }
 .play-trailer-btn {
   background: transparent;
@@ -225,13 +238,14 @@
 .rating-hub {
   display: flex;
   gap: 2rem;
-  background: rgba(20, 20, 20, 0.7); /* Fundo sempre escuro para contraste com o texto branco */
+  background: rgba(20, 20, 20, 0.7); 
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.1);
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 1.5rem;
-  color: #fff; /* Texto forçado branco */
+  color: #fff;
+  flex-wrap: wrap;
 }
 
 .global-score {
@@ -256,6 +270,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 0.5rem;
+  min-width: 200px; /* [CORREÇÃO] Garante tamanho mínimo */
 }
 .tech-bar {
   display: flex;
@@ -287,7 +302,7 @@
 }
 .streaming-list { display: flex; gap: 1rem; flex-wrap: wrap;}
 .streaming-item {
-  background: rgba(30, 30, 30, 0.8); /* Fundo escuro semi-transparente */
+  background: rgba(30, 30, 30, 0.8); 
   border-radius: 8px;
   padding: 0.5rem;
   display: flex;
@@ -314,8 +329,6 @@
 .badge-status { background: var(--special-green) !important; color: #fff !important; }
 
 /* --- MAIN BODY LAYOUT --- */
-/* AQUI COMEÇA O USO DE VARIÁVEIS PARA O MODO CLARO FUNCIONAR */
-
 .details-body {
   display: flex;
   gap: 3rem;
@@ -328,7 +341,10 @@
   min-width: 0; 
   overflow: hidden;
 }
-.details-sidebar { width: 350px; flex-shrink: 0; }
+.details-sidebar { 
+  width: 350px; 
+  flex-shrink: 0; 
+}
 
 /* Blocos de Conteúdo */
 .content-block { margin-bottom: 3rem; }
@@ -338,24 +354,24 @@
   margin-bottom: 1.5rem;
   border-left: 4px solid var(--accent-color);
   padding-left: 1rem;
-  color: var(--text-primary); /* Cor dinâmica */
+  color: var(--text-primary);
 }
 
 /* Sinopse */
 .synopsis-text {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--text-primary); /* Cor dinâmica */
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  background: var(--bg-secondary); /* Cor dinâmica */
+  background: var(--bg-secondary);
   padding: 1.5rem;
   border-radius: 8px;
-  border: 1px solid var(--border-color); /* Cor dinâmica */
+  border: 1px solid var(--border-color);
   color: var(--text-primary);
 }
 .info-item strong { color: var(--text-secondary); margin-right: 5px; }
@@ -368,7 +384,7 @@
   margin-bottom: 1.5rem;
 }
 .cast-card {
-  background: var(--bg-tertiary); /* Cor dinâmica */
+  background: var(--bg-tertiary);
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
@@ -427,7 +443,6 @@
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-color);
 }
-
 .season-discussion h4 {
   font-size: 1rem;
   color: var(--text-secondary);
@@ -438,7 +453,6 @@
   text-transform: uppercase;
   font-weight: 700;
 }
-
 .season-comment-input {
   display: flex;
   gap: 0.5rem;
@@ -474,21 +488,18 @@
   overflow-y: auto;
   border: 1px solid var(--border-color);
 }
-
 .sc-item {
   padding: 0.5rem 0.8rem;
   border-bottom: 1px solid var(--border-color);
   font-size: 0.9rem;
 }
 .sc-item:last-child { border-bottom: none; }
-
 .sc-user { font-weight: 700; color: var(--accent-color); margin-right: 0.5rem; }
 .sc-text { color: var(--text-primary); }
 .sc-date { display: block; font-size: 0.75rem; color: var(--text-tertiary); margin-top: 2px; }
 .no-comments { padding: 1rem; text-align: center; color: var(--text-secondary); font-style: italic; font-size: 0.9rem; }
 .season-comments-list::-webkit-scrollbar { width: 4px; }
 .season-comments-list::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 2px; }
-
 
 /* Curiosidades */
 .trivia-list { display: flex; flex-direction: column; gap: 1rem; }
@@ -551,7 +562,6 @@
 .comment-footer button { background: none; border: none; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; gap: 5px; transition: 0.2s; }
 .comment-footer button:hover { color: var(--accent-color); }
 
-
 /* SIDEBAR WIDGETS */
 .sidebar-widget {
   background: var(--bg-secondary);
@@ -560,6 +570,7 @@
   padding: 1.5rem;
   margin-bottom: 2rem;
   color: var(--text-primary);
+  overflow: hidden; /* Impede gráfico de estourar */
 }
 .sidebar-widget h3 {
   font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;
@@ -579,7 +590,7 @@
 .tl-event { font-size: 0.9rem; color: var(--text-secondary); }
 
 /* Stats Widget */
-.chart-container-box { margin: 1rem -1rem 1rem -1rem; }
+.chart-container-box { margin: 1rem -1rem 1rem -1rem; width: 100%; height: 200px; position: relative; }
 .stats-note { font-size: 0.8rem; color: var(--text-tertiary); text-align: center; font-style: italic; }
 
 /* Recomendados */
@@ -607,9 +618,21 @@
 
 /* Responsividade */
 @media (max-width: 1024px) {
-  .hero-content { flex-direction: column; }
-  .hero-left { width: 100%; flex-direction: row; align-items: flex-end; }
-  .main-poster { width: 150px; height: 225px; }
+  /* [CORREÇÃO] Força coluna única no tablet/mobile */
+  .hero-content { 
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+  }
+  
+  .hero-left { 
+    width: 100%; 
+    flex-direction: row; 
+    align-items: flex-end; 
+    justify-content: center; 
+  }
+  
+  .main-poster { width: 180px; height: auto; }
+  
   .hero-section { min-height: auto; }
   
   .details-body { flex-direction: column; }

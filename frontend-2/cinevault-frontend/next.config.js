@@ -23,7 +23,6 @@ module.exports = {
         protocol: 'https',
         hostname: 'images.pexels.com',
       },
-      // --- ADICIONADOS AGORA ---
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
@@ -31,6 +30,11 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'source.unsplash.com',
+      },
+      // --- NOVO DOMÍNIO ADICIONADO ---
+      {
+        protocol: 'https',
+        hostname: 'i.pravatar.cc',
       },
     ],
   },

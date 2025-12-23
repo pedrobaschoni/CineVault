@@ -31,16 +31,17 @@ const BackToTopButton: React.FC<BackToTopButtonProps> = ({ onClick, threshold = 
   return (
     <button
       onClick={handleClick}
-      className="back-to-top-btn"
-      title="Voltar ao topo"
-      aria-label="Voltar ao topo"
+      className="back-to-top-msg"
+      title="Voltar ao início"
+      aria-label="Voltar ao início"
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(12px)',
+        transform: visible ? 'translate(-50%, 0)' : 'translate(-50%, -12px)',
         pointerEvents: visible ? 'auto' : 'none',
       }}
     >
-      <FaArrowUp />
+      <span className="bt-icon"><FaArrowUp /></span>
+      <span className="bt-text">Voltar ao início</span>
     </button>
   );
 };

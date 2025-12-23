@@ -1,0 +1,678 @@
+/* src/styles/discussions.css */
+
+.discussions-layout {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.discussions-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* --- TOAST NOTIFICATION --- */
+.live-notification {
+  position: fixed;
+  bottom: 30px; left: 30px;
+  background: #1a1a1a;
+  border: 1px solid var(--accent-color);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  display: flex; align-items: center; gap: 10px;
+  z-index: 9999;
+  cursor: pointer;
+  animation: slideUp 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+.pulse-dot {
+  width: 10px; height: 10px; background: #4caf50; border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  animation: pulseGreen 2s infinite;
+}
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(76, 175, 80, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+}
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+/* --- COMMUNITY HIGHLIGHTS (CORRIGIDO) --- */
+.community-highlights {
+  display: grid; 
+  /* MUDANÇA: Forçamos 3 colunas iguais em vez de deixar o navegador calcular */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.5rem; 
+  margin-bottom: 2rem;
+  width: 100%; /* Garante que o grid ocupe a tela toda disponível */
+}
+
+.highlight-card {
+  background: var(--bg-secondary); 
+  border: 1px solid var(--border-color);
+  border-radius: 12px; 
+  padding: 1.5rem; 
+  
+  /* MUDANÇA AQUI: Alinhamento Flex melhorado */
+  display: flex; 
+  align-items: flex-start; /* Alinha no topo */
+  gap: 1.2rem; /* Espaço entre ícone e texto */
+  
+  transition: 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-card:hover { 
+  transform: translateY(-5px); 
+  border-color: var(--accent-color); 
+}
+
+/* Ícone fixo */
+.hl-icon {
+  font-size: 1.8rem; 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 10px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  flex-shrink: 0; /* Impede o ícone de amassar */
+}
+
+/* Cores específicas dos cards */
+.highlight-card.discussion .hl-icon { color: #ff4f4f; background: rgba(255, 79, 79, 0.1); }
+.highlight-card.question .hl-icon { color: #ffd700; background: rgba(255, 215, 0, 0.1); }
+.highlight-card.answer .hl-icon { color: #4caf50; background: rgba(76, 175, 80, 0.1); }
+
+/* Container de Texto */
+.hl-info { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.4rem;
+  min-width: 0; /* Impede o texto de estourar o card */
+}
+
+.hl-label { 
+  font-size: 0.7rem; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  color: var(--text-tertiary); 
+  font-weight: 600;
+}
+
+.hl-title { 
+  font-size: 1rem; 
+  font-weight: 700; 
+  margin: 0; 
+  line-height: 1.4; 
+  color: var(--text-primary);
+  
+  /* Limita a 2 linhas para não quebrar o layout */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hl-user {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: auto; /* Empurra para baixo se sobrar espaço */
+}
+.hl-user strong { 
+  color: var(--accent-color); 
+  font-weight: 600;
+}
+
+/* --- CREATE TOPIC BOX --- */
+.create-topic-box {
+  background: var(--bg-secondary); border-radius: 12px; padding: 1rem;
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+.create-avatar { font-size: 2.5rem; color: var(--text-secondary); }
+.create-input-wrapper { flex: 1; display: flex; gap: 1rem; }
+.create-input-wrapper input {
+  flex: 1; background: var(--bg-primary); border: 1px solid var(--border-color);
+  padding: 0.8rem 1.2rem; border-radius: 8px; color: #fff; outline: none;
+}
+.create-input-wrapper input:focus { border-color: var(--accent-color); }
+.create-actions { display: flex; gap: 0.5rem; }
+.tag-btn { background: transparent; border: 1px dashed var(--text-secondary); color: var(--text-secondary); padding: 0 1rem; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+.publish-btn { background: var(--accent-color); color: #fff; border: none; padding: 0 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+.publish-btn:hover { background: var(--accent-hover); }
+
+/* --- MAIN GRID LAYOUT --- */
+.main-grid { display: flex; gap: 2rem; }
+.left-sidebar { width: 250px; flex-shrink: 0; }
+.topics-feed { flex: 1; min-width: 0; }
+.right-sidebar { width: 300px; flex-shrink: 0; }
+
+/* SIDEBARS */
+.sidebar-menu { margin-bottom: 2rem; }
+.sidebar-menu h3 { font-size: 0.9rem; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 1rem; padding-left: 10px;}
+.cat-btn, .filter-link {
+  display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
+  background: transparent; border: none; padding: 0.8rem 1rem; color: var(--text-secondary);
+  cursor: pointer; border-radius: 8px; transition: 0.2s; margin-bottom: 2px;
+}
+.cat-btn { border-left: 3px solid transparent; border-radius: 0 8px 8px 0; }
+.cat-btn:hover, .cat-btn.active { background: var(--bg-secondary); color: #fff; }
+.filter-link:hover, .filter-link.active { background: var(--bg-secondary); color: var(--accent-color); }
+
+/* TOPICS FEED */
+.feed-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.feed-header h2 { font-size: 1.8rem; }
+.feed-header span { color: var(--text-tertiary); }
+
+.topic-card {
+  display: flex; gap: 1.5rem; background: var(--bg-secondary);
+  border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem;
+  margin-bottom: 1.5rem; transition: 0.2s;
+}
+.topic-card:hover { border-color: var(--border-hover); transform: translateX(5px); }
+.topic-card.trending-glow { border-left: 4px solid #ffd700; }
+
+.vote-column { display: flex; flex-direction: column; align-items: center; gap: 5px; width: 40px; }
+.vote-column button { background: transparent; border: none; color: var(--text-tertiary); cursor: pointer; font-size: 1.2rem; transition: 0.2s; }
+.vote-column button:hover { color: var(--accent-color); transform: scale(1.2); }
+.vote-count { font-weight: 700; font-size: 1.1rem; }
+
+.topic-main { flex: 1; min-width: 0; }
+.topic-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+.topic-tags { display: flex; gap: 0.5rem; align-items: center; }
+.badge-status, .badge-trending {
+  font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; font-weight: 700; display: flex; align-items: center; gap: 5px;
+}
+.badge-trending { background: rgba(255, 215, 0, 0.1); color: #ffd700; border: 1px solid #ffd700; }
+.badge-status.solved { background: rgba(76, 175, 80, 0.1); color: #4caf50; }
+.badge-status.discussing { background: rgba(255, 193, 7, 0.1); color: #ffc107; }
+.badge-status.waiting { background: rgba(244, 67, 54, 0.1); color: #f44336; }
+
+.topic-title { font-size: 1.4rem; margin-bottom: 0.5rem; cursor: pointer; transition: color 0.2s; }
+.topic-title:hover { color: var(--accent-color); }
+.topic-preview { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5; }
+
+.topic-footer { display: flex; align-items: center; gap: 1.5rem; border-top: 1px solid var(--border-color); padding-top: 1rem; }
+.author-info { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 600; }
+.author-avatar { border-radius: 50%; }
+.topic-stats { display: flex; gap: 1rem; color: var(--text-tertiary); font-size: 0.9rem; }
+.topic-stats span { display: flex; align-items: center; gap: 5px; }
+
+.participants-stack { display: flex; align-items: center; margin-left: auto; }
+.p-avatar { border-radius: 50%; border: 2px solid var(--bg-secondary); margin-left: -8px; }
+.p-count { font-size: 0.8rem; margin-left: 5px; color: var(--text-tertiary); }
+
+.focus-btn {
+  background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary);
+  padding: 0.4rem 1rem; border-radius: 20px; cursor: pointer; display: flex; align-items: center; gap: 5px; font-size: 0.8rem; transition: 0.2s;
+}
+.focus-btn:hover { background: var(--bg-tertiary); color: #fff; }
+
+/* RIGHT SIDEBAR WIDGETS (Atualizado para as Regras) */
+.widget-card { 
+  background: var(--bg-secondary); 
+  border-radius: 12px; 
+  padding: 1.5rem; 
+  margin-bottom: 1.5rem; 
+  border: 1px solid var(--border-color); 
+}
+.widget-card h3 { 
+  font-size: 1rem; 
+  margin-bottom: 1.2rem; 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  text-transform: uppercase;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.8rem;
+}
+
+/* Lista de Links Recomendados */
+.rec-list { list-style: none; padding: 0; }
+.rec-list li { margin-bottom: 1.2rem; display: flex; flex-direction: column; }
+.rec-cat { font-size: 0.65rem; text-transform: uppercase; margin-bottom: 4px; display: inline-block; font-weight: 700; letter-spacing: 0.5px; }
+.cat-anime { color: #ff9800; } .cat-movie { color: #e50914; } .cat-tech { color: #00bcd4; }
+.rec-list a { color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.9rem; line-height: 1.4; transition: 0.2s; }
+.rec-list a:hover { color: var(--accent-color); }
+
+/* Lista de Regras (Novo) */
+.rules-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.rules-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+.rule-num {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: rgba(229, 9, 20, 0.1);
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* --- MODO FOCO (Overlay) --- */
+.focus-mode-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: var(--bg-primary); z-index: 2000;
+  overflow-y: auto; padding: 2rem;
+  animation: zoomIn 0.3s ease;
+}
+@keyframes zoomIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.focus-container { max-width: 900px; margin: 0 auto; }
+.close-focus-btn {
+  background: transparent; color: var(--text-secondary); border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; transition: 0.2s;
+}
+.close-focus-btn:hover { color: #fff; border-color: #fff; }
+
+.focus-content { background: var(--bg-secondary); border-radius: 16px; border: 1px solid var(--border-color); padding: 3rem; }
+.focus-header { border-bottom: 1px solid var(--border-color); padding-bottom: 2rem; margin-bottom: 2rem; }
+.topic-badges { display: flex; gap: 1rem; margin-bottom: 1rem; }
+.badge-type { background: var(--bg-tertiary); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
+.focus-header h1 { font-size: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+.focus-meta { display: flex; align-items: center; gap: 1rem; color: var(--text-secondary); }
+.avatar-small { border-radius: 50%; }
+
+.focus-body { font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: #ddd; }
+
+/* Debate Arena */
+.debate-arena {
+  display: flex; gap: 1px; background: var(--border-color); border-radius: 12px; overflow: hidden; margin-top: 2rem;
+}
+.debate-side { flex: 1; padding: 2rem; background: var(--bg-tertiary); text-align: center; }
+.side-a { background: linear-gradient(to bottom, rgba(76, 175, 80, 0.1), var(--bg-tertiary)); }
+.side-b { background: linear-gradient(to bottom, rgba(244, 67, 54, 0.1), var(--bg-tertiary)); }
+.debate-side h4 { text-transform: uppercase; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-secondary); }
+.debate-side p { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; }
+.debate-bar { background: rgba(0,0,0,0.3); height: 30px; border-radius: 15px; position: relative; overflow: hidden; margin-bottom: 1.5rem; }
+.debate-bar .fill { height: 100%; background: #fff; opacity: 0.2; }
+.debate-bar span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold; font-size: 0.8rem; }
+.debate-side button { padding: 0.8rem 2rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; opacity: 0.9; transition: 0.2s; }
+.debate-side button:hover { opacity: 1; transform: scale(1.05); }
+.side-a button { background: #4caf50; color: #fff; }
+.side-b button { background: #f44336; color: #fff; }
+.vs-divider { background: #000; color: #fff; font-weight: 900; padding: 1rem; display: flex; align-items: center; font-style: italic; }
+
+/* Focus Comments */
+.focus-comments-placeholder { 
+  background: var(--bg-tertiary); 
+  padding: 2rem; 
+  border-radius: 12px; 
+  margin-top: 2rem;
+}
+
+.focus-comments-placeholder h3 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+/* --- CORREÇÃO AQUI --- */
+.comment-box {
+  display: flex;          /* Transforma em Flexbox */
+  flex-direction: column; /* Empilha verticalmente (Texto em cima, botão embaixo) */
+  gap: 1rem;              /* Espaço entre o texto e o botão */
+  align-items: flex-end;  /* Alinha o botão à direita */
+}
+
+.comment-box textarea { 
+  width: 100%; 
+  background: var(--bg-primary); 
+  border: 1px solid var(--border-color); 
+  color: #fff; 
+  padding: 1rem; 
+  border-radius: 8px; 
+  min-height: 120px; 
+  resize: vertical; /* Permite o usuário aumentar a caixa se quiser */
+  font-family: inherit;
+}
+
+.comment-box textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.comment-box button { 
+  background: var(--accent-color); 
+  color: #fff; 
+  border: none; 
+  padding: 0.8rem 2rem; 
+  border-radius: 8px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: background 0.2s;
+  /* float: right; REMOVIDO - O Flexbox já cuida disso agora */
+}
+
+.comment-box button:hover {
+  background: var(--accent-hover);
+}
+/* Responsividade */
+@media (max-width: 1024px) {
+  /* ... (outros ajustes que já existiam) ... */
+  .main-grid { flex-direction: column; }
+  .left-sidebar, .right-sidebar { width: 100%; display: flex; gap: 1rem; overflow-x: auto; }
+  .sidebar-menu { min-width: 200px; }
+  .debate-arena { flex-direction: column; }
+  .vs-divider { justify-content: center; padding: 0.5rem; }
+
+  /* ADICIONE ESTA PARTE PARA OS DESTAQUES: */
+  .community-highlights {
+    grid-template-columns: 1fr; /* Volta para 1 coluna em telas menores */
+  }
+}
+
+/* --- CSS PARA O MODAL DE CRIAÇÃO --- */
+.create-modal-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8); z-index: 3000;
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeIn 0.2s;
+}
+
+.create-modal-content {
+  background: var(--bg-secondary);
+  width: 90%; max-width: 700px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  max-height: 90vh; overflow-y: auto;
+}
+
+.create-modal-header {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;
+}
+.create-modal-header h2 { font-size: 1.5rem; color: var(--text-primary); }
+.create-modal-header button { background: none; border: none; color: var(--text-tertiary); font-size: 1.5rem; cursor: pointer; }
+.create-modal-header button:hover { color: var(--accent-color); }
+
+.create-form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-group label { font-size: 0.9rem; font-weight: 700; color: var(--text-secondary); }
+.form-group input, .form-group textarea, .form-group select {
+  background: var(--bg-tertiary); border: 1px solid var(--border-color);
+  border-radius: 8px; padding: 0.8rem; color: var(--text-primary); font-size: 1rem;
+  outline: none;
+}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--accent-color); }
+
+/* Type Selector (Botões de Tipo) */
+.type-selector { display: flex; gap: 1rem; background: var(--bg-tertiary); padding: 0.5rem; border-radius: 12px; border: 1px solid var(--border-color); }
+.type-btn {
+  flex: 1; background: transparent; border: none; color: var(--text-secondary);
+  padding: 0.8rem; border-radius: 8px; font-weight: 600; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  transition: 0.2s;
+}
+.type-btn:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+.type-btn.active { background: var(--accent-color); color: #fff; }
+
+/* Debate Inputs */
+.debate-inputs {
+  display: flex; gap: 1rem; align-items: flex-end;
+  background: rgba(76, 175, 80, 0.1); border: 1px solid #4caf50;
+  padding: 1rem; border-radius: 8px;
+}
+.debate-inputs .form-group { flex: 1; }
+.vs-badge {
+  font-weight: 900; font-style: italic; color: #fff; margin-bottom: 1rem;
+}
+
+.form-footer { display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem; }
+.cancel-btn { background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary); padding: 0.8rem 1.5rem; border-radius: 8px; cursor: pointer; }
+.submit-btn { background: var(--accent-color); border: none; color: #fff; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 700; cursor: pointer; }
+.submit-btn:hover { background: var(--accent-hover); }
+
+/* --- SPOILER STYLES --- */
+.badge-spoiler {
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+  border: 1px solid #f44336;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: flex; align-items: center; gap: 5px;
+}
+
+.spoiler-hidden {
+  filter: blur(6px);
+  user-select: none;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  background-color: #333; /* Fundo escuro para esconder melhor */
+  color: transparent; /* Texto transparente */
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  border-radius: 4px;
+  padding: 0 5px;
+}
+
+.spoiler-hidden:hover {
+  filter: blur(4px); /* Leve melhora no hover */
+}
+
+/* Ao clicar (quando abre o modal), o título já estará normal pois não tem essa classe */
+
+
+/* --- TAG INPUT STYLES (MODAL) --- */
+.tag-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.tag-input-container input {
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  flex: 1;
+  min-width: 150px;
+  outline: none;
+}
+
+.tag-chip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-color);
+  color: var(--text-primary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tag-chip svg {
+  cursor: pointer;
+  color: var(--text-tertiary);
+  font-size: 0.8rem;
+}
+.tag-chip svg:hover { color: var(--accent-color); }
+
+.add-tag-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+
+/* --- FOCUS MODE CLOSE BUTTON (UPDATED) --- */
+.focus-top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.close-focus-btn {
+  background: #333; /* Botão sólido para destaque */
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.close-focus-btn:hover {
+  background: var(--accent-color);
+}
+
+/* Tags no Modal de Foco */
+.modal-tag {
+  background: #333;
+  color: #ccc;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: monospace;
+}
+
+/* --- CUSTOM ERROR MESSAGES --- */
+.input-error {
+  border-color: #f44336 !important;
+  background-color: rgba(244, 67, 54, 0.05) !important;
+}
+
+.error-msg {
+  color: #f44336;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  animation: fadeIn 0.2s ease;
+}
+
+/* --- TAG INPUT (Visual Atualizado) --- */
+.tag-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.tag-input-container input {
+  border: none !important; /* Remove borda interna do input */
+  background: transparent !important;
+  padding: 0.5rem;
+  flex: 1;
+  min-width: 150px;
+}
+
+.tag-chip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-color);
+  color: var(--text-primary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tag-chip svg {
+  cursor: pointer;
+  color: var(--text-tertiary);
+  font-size: 0.8rem;
+  transition: 0.2s;
+}
+.tag-chip svg:hover { color: #f44336; }
+
+.add-tag-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Spoiler Styles */
+.spoiler-hidden {
+  filter: blur(6px);
+  user-select: none;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  background-color: #333;
+  color: transparent;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  border-radius: 4px;
+  padding: 0 5px;
+}
+.spoiler-hidden:hover {
+  filter: blur(4px);
+}
+.badge-spoiler {
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+  border: 1px solid #f44336;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: flex; align-items: center; gap: 5px;
+}
+
+/* --- SPOILER MASK (No lugar do título) --- */
+.spoiler-mask-title {
+  background-color: #222;
+  color: #888;
+  border: 1px dashed #444;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.spoiler-mask-title:hover {
+  background-color: #2a2a2a;
+  border-color: var(--accent-color);
+  color: #fff;
+}

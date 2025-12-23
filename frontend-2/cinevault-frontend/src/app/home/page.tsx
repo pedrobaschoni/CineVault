@@ -21,6 +21,8 @@ import '../../styles/ranking.css';
 import ImdbCarousel from '../../components/ImdbCarousel'; // (Verifique o caminho)
 import '../../styles/imdb-carousel.css'; // (Verifique o caminho)
 import '../../styles/back-to-top.css';
+import RandomDiscovery from 'components/RandomDiscovery';
+import ActiveDebates from 'components/ActiveDebates';
 
 // Componente do Carrossel (Últimas Atualizações / Em Destaques)
 
@@ -284,71 +286,12 @@ const HomePage = () => {
             </div>
           </section>
 
-          {/* --- 4. Top Avaliados da Semana --- */}
-        <section className="home-section">
-          <h2 className="section-title">Top Avaliados da Semana</h2>
-          <div className="top-rated-container">
-            {/* Bloco 1 (Filmes) */}
-            <div className="top-rated-list">
-              <h3 className="subsection-title">Top 5 Filmes</h3>
-              {topRatedWeek.filmes.map(item => (
-                <div className="top-rated-item" key={item.id}>
-                  <span className="top-rated-pos">{item.pos}</span>
-                  <Image src={item.posterUrl} alt={item.title} width={40} height={60} unoptimized />
-                  <span className="top-rated-title">{item.title}</span>
-                </div>
-              ))}
-            </div>
-            {/* Bloco 2 (Séries) */}
-            <div className="top-rated-list">
-              <h3 className="subsection-title">Top 5 Séries</h3>
-              {topRatedWeek.series.map(item => (
-                <div className="top-rated-item" key={item.id}>
-                  <span className="top-rated-pos">{item.pos}</span>
-                  <Image src={item.posterUrl} alt={item.title} width={40} height={60} unoptimized />
-                  <span className="top-rated-title">{item.title}</span>
-                </div>
-              ))}
-            </div>
-            {/* Bloco 3 (Animes) */}
-            <div className="top-rated-list">
-              <h3 className="subsection-title">Top 5 Animes</h3>
-              {topRatedWeek.animes.map(item => (
-                <div className="top-rated-item" key={item.id}>
-                  <span className="top-rated-pos">{item.pos}</span>
-                  <Image src={item.posterUrl} alt={item.title} width={40} height={60} unoptimized />
-                  <span className="top-rated-title">{item.title}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* --- BLOCOS ADICIONADOS --- */}
-            <div className="top-rated-list">
-              <h3 className="subsection-title">Top 5 Docs</h3>
-              {topRatedWeek.documentarios.map(item => (
-                <div className="top-rated-item" key={item.id}>
-                  <span className="top-rated-pos">{item.pos}</span>
-                  <Image src={item.posterUrl} alt={item.title} width={40} height={60} unoptimized />
-                  <span className="top-rated-title">{item.title}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="top-rated-list">
-              <h3 className="subsection-title">Top 5 Animações</h3>
-              {topRatedWeek.animacoes.map(item => (
-                <div className="top-rated-item" key={item.id}>
-                  <span className="top-rated-pos">{item.pos}</span>
-                  <Image src={item.posterUrl} alt={item.title} width={40} height={60} unoptimized />
-                  <span className="top-rated-title">{item.title}</span>
-                </div>
-              ))}
-            </div>
-            {/* --- FIM DOS BLOCOS ADICIONADOS --- */}
-
-          </div>
-        </section>
+          {/* --- 4. NOVAS SEÇÕES (Substituindo Top Avaliados) --- */}
+          <RandomDiscovery />
+          {/* -------------------------------------------------- */}
           
+
+                   
           {/* --- 5. Recomendações do Dia --- */}
           <section className="home-section">
             <h2 className="section-title">Recomendações do Dia</h2>
@@ -378,6 +321,8 @@ const HomePage = () => {
               ))}
             </div>
           </section>
+
+          <ActiveDebates />
 
           {/* --- 7. Roda de Reações --- */}
           <section className="home-section">

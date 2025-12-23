@@ -1,0 +1,634 @@
+/* src/styles/ranked-users.css */
+
+.ranked-users-layout {
+  background-color: #141414;
+  color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  padding-bottom: 4rem;
+}
+
+.ranked-users-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Header --- */
+.ru-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInDown 0.6s ease;
+}
+.ru-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #fff, #aaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ru-header p {
+  color: #999;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Featured Grid (Topo) --- */
+.ru-featured-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  width: 100%; /* Correção de layout */
+}
+
+/* User Month Card */
+.ru-user-month-card {
+  background: linear-gradient(135deg, #1f1f1f 0%, #141414 100%);
+  border: 1px solid #e50914;
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(229, 9, 20, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.ru-um-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #e50914;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+}
+
+.ru-um-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ru-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+.ru-um-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #e50914;
+  object-fit: cover;
+}
+.ru-um-level {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #ffd700;
+  color: #000;
+  font-weight: 900;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #1f1f1f;
+}
+
+.ru-um-info { flex: 1; min-width: 0; } 
+.ru-um-info h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.ru-um-info h2 span {
+  font-size: 1rem;
+  color: #999;
+  font-weight: 400;
+  display: block;
+  margin-top: 4px;
+}
+.ru-um-role {
+  color: #ffd700;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.ru-um-bio {
+  font-style: italic;
+  color: #666;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.ru-xp-container { margin-bottom: 1.5rem; }
+.ru-xp-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.ru-xp-track {
+  width: 100%;
+  height: 8px;
+  background: #2a2a2a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ru-xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e50914, #ff5555);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.ru-um-stats {
+  display: flex;
+  gap: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+.ru-um-stats div { display: flex; flexDirection: column; }
+.ru-um-stats strong { fontSize: 1.2rem; }
+.ru-um-stats span { fontSize: 0.75rem; color: #999; text-transform: uppercase; }
+
+/* Side Column (Topo Direita) */
+.ru-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0; /* Previne overflow */
+}
+
+.ru-hall-card {
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #333;
+}
+.ru-hall-card h3 {
+  fontSize: 1.1rem;
+  marginBottom: 1rem;
+  display: flex;
+  alignItems: center;
+  gap: 0.5rem;
+  textTransform: uppercase;
+}
+.ru-hall-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+.ru-record-item {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 3px solid;
+  transition: transform 0.2s;
+}
+.ru-record-item:hover { transform: translateY(-5px); }
+.ru-record-item span:first-of-type {
+  display: block;
+  font-size: 0.7rem;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.ru-record-item strong {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ru-feed-card {
+  background: #2a2a2a;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #333;
+}
+.ru-feed-card h4 {
+  font-size: 0.9rem;
+  color: #e50914;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ru-feed-list { display: flex; flexDirection: column; gap: 0.8rem; }
+.ru-feed-item {
+  font-size: 0.85rem;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ru-feed-item span:first-child { color: #ffd700; flex-shrink: 0; }
+.ru-feed-item strong { color: #fff; }
+
+
+/* --- Main Area (Ranking + Sidebar Direita) --- */
+.ru-main-area {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap; /* IMPORTANTE: Permite quebrar para baixo */
+}
+
+/* Coluna da Lista de Ranking (Esquerda) */
+.ru-leaderboard-col {
+  flex: 1; 
+  min-width: 300px; /* Largura mínima para não esmagar */
+  width: 100%;
+}
+
+/* Coluna da Sidebar (Direita - Rising Stars) */
+.ru-sidebar-col {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+/* Filters */
+.ru-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ru-filter-btn {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #999;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.ru-filter-btn.active, .ru-filter-btn:hover {
+  background: #e50914;
+  border-color: #e50914;
+  color: #fff;
+}
+.ru-search {
+  margin-left: auto;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-grow: 1;
+  max-width: 300px;
+}
+.ru-search input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: 100%;
+}
+
+/* Rank List */
+.ru-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ru-rank-row {
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid #333;
+  transition: 0.2s;
+  flex-wrap: wrap;
+  position: relative; /* Necessário para o z-index do tooltip */
+}
+.ru-rank-row:hover {
+  border-color: #e50914;
+  transform: scale(1.01);
+  background: #252525;
+  z-index: 2;
+}
+
+.ru-pos {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #666;
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.ru-pos .gold { color: #ffd700; }
+.ru-pos .silver { color: #c0c0c0; }
+.ru-pos .bronze { color: #cd7f32; }
+
+/* --- CÉLULA DO USUÁRIO & TOOLTIP --- */
+.ru-user-cell {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 200px;
+}
+
+/* Container do Avatar para Hover */
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.ru-list-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+  transition: border 0.2s;
+}
+.tooltip-container:hover .ru-list-avatar {
+  border-color: #e50914;
+}
+
+/* O TOOLTIP SOCIAL */
+.social-tooltip {
+  position: absolute;
+  bottom: 120%; /* Fica acima do avatar */
+  left: 0;
+  width: 240px;
+  background-color: rgba(20, 20, 20, 0.98);
+  backdrop-filter: blur(12px);
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 1.2rem;
+  z-index: 999;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  
+  /* Animação de entrada */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.tooltip-container:hover .social-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Conteúdo do Tooltip */
+.tooltip-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 0.8rem; }
+.tooltip-avatar-mini { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+.tooltip-name { display: block; font-size: 1rem; color: #fff; }
+.tooltip-lvl { font-size: 0.75rem; color: #ffd700; font-weight: 700; text-transform: uppercase; }
+
+.tooltip-stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem; text-align: center; }
+.ts-item span { display: block; font-size: 0.65rem; color: #999; text-transform: uppercase; margin-bottom: 2px; }
+.ts-item strong { display: block; font-size: 0.9rem; color: #fff; }
+.rank-s { color: #a335ee; text-shadow: 0 0 8px #a335ee; }
+
+.tooltip-badges { display: flex; gap: 5px; justify-content: center; }
+
+/* Textos e Links */
+.ru-user-text { display: flex; flex-direction: column; }
+.ru-name-link { text-decoration: none; color: inherit; transition: color 0.2s; }
+.ru-name-link:hover h4 { color: #e50914; text-decoration: underline; }
+
+.ru-user-cell h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+.verified { color: #1da1f2; font-size: 0.9rem; }
+.ru-tag {
+  font-size: 0.8rem;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #141414;
+  padding: 2px 8px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.ru-xp-cell {
+  width: 150px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+.ru-xp-cell small { color: #999; }
+.ru-xp-mini-track {
+  width: 100%;
+  height: 6px;
+  background: #141414;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.ru-xp-mini-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #e50914, #ff5555);
+  border-radius: 3px;
+}
+
+.ru-badges-cell {
+  display: flex;
+  gap: 0.3rem;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+.ru-mini-badge {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.ru-mini-badge.gold { background: #ffd700; box-shadow: 0 0 5px #ffd700; }
+.ru-mini-badge.silver { background: #c0c0c0; }
+.ru-mini-badge.mod { background: #4caf50; }
+.ru-mini-badge.art { background: #e91e63; }
+
+/* Sidebar Right Cards */
+.ru-sidebar-card {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.ru-sidebar-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ru-sidebar-card p {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+.ru-rising-list { display: flex; flex-direction: column; gap: 1rem; }
+.ru-rising-item { display: flex; align-items: center; gap: 0.8rem; }
+.ru-rising-item img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.ru-rising-info { flex: 1; min-width: 0; }
+.ru-rising-info strong { display: block; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ru-growth { font-size: 0.8rem; color: #4caf50; display: flex; align-items: center; gap: 3px; }
+.ru-mini-graph { display: flex; gap: 2px; align-items: flex-end; height: 20px; }
+.ru-mini-graph span { width: 4px; background: #e50914; border-radius: 2px; }
+
+.ru-pro-card {
+  text-align: center;
+  border: 1px solid #ffd700;
+  background: linear-gradient(to bottom, #1f1f1f, #1a1a00);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.ru-pro-card h3 span { background: #ffd700; color: #000; padding: 0 4px; border-radius: 2px; margin-left: 5px; }
+.ru-pro-card p { font-size: 0.85rem; color: #999; margin-bottom: 1.5rem; }
+.ru-pro-card button {
+  background: #ffd700; color: #000; border: none; padding: 0.6rem 1.2rem;
+  font-weight: 700; border-radius: 20px; cursor: pointer; width: 100%; transition: 0.2s;
+}
+.ru-pro-card button:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVIDADE CORRIGIDA (Layout Collapse Fix) --- */
+
+@media (max-width: 1024px) {
+  /* Força o Grid de cima a empilhar */
+  .ru-featured-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* Força área principal a empilhar */
+  .ru-main-area {
+    flex-direction: column;
+  }
+  
+  .ru-sidebar-col {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Sidebar lado a lado no tablet */
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ru-header h1 { font-size: 2rem; }
+
+  /* Filtros empilham */
+  .ru-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ru-search {
+    margin-left: 0;
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Sidebar volta a ser coluna única */
+  .ru-sidebar-col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Hall of Fame vira coluna */
+  .ru-hall-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Linha do Ranking vira card vertical */
+  .ru-rank-row {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .ru-pos {
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 0.5rem;
+  }
+  .ru-user-cell {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .ru-xp-cell {
+    width: 100%;
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+  }
+  .ru-badges-cell {
+    margin-top: 0.5rem;
+  }
+  
+  /* Ajustes no Usuário do Mês */
+  .ru-um-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ru-um-label {
+    align-self: center;
+  }
+  .ru-um-stats {
+    justify-content: center;
+  }
+}
