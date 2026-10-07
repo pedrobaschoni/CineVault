@@ -1,0 +1,34 @@
+.rating { display: inline-flex; align-items: center; gap: var(--space-3); }
+.seals { display: inline-flex; gap: 6px; }
+
+.on { fill: var(--color-accent); }
+.ring { fill: none; stroke: var(--cv-po-escuro); stroke-width: 1.6; }
+
+.value {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  min-width: 2.25rem;
+}
+
+/* RatingInput */
+.input { display: inline-flex; align-items: center; gap: var(--space-4); }
+.label { font-weight: 600; color: var(--color-text-2); }
+.field { position: relative; display: inline-flex; }
+
+/* O range fica invisível por cima dos selos e recebe os cliques e o teclado. */
+.range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.field:has(.range:focus-visible) {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}

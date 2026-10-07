@@ -1,0 +1,11 @@
+.tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-tag);
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.muted { color: var(--color-text-muted); }
+.accent { color: var(--color-accent); }
+.hot { color: var(--color-hot); }

@@ -1,0 +1,46 @@
+.poster {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid rgb(238 232 220 / 0.08);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.lg { border-radius: 12px; box-shadow: var(--shadow-poster); }
+
+.img { object-fit: cover; }
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-tag);
+  text-transform: uppercase;
+  color: rgb(238 232 220 / 0.75);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  font-size: 1.375rem;
+}
+
+/* Miniaturas: só a cor (o nome do título já aparece ao lado). */
+.sm .title,
+.sm .meta { display: none; }
+.sm { border-radius: var(--radius-sm); }
+
+.lg .placeholder { padding: 18px; }
+.lg .title { font-size: 2.75rem; line-height: 1; }
