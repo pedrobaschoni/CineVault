@@ -1,0 +1,141 @@
+.page { display: flex; flex-direction: column; gap: var(--space-16); padding-top: var(--space-12); }
+
+/* ---------- Topo ---------- */
+
+.hero { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: var(--space-12); align-items: center; }
+
+.photo {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--cv-po-escuro);
+  animation: photo-in 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.photo img { object-fit: cover; }
+
+@keyframes photo-in { from { opacity: 0; transform: scale(0.96); } }
+
+.heroText { display: flex; flex-direction: column; gap: var(--space-4); min-width: 0; }
+
+.department { color: var(--color-accent); font-weight: 600; }
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.born { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-muted); }
+
+.bio { color: var(--color-text-2); font-size: 1.0625rem; line-height: 1.7; max-width: 46rem; display: flex; flex-direction: column; gap: var(--space-3); }
+.bio summary { list-style: none; cursor: pointer; display: flex; flex-direction: column; gap: var(--space-2); }
+.bio summary::-webkit-details-marker { display: none; }
+.bioPreview {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.bio[open] .bioPreview { display: block; }
+.bioToggle { color: var(--color-accent); font-weight: 600; font-size: var(--text-sm); }
+.bio[open] .bioToggle { display: none; }
+
+.h2 { font-family: var(--font-display); font-size: var(--text-2xl); margin-bottom: var(--space-5); }
+
+.knownFor { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-5); }
+
+/* ---------- Filmografia ---------- */
+
+.split { display: grid; grid-template-columns: minmax(0, 1fr) 20rem; gap: var(--space-12); align-items: start; }
+
+.filmHead { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-3); }
+.filmHead .h2 { margin-bottom: 0; }
+.roleFilter { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+.years { list-style: none; margin: 0; padding: 0; }
+
+.yearRow { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: var(--space-2); }
+
+.year {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-accent);
+  padding-top: var(--space-4);
+}
+
+.yearItems { list-style: none; margin: 0; padding: 0; }
+
+.credit {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.credit:hover .creditTitle { color: var(--color-accent); }
+
+.creditText { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.creditTitle { font-weight: 600; transition: color var(--dur) var(--ease); }
+.creditRole { font-size: 0.8125rem; color: var(--color-text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.creditJobs { font-size: 0.8125rem; color: var(--color-text-2); white-space: nowrap; }
+.creditScore { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-accent); min-width: 2rem; text-align: right; }
+
+.more {
+  margin-top: var(--space-5);
+  height: 2.5rem;
+  padding-inline: var(--space-5);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-strong);
+  background: transparent;
+  font-weight: 600;
+}
+.more:hover { border-color: var(--color-text-muted); }
+
+.numbers {
+  position: sticky;
+  top: calc(var(--header-h) + var(--space-6));
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.numbers dl { margin: 0; display: flex; flex-direction: column; }
+.numbers dl > div { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-4); padding-block: var(--space-3); border-bottom: 1px solid var(--color-border); }
+.numbers dl > div:last-child { border-bottom: 0; }
+.numbers dt { color: var(--color-text-2); font-size: var(--text-sm); }
+.numbers dd { margin: 0; font-weight: 700; text-align: right; }
+.big { font-family: var(--font-display); font-size: 1.75rem; font-weight: 600 !important; }
+
+@media (max-width: 1100px) {
+  .knownFor { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .knownFor > :nth-child(n + 5) { display: none; }
+  .split { grid-template-columns: 1fr; }
+  .numbers { position: static; order: -1; }
+}
+
+@media (max-width: 680px) {
+  .hero { grid-template-columns: 1fr; gap: var(--space-6); }
+  .photo { width: 10rem; }
+  .knownFor { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .knownFor > :nth-child(n + 5) { display: flex; }
+  .yearRow { grid-template-columns: 1fr; }
+  .year { padding-top: var(--space-6); }
+  .creditJobs { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo { animation: none; }
+}

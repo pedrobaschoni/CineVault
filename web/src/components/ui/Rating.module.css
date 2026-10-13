@@ -27,6 +27,48 @@
   cursor: pointer;
 }
 
+.input { flex-wrap: wrap; row-gap: var(--space-2); }
+
+.sealWrap, .stamp { display: inline-flex; position: relative; }
+
+/* O selo escolhido carimba: desce, achata e solta um anel de latão. */
+.stamp { animation: stamp 420ms cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.stamp::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  animation: stamp-ring 520ms ease-out both;
+  pointer-events: none;
+}
+
+@keyframes stamp {
+  0% { transform: scale(1.45); }
+  55% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+@keyframes stamp-ring {
+  from { opacity: 0.9; transform: scale(0.8); }
+  to { opacity: 0; transform: scale(1.7); }
+}
+
+.word { font-size: var(--text-sm); color: var(--color-text-2); font-weight: 600; min-width: 6.5rem; }
+
+.clear {
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  text-decoration: underline;
+  padding: 0;
+}
+.clear:hover { color: var(--color-text); }
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp, .stamp::after { animation: none; }
+}
+
 .field:has(.range:focus-visible) {
   outline: 2px solid var(--color-focus);
   outline-offset: 4px;

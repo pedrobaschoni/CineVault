@@ -1,0 +1,39 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding-block: var(--space-16);
+  /* Só aparece se o carregamento passar de um instante; evita piscar em navegações rápidas. */
+  animation: appear 200ms ease-out 250ms both;
+}
+
+.svg { overflow: visible; }
+.rim { fill: none; stroke: var(--color-border-strong); stroke-width: 1.5; }
+.ring { fill: none; stroke: var(--color-border); stroke-width: 1; }
+.tick { stroke: var(--cv-po-escuro); stroke-width: 1.5; }
+.tickMajor { stroke: var(--color-accent); stroke-width: 2; }
+.hub { fill: var(--color-surface-2); stroke: var(--color-accent); stroke-width: 1.5; }
+.index { fill: var(--color-accent); }
+
+.wheel {
+  transform-origin: 44px 44px;
+  animation: combination 2.6s infinite;
+}
+
+/* Direita, esquerda, direita: a combinação. Cada trecho anda em cliques. */
+@keyframes combination {
+  0% { transform: rotate(0deg); animation-timing-function: steps(10, end); }
+  30% { transform: rotate(150deg); animation-timing-function: steps(14, end); }
+  62% { transform: rotate(-60deg); animation-timing-function: steps(6, end); }
+  84% { transform: rotate(30deg); animation-timing-function: ease-out; }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes appear { from { opacity: 0; } }
+
+.label { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .wheel { animation: none; }
+}

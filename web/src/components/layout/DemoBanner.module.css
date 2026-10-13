@@ -1,0 +1,15 @@
+.banner {
+  margin: 0;
+  padding: var(--space-2) var(--gutter);
+  background: color-mix(in srgb, var(--color-accent) 14%, var(--color-bg));
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
+  color: var(--color-text-2);
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+.banner code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+}

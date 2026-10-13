@@ -1,0 +1,256 @@
+.page { display: flex; flex-direction: column; gap: var(--space-16); padding-top: var(--space-12); }
+
+/* ---------- Topo ---------- */
+
+.header { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--space-8); flex-wrap: wrap; }
+
+.h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.lead { margin-top: var(--space-3); color: var(--color-text-2); font-size: var(--text-lg); max-width: 40rem; }
+
+.listHeader { display: flex; flex-direction: column; gap: var(--space-2); }
+
+.back { font-weight: 600; font-size: var(--text-sm); text-decoration: none; }
+.back::before { content: '‹ '; }
+
+/* Surpreenda-me: o mostrador gira quando o mouse passa, como quem tenta a sorte. */
+.surprise {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  height: 3.5rem;
+  padding-inline: 1.625rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.surprise:hover { background: var(--color-accent); color: var(--color-on-accent); }
+.surpriseDial { display: inline-flex; transition: transform 700ms steps(9, end); }
+.surprise:hover .surpriseDial { transform: rotate(270deg); }
+
+/* ---------- Listas do cofre ---------- */
+
+.lists { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); }
+
+.listCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: border-color var(--dur) var(--ease);
+}
+.listCard:hover { border-color: var(--color-border-strong); color: var(--color-text); }
+
+/* Três pôsteres em leque; ao passar o mouse, o leque abre. */
+.fan { position: relative; height: 9.5rem; margin-bottom: var(--space-3); }
+
+.fanItem {
+  position: absolute;
+  top: 0;
+  left: calc(var(--j) * 3.25rem);
+  width: 5.75rem;
+  rotate: calc((var(--j) - 1) * 6.5deg);
+  transform-origin: 50% 110%;
+  transition: rotate 380ms cubic-bezier(0.2, 0.7, 0.2, 1), translate 380ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.4);
+  border-radius: var(--radius-sm);
+}
+.listCard:hover .fanItem {
+  rotate: calc((var(--j) - 1) * 13deg);
+  translate: calc((var(--j) - 1) * 0.75rem) -0.25rem;
+}
+
+.listName { font-weight: 700; font-size: 1.0625rem; }
+.listDesc { color: var(--color-text-muted); font-size: var(--text-sm); line-height: 1.5; }
+
+/* ---------- Lançamentos ---------- */
+
+.releases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-10); }
+
+.releaseList { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+
+/* Só uma das colunas tem conteúdo: ela ocupa a largura toda, com a lista em duas colunas. */
+.releases:has(> :only-child) { grid-template-columns: 1fr; }
+.releases:has(> :only-child) .releaseList { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.release {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.release:hover { border-color: var(--color-border-strong); color: var(--color-text); }
+
+.releaseThumb { width: 3.25rem; flex-shrink: 0; }
+.releaseText { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.releaseTitle { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.releaseNote { font-size: 0.8125rem; color: var(--color-text-muted); }
+
+/* ---------- Catálogo ---------- */
+
+.catalog { display: flex; flex-direction: column; gap: var(--space-5); scroll-margin-top: calc(var(--header-h) + var(--space-4)); }
+
+.h2 { font-family: var(--font-display); font-size: var(--text-2xl); }
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: opacity var(--dur) var(--ease);
+}
+.filters[aria-busy='true'] { opacity: 0.7; }
+
+.filterRow { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+
+.types, .selects { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+.select, .sort {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.select select, .sort select {
+  appearance: none;
+  height: 2.5rem;
+  padding: 0 2.25rem 0 0.875rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+.select select:hover, .sort select:hover { border-color: var(--color-border-strong); }
+.select > svg, .sort > svg { position: absolute; right: 0.75rem; pointer-events: none; color: var(--color-text-muted); }
+
+.selectOn select { border-color: var(--color-accent); color: var(--color-accent); }
+
+.sort select { background: transparent; }
+
+.check { display: inline-flex; align-items: center; gap: var(--space-3); font-size: var(--text-sm); font-weight: 600; color: var(--color-text-2); cursor: pointer; }
+.check input { width: 1.125rem; height: 1.125rem; accent-color: var(--color-accent); }
+
+.activeRow { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+
+.activeChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 1.875rem;
+  padding-inline: 0.75rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-strong);
+  background: transparent;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.activeChip:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+.clear { margin-left: var(--space-2); font-size: 0.8125rem; font-weight: 600; }
+.count { margin-left: auto; font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-text-muted); }
+
+.grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--space-8) var(--space-5); }
+
+/* Itens que chegam pelo "Carregar mais" entram em sequência curta: resposta a um clique. */
+.appear { animation: appear 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 30ms); }
+@keyframes appear { from { opacity: 0; transform: translateY(10px); } }
+
+.more { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); padding-top: var(--space-6); }
+.error { color: var(--color-hot); font-size: var(--text-sm); }
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-10);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+}
+.emptyTitle { font-family: var(--font-display); font-size: var(--text-xl); }
+.emptyText { color: var(--color-text-2); }
+.emptyLink { font-weight: 600; }
+.emptyLinks { display: flex; gap: var(--space-5); font-weight: 600; }
+
+/* ---------- Pessoas (busca) ---------- */
+
+.people { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+
+.personCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.personCard:hover { border-color: var(--color-border-strong); color: var(--color-text); }
+
+.personPhoto {
+  position: relative;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-2);
+  font-family: var(--font-display);
+  color: var(--color-text-2);
+}
+.personPhoto img { object-fit: cover; }
+.personName { display: block; font-weight: 700; }
+.personMeta { display: block; font-size: 0.8125rem; color: var(--color-text-muted); }
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .lists { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .releases { grid-template-columns: 1fr; }
+  .people { grid-template-columns: 1fr; }
+  .filterRow { align-items: flex-start; }
+}
+
+@media (max-width: 560px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6) var(--space-4); }
+  .lists { grid-template-columns: 1fr; }
+  .surprise { width: 100%; justify-content: center; }
+  .count { margin-left: 0; width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .appear { animation: none; }
+  .fanItem, .surpriseDial { transition: none; }
+}

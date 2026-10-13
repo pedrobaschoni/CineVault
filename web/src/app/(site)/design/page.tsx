@@ -96,8 +96,8 @@ export default function DesignPage() {
         <div className={styles.media}>
           <Poster title="Arcane" meta="Série · 2021" color="#3a2b47" size="lg" width="14rem" />
           <div className={styles.cards}>
-            <PosterCard href="/titulo/anime/frieren" title="Frieren" type="anime" year={2023} score={9.3} color="#2c3f45" />
-            <PosterCard href="/titulo/filme/duna-2" title="Duna: Parte Dois" type="filme" year={2024} score={8.9} color="#4a3622" />
+            <PosterCard item={{ id: 209867, kind: 'tv', type: 'anime', title: 'Frieren', year: 2023, score: 8.8, genreIds: [16], href: '/titulo/anime/209867-frieren-e-a-jornada-para-o-alem' }} />
+            <PosterCard item={{ id: 693134, kind: 'movie', type: 'filme', title: 'Duna: Parte Dois', year: 2024, score: 8.1, genreIds: [878], href: '/titulo/filme/693134-duna-parte-dois' }} />
           </div>
           <div className={styles.stubs}>
             <TicketStub date="2026-10-05" title="Vidas Passadas" meta="Filme · 2023 · primeira vez" rating={4.5} />

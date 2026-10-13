@@ -1,0 +1,12 @@
+.page { padding-top: var(--space-12); max-width: calc(56rem + 2 * var(--gutter)); }
+
+.header { margin-bottom: var(--space-8); }
+
+.h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.lead { margin-top: var(--space-3); color: var(--color-text-2); font-size: var(--text-lg); }

@@ -1,0 +1,7 @@
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+/* Estado ativo (já na lista / favoritado). Seletor duplo para vencer o estilo base do botão. */
+.on.on { border-color: var(--color-accent); color: var(--color-accent); background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+
+/* Coração preenchido quando favoritado. */
+.heart svg { fill: currentColor; }

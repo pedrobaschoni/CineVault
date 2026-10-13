@@ -1,28 +1,24 @@
 import Link from 'next/link';
 import { formatRating, MEDIA_LABEL } from '@/lib/format';
-import type { MediaType } from '@/types';
+import type { TitleSummary } from '@/types';
 import { Poster } from './Poster';
 import styles from './PosterCard.module.css';
 
 interface PosterCardProps {
-  href: string;
-  title: string;
-  type: MediaType;
-  year: number;
-  /** Nota da comunidade, de 0 a 10. */
-  score?: number;
-  posterUrl?: string;
-  color?: string;
+  item: TitleSummary;
+  sizes?: string;
+  priority?: boolean;
 }
 
 /** Pôster + título + nota. É o card usado em todas as grades do site. */
-export function PosterCard({ href, title, type, year, score, posterUrl, color }: PosterCardProps) {
+export function PosterCard({ item, sizes = '(max-width: 560px) 45vw, (max-width: 1100px) 22vw, 200px', priority }: PosterCardProps) {
+  const meta = [MEDIA_LABEL[item.type], item.year].filter(Boolean).join(' · ');
   return (
-    <Link href={href} className={styles.card}>
-      <Poster title={title} src={posterUrl} color={color} meta={`${MEDIA_LABEL[type]} · ${year}`} />
+    <Link href={item.href} className={styles.card}>
+      <Poster title={item.title} src={item.posterUrl} seed={item.id} meta={meta} sizes={sizes} priority={priority} />
       <span className={styles.row}>
-        <span className={styles.title}>{title}</span>
-        {score !== undefined && <span className={styles.score}>{formatRating(score)}</span>}
+        <span className={styles.title}>{item.title}</span>
+        {item.score !== undefined && item.score > 0 && <span className={styles.score}>{formatRating(item.score)}</span>}
       </span>
     </Link>
   );

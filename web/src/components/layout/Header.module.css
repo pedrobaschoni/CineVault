@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgb(13 14 18 / 0.88);
-  backdrop-filter: blur(12px);
+  /* Fundo quase opaco em vez de desfoque: backdrop-filter sobre imagens grandes pesa na rolagem. */
+  background: rgb(13 14 18 / 0.97);
   border-bottom: 1px solid var(--color-border);
 }
 

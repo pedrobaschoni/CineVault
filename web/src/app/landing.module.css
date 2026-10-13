@@ -55,6 +55,21 @@
   box-shadow: 0 20px 40px rgb(0 0 0 / 0.45);
 }
 
+/* Entrada da landing: os pôsteres chegam um a um, como cartões tirados do cofre. */
+.posterA, .posterB, .posterC, .stub, .dial { animation: deal 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.posterA { animation-delay: 0.1s; }
+.posterB { animation-delay: 0.22s; }
+.posterC { animation-delay: 0.34s; }
+.dial { animation-delay: 0.45s; }
+.stub { animation-name: slide-in; animation-delay: 0.55s; }
+
+@keyframes deal { from { opacity: 0; translate: -2rem 3rem; } }
+@keyframes slide-in { from { opacity: 0; translate: -3rem 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .posterA, .posterB, .posterC, .stub, .dial { animation: none; }
+}
+
 /* Três pilares */
 .features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); padding-block: var(--space-8); }
 

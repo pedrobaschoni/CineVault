@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { cx } from '@/lib/cx';
+import { posterColor } from '@/lib/media';
 import styles from './Poster.module.css';
 
 interface PosterProps {
@@ -8,8 +9,9 @@ interface PosterProps {
   src?: string;
   /** Linha de catálogo no topo do bloco provisório, ex.: "Série · 2021". */
   meta?: string;
-  /** Cor do bloco provisório. */
+  /** Cor do bloco provisório. Sem ela, a cor sai do `seed` (ou do título). */
   color?: string;
+  seed?: number | string;
   /** Largura em CSS (o pôster sempre mantém a proporção 2:3). */
   width?: string;
   /** Tamanhos para o next/image; ajuste conforme o layout que usa o pôster. */
@@ -21,22 +23,23 @@ interface PosterProps {
 
 /**
  * Pôster na proporção 2:3. O tamanho vem só do próprio componente
- * (width + aspect-ratio), então ele não depende do CSS da página
- * em que está, que era a causa do pôster desalinhado no site antigo.
+ * (width + aspect-ratio), então ele não depende do CSS da página em que está.
  */
 export function Poster({
   title,
   src,
   meta,
-  color = 'var(--cv-chumbo)',
+  color,
+  seed,
   width,
   sizes = '(max-width: 768px) 40vw, 200px',
   priority,
   size = 'md',
   className,
 }: PosterProps) {
+  const background = src ? 'var(--color-surface-2)' : color ?? posterColor(seed ?? title);
   return (
-    <div className={cx(styles.poster, styles[size], className)} style={{ width, background: src ? undefined : color }}>
+    <div className={cx(styles.poster, styles[size], className)} style={{ width, background }}>
       {src ? (
         <Image src={src} alt={`Pôster de ${title}`} fill sizes={sizes} priority={priority} className={styles.img} />
       ) : (

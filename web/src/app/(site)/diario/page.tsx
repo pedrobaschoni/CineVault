@@ -1,14 +1,17 @@
 import type { Metadata } from 'next';
-import { ComingSoon } from '@/components/ui/ComingSoon';
+import { DiaryView } from '@/components/review/DiaryView';
+import styles from './diario.module.css';
 
 export const metadata: Metadata = { title: 'Diário' };
 
 export default function DiarioPage() {
   return (
-    <ComingSoon
-      phase={3}
-      title="Diário"
-      description="Tudo o que você assistiu, organizado por data, com nota, reassistidas e episódios."
-    />
+    <div className={`container ${styles.page}`}>
+      <header className={styles.header}>
+        <h1 className={styles.h1}>Diário</h1>
+        <p className={styles.lead}>Tudo o que você registrou, do mais recente para o mais antigo.</p>
+      </header>
+      <DiaryView />
+    </div>
   );
 }
