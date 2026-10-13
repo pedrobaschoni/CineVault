@@ -1,12 +1,10 @@
-// src/components/MovieCard.tsx
 'use client';
 
 import React from 'react';
 import Image from 'next/image';
-import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; // Ícones
-import '../styles/moviecards.css'; // Importa o CSS do card
+import { FaPlay, FaStar, FaRegImage } from 'react-icons/fa'; 
+import '../styles/moviecards.css'; 
 
-// Props do Card
 interface MovieCardProps {
   title: string;
   posterUrl: string;

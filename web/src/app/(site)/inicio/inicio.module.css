@@ -5,49 +5,6 @@
   padding-top: var(--space-12);
 }
 
-/* Destaque: a íris abre a partir do pôster, à direita. */
-section.hero {
-  --iris-x: calc(100% - max(var(--gutter), 50% - 640px) - 150px);
-  --iris-y: 50%;
-}
-
-.heroGrid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: var(--space-12);
-  align-items: center;
-  padding-block: var(--space-16);
-}
-
-.heroText { display: flex; flex-direction: column; gap: var(--space-5); max-width: 42rem; }
-
-.heroTitle {
-  font-family: var(--font-display);
-  font-size: var(--text-hero);
-  line-height: 0.95;
-  letter-spacing: -0.025em;
-  text-wrap: balance;
-  padding-bottom: 0.08em;
-}
-
-.heroMeta { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-2); }
-
-.heroSynopsis {
-  font-size: var(--text-lg);
-  line-height: 1.6;
-  color: var(--color-text-2);
-  max-width: 36rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
-
-.heroPoster { display: flex; justify-content: center; }
-.heroPoster > * { width: 300px; }
-
 /* Continue de onde parou */
 .continue { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); }
 
@@ -118,10 +75,6 @@ section.hero {
 }
 
 @media (max-width: 860px) {
-  section.hero { --iris-x: 50%; --iris-y: 20%; }
-  .heroGrid { grid-template-columns: 1fr; padding-block: var(--space-8); gap: var(--space-8); }
-  .heroPoster { order: -1; }
-  .heroPoster > * { width: 12rem; }
   .split { grid-template-columns: 1fr; }
 }
 

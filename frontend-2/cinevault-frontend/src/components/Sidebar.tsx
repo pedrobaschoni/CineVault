@@ -7,25 +7,21 @@ import Image from 'next/image';
 import { FaHome, FaFilm, FaTv, FaRegClock, FaBookmark, FaStar } from 'react-icons/fa';
 import '../styles/sidebar.css';
 
-// Props que a Sidebar vai receber
 interface SidebarProps {
-  isOpen: boolean; // Estado (aberta ou fechada)
+  isOpen: boolean; 
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
   return (
-    // Aplica a classe 'closed' se 'isOpen' for falso
     <aside className={`sidebar ${isOpen ? '' : 'closed'}`}>
       <div className="sidebar-header">
         <Image
-          src="/iconeescuro.png" // Seu ícone
+          src="/iconeescuro.png"
           alt="Logo"
           width={40}
           height={40}
           className="sidebar-logo"
         />
-        {/* Título removido, conforme pedido */}
-        {/* <span className="sidebar-title">CineVault</span> */}
       </div>
 
       <nav className="sidebar-nav">
@@ -55,7 +51,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
         </Link>
       </nav>
 
-      {/* O botão de toggle foi removido daqui */}
     </aside>
   );
 };

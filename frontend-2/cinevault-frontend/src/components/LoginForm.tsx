@@ -6,7 +6,6 @@ const LoginForm: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Aqui você pode adicionar a lógica para autenticação
         console.log('Email:', email);
         console.log('Password:', password);
     };

@@ -65,7 +65,7 @@ const FavoritosPage = () => {
   
   // ESTADOS DE FILTRO E ORDENAÇÃO
   const [filterType, setFilterType] = useState('todos');
-  const [sortOrder, setSortOrder] = useState('recentes'); // recentes, maior_nota, menor_nota, az
+  const [sortOrder, setSortOrder] = useState('recentes');
 
   // Lógica de filtragem e ordenação REAL
   const getFilteredRatings = () => {
@@ -85,7 +85,7 @@ const FavoritosPage = () => {
         case 'maior_nota': return b.rating - a.rating;
         case 'menor_nota': return a.rating - b.rating;
         case 'az': return a.title.localeCompare(b.title);
-        default: return 0; // "recentes" mantém a ordem original do array (mock)
+        default: return 0; 
       }
     });
 

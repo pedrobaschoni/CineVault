@@ -432,7 +432,7 @@ const DiscussionsPage = () => {
               </ul>
             </div>
 
-            {/* --- 2. REGRAS DA COMUNIDADE (REINSERIDO) --- */}
+            {/* --- 2. REGRAS DA COMUNIDADE --- */}
             <div className="widget-card">
               <h3><FaShieldAlt /> Regras da Comunidade</h3>
               <ul className="rules-list">
@@ -461,7 +461,6 @@ const DiscussionsPage = () => {
   );
 };
 
-// ... (CreateTopicModal permanece igual) ...
 const CreateTopicModal = ({ onClose, onSubmit }: { onClose: () => void, onSubmit: (data: any) => void }) => {
   const [type, setType] = useState<TopicType>('normal');
   const [title, setTitle] = useState('');

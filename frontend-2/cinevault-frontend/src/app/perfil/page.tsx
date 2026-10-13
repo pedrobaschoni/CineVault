@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '../../components/Header'; // Seu header existente
+import Header from '../../components/Header';
 import { FaStar, FaFilm, FaPoll, FaRegClock, FaPencilAlt } from 'react-icons/fa';
 import {
   Radar,
@@ -13,10 +13,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import '../../styles/profile.css'; // Vamos criar este CSS
+import '../../styles/profile.css'; 
 
-// --- DADOS FICTÍCIOS (MOCK DATA) ---
-// Substitua por dados reais do seu backend
 const userData = {
   name: 'Ana "CineGourmet" Silva',
   username: '@anagourmet',
@@ -74,10 +72,8 @@ const timelineData = [
     comment: 'Tenso e visceral. A fotografia é incrível, mas o roteiro deixa algumas pontas soltas sobre a política do conflito.'
   },
 ];
-// --- FIM DOS DADOS FICTÍCIOS ---
 
 
-// Componente do Gráfico de Radar (precisa ser 'use client')
 const ProfileRadarChart = () => (
   <ResponsiveContainer width="100%" height="100%">
     <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarData}>
@@ -104,7 +100,6 @@ const ProfileRadarChart = () => (
   </ResponsiveContainer>
 );
 
-// Componente da Página de Perfil
 const UserProfilePage = () => {
   return (
     <div className="profile-layout">

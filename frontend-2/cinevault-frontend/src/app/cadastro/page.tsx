@@ -16,7 +16,6 @@ export default function CadastroPage() {
 
   const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica de cadastro (validação, chamadas API, etc.)
     console.log('Nome:', name);
     console.log('Email:', email);
     console.log('Senha:', password);
@@ -93,11 +92,11 @@ export default function CadastroPage() {
             <button type="button" className="google-login-button">
               {/* Este é o ícone do Google como SVG */}
               <svg
-                className="google-icon" // O seu CSS vai funcionar aqui
+                className="google-icon" 
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 48 48"
-                width="20px" // Mesmo tamanho que você tinha
-                height="20px" // Mesmo tamanho que você tinha
+                width="20px" 
+                height="20px" 
               >
                 <path
                   fill="#EA4335"
@@ -132,7 +131,7 @@ export default function CadastroPage() {
 
       <div className="footer-credits">
         <p>Uma criação de programadores independentes: </p>
-        <p>Isaque P. Lino & Pedro L. Baschoni</p>
+        <p>Adryan L. Pereira & Pedro L. Baschoni</p>
       </div>
     </main>
   );

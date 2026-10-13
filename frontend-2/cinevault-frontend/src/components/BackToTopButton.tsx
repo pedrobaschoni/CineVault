@@ -6,7 +6,7 @@ import '../styles/back-to-top.css';
 
 interface BackToTopButtonProps {
   onClick?: () => void;
-  threshold?: number; // px scrolled before showing
+  threshold?: number; 
 }
 
 const BackToTopButton: React.FC<BackToTopButtonProps> = ({ onClick, threshold = 300 }) => {

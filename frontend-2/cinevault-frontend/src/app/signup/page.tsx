@@ -26,7 +26,6 @@ const SignupPage = () => {
         return;
       }
 
-      // Simulate successful sign up
       router.push('/');
     }, 1000);
   };

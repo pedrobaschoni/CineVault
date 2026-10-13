@@ -10,9 +10,8 @@ import {
   FaChevronRight,
   FaPlus
 } from 'react-icons/fa';
-import '../styles/imdb-carousel.css'; // Vamos criar este CSS
+import '../styles/imdb-carousel.css'; 
 
-// Tipo para os dados do vídeo
 interface VideoData {
   id: number;
   heroImage: string;
@@ -24,13 +23,11 @@ interface VideoData {
   comments: number;
 }
 
-// Props do componente
 interface ImdbCarouselProps {
   title: string;
   videos: VideoData[];
 }
 
-// Helper para formatar números (1100 -> 1.1k)
 const formatNumber = (num: number) => {
   if (num >= 1000000) return (num / 1000000).toFixed(1) + 'm';
   if (num >= 1000) return (num / 1000).toFixed(1) + 'k';

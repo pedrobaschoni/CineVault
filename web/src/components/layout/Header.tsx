@@ -13,7 +13,7 @@ export function Header() {
         <div className={styles.search}>
           <SearchField />
         </div>
-        <UserMenu initial="P" name="Pedro" />
+        <UserMenu />
       </div>
     </header>
   );

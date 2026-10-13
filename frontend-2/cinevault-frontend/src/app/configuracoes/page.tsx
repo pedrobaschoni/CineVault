@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Header from '../../components/Header'; // Ajuste o caminho
+import Header from '../../components/Header'; 
 import { 
   FaUserCog, 
   FaPalette, 
@@ -9,10 +9,8 @@ import {
   FaShieldAlt, 
   FaTrashAlt 
 } from 'react-icons/fa';
-import '../../styles/settings-page.css'; // Vamos criar este CSS
+import '../../styles/settings-page.css'; 
 
-// --- Componente Reutilizável: Toggle Switch "Gourmet" ---
-// (Criamos ele aqui mesmo para facilitar)
 interface ToggleSwitchProps {
   label: string;
   description: string;
@@ -29,7 +27,6 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ label, description }) => (
     </label>
   </div>
 );
-// --- Fim do Toggle Switch ---
 
 
 const SettingsPage = () => {

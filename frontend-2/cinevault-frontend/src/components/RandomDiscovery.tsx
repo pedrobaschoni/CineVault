@@ -5,14 +5,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaRandom, FaPlay, FaInfoCircle, FaYoutube } from 'react-icons/fa';
 
-// Mock de dados para o "Shuffle"
 const randomPool = [
   {
     id: 101,
     title: 'Interestelar',
     poster: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
     curiosity: 'O roteiro original previa que a humanidade encontraria alienígenas vivos, não apenas seus vestígios.',
-    trailerId: 'zSWdZVtXT7E' // ID do Youtube
+    trailerId: 'zSWdZVtXT7E' 
   },
   {
     id: 102,
@@ -36,7 +35,6 @@ const RandomDiscovery = () => {
 
   useEffect(() => {
     setIsClient(true);
-    // Seleciona um aleatório apenas no cliente para evitar erro de hidratação
     const random = randomPool[Math.floor(Math.random() * randomPool.length)];
     setMovie(random);
   }, []);
@@ -49,7 +47,7 @@ const RandomDiscovery = () => {
     setMovie(newRandom);
   };
 
-  if (!isClient) return null; // Evita layout shift inicial
+  if (!isClient) return null;
 
   return (
     <section className="home-section random-discovery-section">

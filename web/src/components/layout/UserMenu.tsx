@@ -1,23 +1,25 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useId, useRef, useState } from 'react';
 import { USER_NAV } from '@/lib/navigation';
+import { signOut, useAccount } from '@/services/user';
 import styles from './UserMenu.module.css';
 
-interface UserMenuProps {
-  initial: string;
-  name: string;
-}
-
-/** Avatar que abre o menu pessoal: Perfil, Configurações, Sobre e Sair. */
-export function UserMenu({ initial, name }: UserMenuProps) {
+/**
+ * Sem login: botão "Entrar". Com login: a foto (ou a inicial) abre o menu
+ * pessoal com Perfil, Configurações, Sobre e Sair.
+ */
+export function UserMenu() {
+  const { account, checking, synced } = useAccount();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const menuId = useId();
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => setOpen(false), [pathname]);
 
@@ -40,24 +42,51 @@ export function UserMenu({ initial, name }: UserMenuProps) {
     };
   }, [open]);
 
+  // Enquanto descobre se há sessão, um círculo vazio guarda o lugar (sem pular o layout).
+  if (checking) return <div className={styles.wrap}><span className={styles.placeholder} aria-hidden="true" /></div>;
+
+  if (!account) {
+    return (
+      <div className={styles.wrap}>
+        <Link href={`/entrar?next=${encodeURIComponent(pathname)}`} className={styles.signIn}>
+          Entrar
+        </Link>
+      </div>
+    );
+  }
+
+  async function onSignOut() {
+    setOpen(false);
+    await signOut();
+    router.refresh();
+  }
+
   return (
     <div className={styles.wrap} ref={ref}>
       <button
         ref={buttonRef}
         type="button"
         className={styles.avatar}
-        aria-label={`Menu de ${name}`}
+        aria-label={`Menu de ${account.name}`}
         aria-expanded={open}
         aria-controls={menuId}
         onClick={() => setOpen((v) => !v)}
       >
-        {initial}
+        {account.avatarUrl ? (
+          <Image src={account.avatarUrl} alt="" width={42} height={42} className={styles.photo} unoptimized referrerPolicy="no-referrer" />
+        ) : (
+          account.name.charAt(0).toUpperCase()
+        )}
       </button>
 
       {open && (
         <div id={menuId} className={styles.menu}>
           <div className={styles.who}>
-            <span className={styles.name}>{name}</span>
+            <span className={styles.name}>{account.name}</span>
+            {account.email && <span className={styles.email}>{account.email}</span>}
+            <span className={styles.sync} data-on={synced || undefined}>
+              {synced ? 'Diário salvo na nuvem' : 'Salvando neste navegador'}
+            </span>
           </div>
           <ul className={styles.list}>
             {USER_NAV.map((item) => (
@@ -68,10 +97,9 @@ export function UserMenu({ initial, name }: UserMenuProps) {
               </li>
             ))}
             <li className={styles.sep}>
-              {/* Fase 3: encerra a sessão de verdade. */}
-              <Link href="/entrar" className={styles.item}>
+              <button type="button" className={styles.item} onClick={onSignOut}>
                 Sair
-              </Link>
+              </button>
             </li>
           </ul>
         </div>

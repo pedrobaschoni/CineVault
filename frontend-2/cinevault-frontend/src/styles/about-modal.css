@@ -27,7 +27,7 @@
   border: 1px solid var(--border-color);
   border-radius: 16px;
   width: 90%;
-  max-width: 700px; /* Um pouco maior para o novo conteúdo */
+  max-width: 700px; 
   max-height: 90vh;
   overflow-y: auto;
   position: relative;

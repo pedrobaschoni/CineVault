@@ -49,6 +49,7 @@ Cada título abre como um cofre: o fundo se revela em íris a partir do pôster,
 | 🎭 **Pessoas** | Biografia, "conhecido por" e filmografia de atores e diretores, filtrável por função. |
 | 📍 **Onde assistir** | Em quais streamings o título está disponível no Brasil, por assinatura, aluguel ou compra. |
 | ⭐ **Quero ver e favoritos** | Guarde o que quer assistir e o que mais marcou você. |
+| ☁️ **Conta e nuvem** | Entre com o Google (ou e-mail) e seu diário aparece em qualquer aparelho. Sem conta, tudo fica salvo no navegador. |
 
 O CineVault separa o catálogo em **filmes**, **séries**, **animes** (séries animadas japonesas) e **doramas** (séries asiáticas com atores), em vez de juntar tudo como "programa de TV".
 
@@ -58,7 +59,7 @@ O CineVault separa o catálogo em **filmes**, **séries**, **animes** (séries a
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/readme/inicio.jpg" alt="Início com o destaque da semana"><br><sub><b>Início</b>: o mais visto da semana, o que está em alta e o seu diário.</sub></td>
+    <td width="50%"><img src="docs/readme/inicio.jpg" alt="Início com os destaques da semana"><br><sub><b>Início</b>: os destaques da semana girando como um cofre, o que está em alta e o seu diário.</sub></td>
     <td width="50%"><img src="docs/readme/titulo.jpg" alt="Página de uma série"><br><sub><b>Título</b>: nota do público, onde assistir, elenco e temporadas.</sub></td>
   </tr>
   <tr>
@@ -104,6 +105,7 @@ O CineVault separa o catálogo em **filmes**, **séries**, **animes** (séries a
 - **[Next.js 16](https://nextjs.org)** com App Router, **React 19** e **TypeScript**
 - **CSS Modules** e design tokens próprios, sem framework de CSS. Cada componente tem seu estilo isolado.
 - **[API do TMDB](https://developer.themoviedb.org)** para o catálogo, chamada só no servidor e com cache
+- **[Supabase](https://supabase.com)** para o login com o Google e o banco (Postgres com RLS: cada pessoa só acessa os próprios dados)
 - **Fontsource** para servir as fontes pelo próprio site
 - Toda a lógica do catálogo fica em `web/src/services/catalog` e a dos dados do usuário em `web/src/services/user`. As páginas nunca chamam a API diretamente.
 
@@ -131,6 +133,8 @@ TMDB_API_TOKEN=eyJ...
 
 > Sem token, o site roda em **modo demonstração**, com cerca de 40 títulos de exemplo. Dá para testar tudo antes mesmo de criar a conta.
 
+**Login com o Google (opcional).** Sem configurar nada, o site funciona sem login e salva o diário no navegador. Para ativar o login e a nuvem, crie um projeto gratuito no Supabase e siga o [passo a passo do README do frontend](web/README.md#login-com-o-google-e-dados-na-nuvem-supabase-opcional).
+
 Os detalhes técnicos (rotas, estrutura de pastas e convenções) estão no [README do frontend](web/README.md).
 
 ## 📁 Estrutura do repositório
@@ -139,6 +143,7 @@ Os detalhes técnicos (rotas, estrutura de pastas e convenções) estão no [REA
 CineVault/
 ├── web/          frontend atual (Next.js): é aqui que o projeto vive
 ├── backend/      espaço reservado para a API, nas próximas fases
+│               (o login e o banco hoje vêm do Supabase: web/supabase/schema.sql)
 ├── frontend-2/   versão antiga, mantida só como referência
 └── docs/         imagens deste README
 ```
@@ -149,13 +154,12 @@ CineVault/
 
 - [x] **Fase 1: fundação e identidade.** Design tokens, componentes, navegação, landing e "Sobre".
 - [x] **Fase 2: catálogo real.** TMDB, páginas de título e de pessoa, Explorar, busca e a abertura do cofre.
-- [ ] **Fase 3: dados do usuário.** Diário, opiniões, episódios e listas já funcionam, salvos no navegador. Faltam o login e as páginas de listas e perfil.
+- [ ] **Fase 3: dados do usuário.** Diário, opiniões, episódios, listas, login com o Google e sincronização na nuvem já funcionam. Faltam as páginas de listas e perfil.
 - [ ] **Fase 4: experiência.** Estatísticas pessoais e a comunidade, com reviews públicas e ranking de usuários.
 - [ ] **Fase 5: diferenciais.**
   - Cofre do ano, uma retrospectiva anual.
   - Compatibilidade de gosto entre amigos.
   - Importação do Letterboxd e do MyAnimeList.
-- [ ] **Backend** para salvar tudo na nuvem e sincronizar entre aparelhos.
 
 ## 🙏 Créditos
 

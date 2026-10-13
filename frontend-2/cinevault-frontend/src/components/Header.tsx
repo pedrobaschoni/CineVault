@@ -9,21 +9,18 @@ import {
   FaSearch,
   FaMoon,
   FaUserCircle,
-  FaChevronRight, // Adicionado para sub-menus
-  FaLock // Opcional: Ícone de cadeado para o cofre (se quiser usar)
+  FaChevronRight, 
 } from 'react-icons/fa';
-import '../styles/header.css'; // Importa o CSS
-import AboutModal from './AboutModal'; // Modal Sobre
-import '../styles/about-modal.css'; // CSS do Modal
+import '../styles/header.css'; 
+import AboutModal from './AboutModal'; 
+import '../styles/about-modal.css'; 
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
-  // Estado para o modal "Sobre"
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    // Adicionado style para garantir o contexto de empilhamento (z-index)
     <header className="header" style={{ position: 'relative', zIndex: 100 }}>
       <div className="header-left">
         <Image

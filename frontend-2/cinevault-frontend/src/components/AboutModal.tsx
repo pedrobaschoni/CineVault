@@ -21,23 +21,19 @@ import {
 } from 'react-icons/fa';
 import Image from 'next/image';
 
-// Props: A função 'onClose' será passada pelo Header
 interface AboutModalProps {
   onClose: () => void;
 }
 
 const AboutModal: React.FC<AboutModalProps> = ({ onClose }) => {
 
-  // Efeito para travar o scroll do 'body' enquanto o modal estiver aberto
   useEffect(() => {
     document.body.style.overflow = 'hidden';
-    // Função de limpeza: devolve o scroll quando o componente for "desmontado"
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, []);
 
-  // Função para fechar o modal se o usuário clicar no fundo (overlay)
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -59,7 +55,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ onClose }) => {
 
         <div className="modal-header">
           <Image
-            src="/images/iconeclaro.png" // Mude o tamanho aqui se quiser
+            src="/images/iconeclaro.png" 
             alt="CineVault Logo"
             width={100}
             height={80}

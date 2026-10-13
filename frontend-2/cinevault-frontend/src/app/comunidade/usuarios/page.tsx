@@ -243,7 +243,7 @@ const RankedUsersPage = () => {
                           ))}
                         </div>
                         
-                        {/* Botão removido conforme pedido */}
+                        
                       </div>
                       {/* ------------------------- */}
                     </div>

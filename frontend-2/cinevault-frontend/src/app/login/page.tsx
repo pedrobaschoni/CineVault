@@ -1,36 +1,31 @@
-// app/login/page.tsx
-'use client'; // Necessário para componentes com interatividade (hooks)
+'use client'; 
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation'; // Para navegação programática
-import Link from 'next/link'; // Para navegação entre páginas
-import '../../styles/login.css'; // Importa o CSS
+import { useRouter } from 'next/navigation'; 
+import Link from 'next/link'; 
+import '../../styles/login.css'; 
 
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // Lógica de login
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Previne o recarregamento da página
+    e.preventDefault();
     console.log('Email:', email);
     console.log('Senha:', password);
-    // Adicione sua lógica de autenticação aqui
+
   };
 
-  // Função para navegar para o cadastro (se necessário)
   const goToCadastro = () => {
-    router.push('/cadastro'); // Rota de exemplo
+    router.push('/cadastro'); 
   };
 
   return (
-    // 'login-page' substitui o 'ion-content' para aplicar o fundo
     <main className="login-page">
       <div className="main-grid">
         <div className="logo-container">
-          {/* Você pode adicionar seu logo aqui */}
-          {/* <Image src="/logo.svg" alt="Logo" width={80} height={80} className="logo-icon" /> */}
+          {/* Logo / imagem grande à esquerda, conforme layout */}  
         </div>
 
         <div className="form-container">
@@ -75,12 +70,10 @@ export default function LoginPage() {
             </form>
 
             <div className="separator">OU</div>
-            {/* Botão de login com Google removido conforme solicitado */}
 
             <div className="signup-link">
               <p>
                 Não possui conta?{' '}
-                {/* 'Link' do Next.js substitui a âncora com (click) */}
                 <Link href="/cadastro">Cadastre-se</Link>
               </p>
             </div>

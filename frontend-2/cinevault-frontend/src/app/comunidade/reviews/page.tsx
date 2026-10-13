@@ -96,8 +96,6 @@ const CommunityReviewsPage = () => {
   const [selectedReview, setSelectedReview] = useState<any>(null);
   const [filterText, setFilterText] = useState('');
 
-  // 2. CORREÇÃO: useEffect para controlar o scroll do body
-  // Isso garante que o scroll seja destravado se o usuário sair da página
   useEffect(() => {
     if (selectedReview) {
       document.body.style.overflow = 'hidden';
@@ -105,23 +103,19 @@ const CommunityReviewsPage = () => {
       document.body.style.overflow = 'unset';
     }
 
-    // Função de limpeza: roda quando o componente é desmontado (ex: ao mudar de página)
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [selectedReview]);
 
-  // Ordenação automática por likes
   const highlights = [...reviews].sort((a, b) => b.likes - a.likes).slice(0, 3);
   const feed = reviews; 
 
   const openModal = (review: any) => {
-    // Removido o document.body.style daqui, o useEffect cuida disso
     setSelectedReview(review);
   };
 
   const closeModal = () => {
-    // Removido o document.body.style daqui, o useEffect cuida disso
     setSelectedReview(null);
   };
 

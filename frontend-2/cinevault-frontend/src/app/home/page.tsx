@@ -6,25 +6,24 @@ import MovieCard from '../../components/MovieCard';
 import RankingSection from '../../components/RankingSection';
 import BackToTopButton from '../../components/BackToTopButton';
 import Link from 'next/link';
-import Image from 'next/image'; // Importa o Image para os avatares e posters
+import Image from 'next/image';
 import { 
   FaChevronLeft, 
   FaChevronRight, 
   FaStar, 
   FaComment, 
   FaHeart 
-} from 'react-icons/fa'; // Ícones para o carrossel e feed
+} from 'react-icons/fa';
 import '../../styles/home.css';
 import '../../styles/header.css';
 import '../../styles/moviecards.css';
 import '../../styles/ranking.css';
-import ImdbCarousel from '../../components/ImdbCarousel'; // (Verifique o caminho)
-import '../../styles/imdb-carousel.css'; // (Verifique o caminho)
+import ImdbCarousel from '../../components/ImdbCarousel'; 
+import '../../styles/imdb-carousel.css'; 
 import '../../styles/back-to-top.css';
 import RandomDiscovery from 'components/RandomDiscovery';
 import ActiveDebates from 'components/ActiveDebates';
 
-// Componente do Carrossel (Últimas Atualizações / Em Destaques)
 
 const HorizontalCarousel = ({ title, movies }: { title: string, movies: any[] }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -71,12 +70,8 @@ const HorizontalCarousel = ({ title, movies }: { title: string, movies: any[] })
 
 const HomePage = () => {
 
-  // --- DADOS EXPANDIDOS ---
 
-  // NO SEU 'src/app/home/page.tsx'
 
-  // APAGUE a sua const 'recentMovies' antiga
-  // E ADICIONE ESTA NO LUGAR:
   const ultimasAtualizacoesVideos = [
     {
       id: 1,

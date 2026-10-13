@@ -16,15 +16,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2
 ;
 ;
 const AboutModal = ({ onClose })=>{
-    // Efeito para travar o scroll do 'body' enquanto o modal estiver aberto
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         document.body.style.overflow = 'hidden';
-        // Função de limpeza: devolve o scroll quando o componente for "desmontado"
         return ()=>{
             document.body.style.overflow = 'auto';
         };
     }, []);
-    // Função para fechar o modal se o usuário clicar no fundo (overlay)
     const handleOverlayClick = (e)=>{
         if (e.target === e.currentTarget) {
             onClose();
@@ -41,12 +38,12 @@ const AboutModal = ({ onClose })=>{
                     onClick: onClose,
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaTimes"], {}, void 0, false, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                        lineNumber: 51,
+                        lineNumber: 47,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                    lineNumber: 50,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -54,12 +51,12 @@ const AboutModal = ({ onClose })=>{
                     children: '"A magia do cinema não está em assistir, mas em descobrir."'
                 }, void 0, false, {
                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                    lineNumber: 54,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {}, void 0, false, {
                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                    lineNumber: 58,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -72,14 +69,14 @@ const AboutModal = ({ onClose })=>{
                             height: 80
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 61,
+                            lineNumber: 57,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             children: "Bem-vindo ao CineVault!"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 67,
+                            lineNumber: 63,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -87,13 +84,13 @@ const AboutModal = ({ onClose })=>{
                             children: "Mais do que um catálogo. O seu cofre de entretenimento."
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 68,
+                            lineNumber: 64,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                    lineNumber: 60,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -103,7 +100,7 @@ const AboutModal = ({ onClose })=>{
                             children: "Nossa História: A Frustração que Virou Solução"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 76,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -111,7 +108,7 @@ const AboutModal = ({ onClose })=>{
                             children: "Quantas vezes você já abriu um streaming... depois outro... e mais um... e 40 minutos depois, desistiu sem assistir nada?"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 77,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -122,21 +119,21 @@ const AboutModal = ({ onClose })=>{
                                     children: "realmente"
                                 }, void 0, false, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 80,
                                     columnNumber: 66
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 " decidir o que assistir."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 81,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                             children: "Nosso Objetivo: Clareza no Caos"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 89,
+                            lineNumber: 85,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -147,21 +144,21 @@ const AboutModal = ({ onClose })=>{
                                     children: "devolver a você o controle do seu tempo."
                                 }, void 0, false, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 87,
                                     columnNumber: 37
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 "Não somos uma plataforma de streaming; somos a ferramenta definitiva de consulta que ajuda você a tomar a melhor decisão antes de apertar o play."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 90,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                             children: "Como Funciona?"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 97,
+                            lineNumber: 93,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
@@ -174,25 +171,25 @@ const AboutModal = ({ onClose })=>{
                                                 children: "PESQUISE E DESCUBRA"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 101,
+                                                lineNumber: 97,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Use nossa busca ou explore os rankings para encontrar uma obra."
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 98,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 96,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 95,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -202,7 +199,7 @@ const AboutModal = ({ onClose })=>{
                                                 children: 'ENTRE NO "COFRE"'
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 103,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -212,25 +209,25 @@ const AboutModal = ({ onClose })=>{
                                                         children: "onde assistir"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                        lineNumber: 108,
+                                                        lineNumber: 104,
                                                         columnNumber: 115
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     "."
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 108,
+                                                lineNumber: 104,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 102,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 105,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -240,25 +237,25 @@ const AboutModal = ({ onClose })=>{
                                                 children: "ORGANIZE SUAS LISTAS"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 113,
+                                                lineNumber: 109,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: 'Gostou? Adicione ao "Quero Ver". Já assistiu? Mova para "Já Visto" e acompanhe seu progresso.'
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 114,
+                                                lineNumber: 110,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                        lineNumber: 112,
+                                        lineNumber: 108,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 107,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -268,38 +265,38 @@ const AboutModal = ({ onClose })=>{
                                                 children: "DEIXE SUA MARCA"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 119,
+                                                lineNumber: 115,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: "Avalie o que assistiu e ajude outros membros da comunidade a fazerem a escolha certa."
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 120,
+                                                lineNumber: 116,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                        lineNumber: 118,
+                                        lineNumber: 114,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 113,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 98,
+                            lineNumber: 94,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                             children: "Por que usar o CineVault?"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 126,
+                            lineNumber: 122,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -311,7 +308,7 @@ const AboutModal = ({ onClose })=>{
                                             className: "icon"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 129,
+                                            lineNumber: 125,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -320,26 +317,26 @@ const AboutModal = ({ onClose })=>{
                                                     children: "Interface Rápida e Intuitiva"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 131,
+                                                    lineNumber: 127,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Feito para você achar o que precisa em segundos, sem distrações."
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 132,
+                                                    lineNumber: 128,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 130,
+                                            lineNumber: 126,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 124,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -348,7 +345,7 @@ const AboutModal = ({ onClose })=>{
                                             className: "icon"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 136,
+                                            lineNumber: 132,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -357,26 +354,26 @@ const AboutModal = ({ onClose })=>{
                                                     children: "Sem Anúncios Invasivos"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 138,
+                                                    lineNumber: 134,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Sua experiência é nossa prioridade. Foco total no conteúdo."
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 139,
+                                                    lineNumber: 135,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 133,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 131,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -385,7 +382,7 @@ const AboutModal = ({ onClose })=>{
                                             className: "icon"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 143,
+                                            lineNumber: 139,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -394,26 +391,26 @@ const AboutModal = ({ onClose })=>{
                                                     children: "Onde Assistir (Atualizado!)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 145,
+                                                    lineNumber: 141,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Paramos sua busca. Dizemos exatamente em qual streaming o título está."
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 142,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 144,
+                                            lineNumber: 140,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 138,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -422,7 +419,7 @@ const AboutModal = ({ onClose })=>{
                                             className: "icon"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 150,
+                                            lineNumber: 146,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -431,26 +428,26 @@ const AboutModal = ({ onClose })=>{
                                                     children: "Seu Cofre Pessoal"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 152,
+                                                    lineNumber: 148,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Suas listas são o coração do site. Organize o que viu e o que verá."
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 153,
+                                                    lineNumber: 149,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 151,
+                                            lineNumber: 147,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 149,
+                                    lineNumber: 145,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -459,7 +456,7 @@ const AboutModal = ({ onClose })=>{
                                             className: "icon"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 153,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -468,7 +465,7 @@ const AboutModal = ({ onClose })=>{
                                                     children: "Rankings Relevantes"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 159,
+                                                    lineNumber: 155,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -478,39 +475,39 @@ const AboutModal = ({ onClose })=>{
                                                             children: "agora"
                                                         }, void 0, false, {
                                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                            lineNumber: 160,
+                                                            lineNumber: 156,
                                                             columnNumber: 48
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         " na comunidade e no mundo."
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 160,
+                                                    lineNumber: 156,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 158,
+                                            lineNumber: 154,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 152,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 127,
+                            lineNumber: 123,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                             children: "Movido pela Comunidade"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 166,
+                            lineNumber: 162,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -518,7 +515,7 @@ const AboutModal = ({ onClose })=>{
                             children: "No CineVault, sua opinião importa. Junte-se a milhares de fãs, leia reviews detalhados e descubra recomendações de pessoas reais."
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 167,
+                            lineNumber: 163,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -531,25 +528,25 @@ const AboutModal = ({ onClose })=>{
                                                 children: "Estatística (Fictício)"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 174,
+                                                lineNumber: 170,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
                                                 children: "Valor"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                lineNumber: 175,
+                                                lineNumber: 171,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                        lineNumber: 173,
+                                        lineNumber: 169,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 172,
+                                    lineNumber: 168,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -560,11 +557,33 @@ const AboutModal = ({ onClose })=>{
                                                     children: "Obras no Catálogo"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 180,
+                                                    lineNumber: 176,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                     children: "+150.000"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
+                                                    lineNumber: 177,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
+                                            lineNumber: 175,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                    children: "Usuários Ativos"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
+                                                    lineNumber: 180,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                    children: "+20.000"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
                                                     lineNumber: 181,
@@ -579,14 +598,14 @@ const AboutModal = ({ onClose })=>{
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                    children: "Usuários Ativos"
+                                                    children: "Atualizações Diárias"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
                                                     lineNumber: 184,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                    children: "+20.000"
+                                                    children: "+500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
                                                     lineNumber: 185,
@@ -597,53 +616,31 @@ const AboutModal = ({ onClose })=>{
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
                                             lineNumber: 183,
                                             columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                    children: "Atualizações Diárias"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 188,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                    children: "+500"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                                    lineNumber: 189,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 187,
-                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 178,
+                                    lineNumber: 174,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 171,
+                            lineNumber: 167,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                             children: "Nosso Futuro & Transparência"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 195,
+                            lineNumber: 191,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                             children: "O que vem por aí (Roadmap):"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 197,
+                            lineNumber: 193,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -653,83 +650,83 @@ const AboutModal = ({ onClose })=>{
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaBrain"], {}, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 199,
+                                            lineNumber: 195,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " Recomendações inteligentes (IA) baseadas no seu gosto."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 199,
+                                    lineNumber: 195,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaTrophy"], {}, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 200,
+                                            lineNumber: 196,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " Badges e conquistas por atividade."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 200,
+                                    lineNumber: 196,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaMobileAlt"], {}, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 201,
+                                            lineNumber: 197,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " App mobile dedicado (iOS e Android)."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 201,
+                                    lineNumber: 197,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaBook"], {}, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 202,
+                                            lineNumber: 198,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " Mais categorias (livros, podcasts e games)."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 198,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaYoutube"], {}, void 0, false, {
                                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                            lineNumber: 203,
+                                            lineNumber: 199,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " Integração nativa com trailers."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 203,
+                                    lineNumber: 199,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 198,
+                            lineNumber: 194,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                             children: "Nossa Transparência:"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 206,
+                            lineNumber: 202,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -740,19 +737,19 @@ const AboutModal = ({ onClose })=>{
                                     children: "Nós não hospedamos nenhum filme ou série."
                                 }, void 0, false, {
                                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                                    lineNumber: 209,
+                                    lineNumber: 205,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 " Nosso serviço é 100% focado em fornecer informações e links para as plataformas de streaming oficiais."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 207,
+                            lineNumber: 203,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {}, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 214,
+                            lineNumber: 210,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -761,24 +758,24 @@ const AboutModal = ({ onClose })=>{
                             children: "Começar a explorar!"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                            lineNumber: 216,
+                            lineNumber: 212,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-                    lineNumber: 73,
+                    lineNumber: 69,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-            lineNumber: 49,
+            lineNumber: 45,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx",
-        lineNumber: 48,
+        lineNumber: 44,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -798,7 +795,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/frontend-2/cinevault-frontend/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/frontend-2/cinevault-frontend/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/frontend-2/cinevault-frontend/node_modules/react-icons/fa/index.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$src$2f$components$2f$AboutModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx [app-ssr] (ecmascript)"); // Modal Sobre
+var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$src$2f$components$2f$AboutModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/frontend-2/cinevault-frontend/src/components/AboutModal.tsx [app-ssr] (ecmascript)");
 'use client';
 ;
 ;
@@ -811,10 +808,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2
 ;
 const Header = ()=>{
     const { theme, toggleTheme } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$src$2f$context$2f$ThemeContext$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useTheme"])();
-    // Estado para o modal "Sobre"
     const [isModalOpen, setIsModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
-    return(// Adicionado style para garantir o contexto de empilhamento (z-index)
-    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         className: "header",
         style: {
             position: 'relative',
@@ -831,12 +826,12 @@ const Header = ()=>{
                     className: "header-logo"
                 }, void 0, false, {
                     fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                    lineNumber: 29,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                lineNumber: 28,
+                lineNumber: 25,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -848,7 +843,7 @@ const Header = ()=>{
                         children: "Início"
                     }, void 0, false, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 40,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -860,7 +855,7 @@ const Header = ()=>{
                         children: "Sobre o CineVault"
                     }, void 0, false, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 45,
+                        lineNumber: 42,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -870,7 +865,7 @@ const Header = ()=>{
                                 children: "Descobrir"
                             }, void 0, false, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 55,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -881,7 +876,7 @@ const Header = ()=>{
                                         children: "Recomendações para você"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 54,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -889,7 +884,7 @@ const Header = ()=>{
                                         children: "Surpreenda-me"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 55,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -903,13 +898,13 @@ const Header = ()=>{
                                                         className: "submenu-chevron"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 62,
+                                                        lineNumber: 59,
                                                         columnNumber: 34
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 61,
+                                                lineNumber: 58,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -920,7 +915,7 @@ const Header = ()=>{
                                                         children: "Filmes de plot twist"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 65,
+                                                        lineNumber: 62,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -928,7 +923,7 @@ const Header = ()=>{
                                                         children: "Para maratonar"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 66,
+                                                        lineNumber: 63,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -936,19 +931,19 @@ const Header = ()=>{
                                                         children: "Terror psicológico"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 67,
+                                                        lineNumber: 64,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 64,
+                                                lineNumber: 61,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 60,
+                                        lineNumber: 57,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -962,13 +957,13 @@ const Header = ()=>{
                                                         className: "submenu-chevron"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 73,
+                                                        lineNumber: 70,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 72,
+                                                lineNumber: 69,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -979,7 +974,7 @@ const Header = ()=>{
                                                         children: "Oscar"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 76,
+                                                        lineNumber: 73,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -987,7 +982,7 @@ const Header = ()=>{
                                                         children: "Emmy"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 77,
+                                                        lineNumber: 74,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -995,31 +990,31 @@ const Header = ()=>{
                                                         children: "Anime Awards"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 78,
+                                                        lineNumber: 75,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 75,
+                                                lineNumber: 72,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 71,
+                                        lineNumber: 68,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 56,
+                                lineNumber: 53,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 54,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1029,7 +1024,7 @@ const Header = ()=>{
                                 children: "Em Alta"
                             }, void 0, false, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 86,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1040,7 +1035,7 @@ const Header = ()=>{
                                         children: "Top do Momento (Global)"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 85,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1048,7 +1043,7 @@ const Header = ()=>{
                                         children: "Mais avaliados da semana"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 89,
+                                        lineNumber: 86,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1056,7 +1051,7 @@ const Header = ()=>{
                                         children: "Mais comentados hoje"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 90,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1064,19 +1059,19 @@ const Header = ()=>{
                                         children: "Bombando no Brasil"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 91,
+                                        lineNumber: 88,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 87,
+                                lineNumber: 84,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 85,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1086,7 +1081,7 @@ const Header = ()=>{
                                 children: "Categorias"
                             }, void 0, false, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 97,
+                                lineNumber: 94,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1103,13 +1098,13 @@ const Header = ()=>{
                                                         className: "submenu-chevron"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 102,
+                                                        lineNumber: 99,
                                                         columnNumber: 35
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 101,
+                                                lineNumber: 98,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1120,7 +1115,7 @@ const Header = ()=>{
                                                         children: "Ação"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 105,
+                                                        lineNumber: 102,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1128,7 +1123,7 @@ const Header = ()=>{
                                                         children: "Comédia"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 106,
+                                                        lineNumber: 103,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1136,7 +1131,7 @@ const Header = ()=>{
                                                         children: "Drama"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 107,
+                                                        lineNumber: 104,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1144,7 +1139,7 @@ const Header = ()=>{
                                                         children: "Terror"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 108,
+                                                        lineNumber: 105,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1152,19 +1147,19 @@ const Header = ()=>{
                                                         children: "Ficção Científica"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 109,
+                                                        lineNumber: 106,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 104,
+                                                lineNumber: 101,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 97,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1178,13 +1173,13 @@ const Header = ()=>{
                                                         className: "submenu-chevron"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 115,
+                                                        lineNumber: 112,
                                                         columnNumber: 35
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 114,
+                                                lineNumber: 111,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1195,7 +1190,7 @@ const Header = ()=>{
                                                         children: "Thriller"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 118,
+                                                        lineNumber: 115,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1203,7 +1198,7 @@ const Header = ()=>{
                                                         children: "Sitcom"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 119,
+                                                        lineNumber: 116,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1211,19 +1206,19 @@ const Header = ()=>{
                                                         children: "Documentário"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 120,
+                                                        lineNumber: 117,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 117,
+                                                lineNumber: 114,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 113,
+                                        lineNumber: 110,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1237,13 +1232,13 @@ const Header = ()=>{
                                                         className: "submenu-chevron"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 126,
+                                                        lineNumber: 123,
                                                         columnNumber: 24
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 125,
+                                                lineNumber: 122,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1254,7 +1249,7 @@ const Header = ()=>{
                                                         children: "Shounen"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 129,
+                                                        lineNumber: 126,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1262,7 +1257,7 @@ const Header = ()=>{
                                                         children: "Seinen"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 130,
+                                                        lineNumber: 127,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1270,19 +1265,19 @@ const Header = ()=>{
                                                         children: "Isekai"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 131,
+                                                        lineNumber: 128,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 128,
+                                                lineNumber: 125,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 121,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1296,13 +1291,13 @@ const Header = ()=>{
                                                         className: "submenu-chevron"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 137,
+                                                        lineNumber: 134,
                                                         columnNumber: 26
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 136,
+                                                lineNumber: 133,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1313,7 +1308,7 @@ const Header = ()=>{
                                                         children: "EUA"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 140,
+                                                        lineNumber: 137,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1321,7 +1316,7 @@ const Header = ()=>{
                                                         children: "Coreia"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 141,
+                                                        lineNumber: 138,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1329,19 +1324,19 @@ const Header = ()=>{
                                                         children: "Japão"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 139,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 139,
+                                                lineNumber: 136,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 135,
+                                        lineNumber: 132,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1355,13 +1350,13 @@ const Header = ()=>{
                                                         className: "submenu-chevron"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 145,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 147,
+                                                lineNumber: 144,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1372,7 +1367,7 @@ const Header = ()=>{
                                                         children: "Lançamentos 2025"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 151,
+                                                        lineNumber: 148,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1380,7 +1375,7 @@ const Header = ()=>{
                                                         children: "Anos 2010"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 152,
+                                                        lineNumber: 149,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1388,7 +1383,7 @@ const Header = ()=>{
                                                         children: "Anos 2000"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 153,
+                                                        lineNumber: 150,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1396,31 +1391,31 @@ const Header = ()=>{
                                                         children: "Clássicos"
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                        lineNumber: 154,
+                                                        lineNumber: 151,
                                                         columnNumber: 17
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 150,
+                                                lineNumber: 147,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 143,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 98,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 96,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1430,7 +1425,7 @@ const Header = ()=>{
                                 children: "Lançamentos"
                             }, void 0, false, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 162,
+                                lineNumber: 159,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1441,7 +1436,7 @@ const Header = ()=>{
                                         children: "Em cartaz (Cinema)"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 161,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1449,7 +1444,7 @@ const Header = ()=>{
                                         children: "Streaming"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 162,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1457,7 +1452,7 @@ const Header = ()=>{
                                         children: "Próximos Filmes"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 163,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1465,19 +1460,19 @@ const Header = ()=>{
                                         children: "Próximas Séries"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 167,
+                                        lineNumber: 164,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 163,
+                                lineNumber: 160,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 161,
+                        lineNumber: 158,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1487,7 +1482,7 @@ const Header = ()=>{
                                 children: "Meu Cofre"
                             }, void 0, false, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 173,
+                                lineNumber: 170,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1512,7 +1507,7 @@ const Header = ()=>{
                                                 children: "Abrir meu Cofre"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 178,
+                                                lineNumber: 175,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1524,13 +1519,13 @@ const Header = ()=>{
                                                 children: "Favoritos, histórico, avaliações e resenhas"
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                                lineNumber: 179,
+                                                lineNumber: 176,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 177,
+                                        lineNumber: 174,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1538,19 +1533,19 @@ const Header = ()=>{
                                         children: "Quero Ver"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 182,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 174,
+                                lineNumber: 171,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 172,
+                        lineNumber: 169,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1560,7 +1555,7 @@ const Header = ()=>{
                                 children: "Comunidade"
                             }, void 0, false, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 191,
+                                lineNumber: 188,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1571,7 +1566,7 @@ const Header = ()=>{
                                         children: "Reviews da Comunidade"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 190,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1579,7 +1574,7 @@ const Header = ()=>{
                                         children: "Usuários Bem Ranqueados"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 194,
+                                        lineNumber: 191,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1587,25 +1582,25 @@ const Header = ()=>{
                                         children: "Discussões"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 195,
+                                        lineNumber: 192,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 192,
+                                lineNumber: 189,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 190,
+                        lineNumber: 187,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                lineNumber: 38,
+                lineNumber: 35,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1615,12 +1610,12 @@ const Header = ()=>{
                         className: "search-btn",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaSearch"], {}, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                            lineNumber: 203,
+                            lineNumber: 200,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 202,
+                        lineNumber: 199,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1629,7 +1624,7 @@ const Header = ()=>{
                         title: "Alternar tema",
                         children: theme === 'dark' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaMoon"], {}, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                            lineNumber: 206,
+                            lineNumber: 203,
                             columnNumber: 31
                         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             style: {
@@ -1638,12 +1633,12 @@ const Header = ()=>{
                             children: "☀️"
                         }, void 0, false, {
                             fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                            lineNumber: 206,
+                            lineNumber: 203,
                             columnNumber: 44
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 205,
+                        lineNumber: 202,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1656,20 +1651,20 @@ const Header = ()=>{
                                         className: "user-icon"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 212,
+                                        lineNumber: 209,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Usuário"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 213,
+                                        lineNumber: 210,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 211,
+                                lineNumber: 208,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1680,7 +1675,7 @@ const Header = ()=>{
                                         children: "Meu Perfil"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 216,
+                                        lineNumber: 213,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1688,7 +1683,7 @@ const Header = ()=>{
                                         children: "Configurações"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 217,
+                                        lineNumber: 214,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -1696,40 +1691,40 @@ const Header = ()=>{
                                         children: "Sair"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                        lineNumber: 218,
+                                        lineNumber: 215,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                                lineNumber: 215,
+                                lineNumber: 212,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                        lineNumber: 210,
+                        lineNumber: 207,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                lineNumber: 201,
+                lineNumber: 198,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             isModalOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$src$2f$components$2f$AboutModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 onClose: ()=>setIsModalOpen(false)
             }, void 0, false, {
                 fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-                lineNumber: 224,
+                lineNumber: 221,
                 columnNumber: 23
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/frontend-2/cinevault-frontend/src/components/Header.tsx",
-        lineNumber: 27,
+        lineNumber: 24,
         columnNumber: 5
-    }, ("TURBOPACK compile-time value", void 0)));
+    }, ("TURBOPACK compile-time value", void 0));
 };
 const __TURBOPACK__default__export__ = Header;
 }),
@@ -1961,7 +1956,7 @@ const FavoritosPage = ()=>{
     const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('favoritos');
     // ESTADOS DE FILTRO E ORDENAÇÃO
     const [filterType, setFilterType] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('todos');
-    const [sortOrder, setSortOrder] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('recentes'); // recentes, maior_nota, menor_nota, az
+    const [sortOrder, setSortOrder] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2d$2$2f$cinevault$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('recentes');
     // Lógica de filtragem e ordenação REAL
     const getFilteredRatings = ()=>{
         let items = [
@@ -1984,7 +1979,7 @@ const FavoritosPage = ()=>{
                 case 'az':
                     return a.title.localeCompare(b.title);
                 default:
-                    return 0; // "recentes" mantém a ordem original do array (mock)
+                    return 0;
             }
         });
         return items;

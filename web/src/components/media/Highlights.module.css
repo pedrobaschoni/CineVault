@@ -1,0 +1,216 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ---- Fundos empilhados ---- */
+
+.backdrops { position: absolute; inset: 0; z-index: -1; }
+
+.layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: radial-gradient(110% 90% at 78% 45%, color-mix(in srgb, var(--layer-tint) 85%, white 6%), var(--layer-tint) 45%, color-mix(in srgb, var(--layer-tint) 40%, var(--color-bg)) 100%);
+  transition: opacity 0.9s ease;
+}
+.layerActive { opacity: 1; }
+
+.image { object-fit: cover; object-position: center 25%; }
+
+/* O fundo que entra se aproxima de leve (transform: só a GPU trabalha). */
+.layerActive .image { animation: settle 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; }
+@keyframes settle { from { transform: scale(1.06); } }
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(13 14 18 / 0.94) 0%, rgb(13 14 18 / 0.8) 40%, rgb(13 14 18 / 0.35) 75%, rgb(13 14 18 / 0.5) 100%),
+    linear-gradient(180deg, rgb(13 14 18 / 0) 50%, var(--color-bg) 100%);
+}
+
+/* ---- Conteúdo ---- */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: var(--space-12);
+  align-items: center;
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-8);
+  min-height: 34rem;
+}
+
+.text { display: flex; flex-direction: column; gap: var(--space-5); max-width: 42rem; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  padding-bottom: 0.08em;
+  overflow: hidden;
+}
+
+.meta { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text-2); }
+
+.synopsis {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  color: var(--color-text-2);
+  max-width: 36rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
+
+.poster { display: flex; justify-content: center; }
+.poster > * { width: 280px; }
+
+/* ---- Entrada de cada destaque ---- */
+
+.enter {
+  animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  animation-delay: calc(0.12s + var(--i, 0) * 0.07s);
+}
+
+/* O título sobe de dentro de uma "fresta", como na página do título. */
+.titleInner { display: inline-block; animation: from-slot 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.08s backwards; }
+
+/* O pôster entra girando um pouco, como a roda do cofre encaixando. */
+.poster { animation: poster-in 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+@keyframes from-slot { from { transform: translateY(105%); } }
+@keyframes poster-in {
+  from { opacity: 0; transform: translateX(24px) rotate(3deg) scale(0.96); }
+}
+
+/* ---- Controles: mostrador, miniaturas e botões ---- */
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding-bottom: var(--space-10);
+}
+
+.dial { display: flex; align-items: center; gap: var(--space-3); flex-shrink: 0; }
+.dialFace { width: 48px; height: 48px; overflow: visible; }
+.dialRing { fill: rgb(13 14 18 / 0.6); stroke: var(--color-border-strong); stroke-width: 1.5; }
+.dialTimer {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 2;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transform: rotate(-90deg);
+  animation: timer linear forwards;
+}
+.dialTimer[data-static] { animation: none; stroke-dashoffset: 0; opacity: 0.35; }
+@keyframes timer { to { stroke-dashoffset: 0; } }
+
+.dialTick { stroke: var(--color-text-muted); stroke-width: 1.5; stroke-linecap: round; transition: stroke var(--dur) var(--ease); }
+.dialTickOn { stroke: var(--color-accent); }
+
+/* Gira em cliques, como a combinação de um cofre. */
+.dialNeedle {
+  stroke: var(--color-accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  fill: var(--color-accent);
+  transition: rotate 0.7s cubic-bezier(0.5, 1.6, 0.4, 1);
+}
+
+.counter { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--color-text); letter-spacing: 0.04em; }
+.counterTotal { color: var(--color-text-muted); }
+
+.tabs { display: flex; gap: var(--space-3); flex: 1; min-width: 0; }
+
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 8px;
+  padding-right: var(--space-3);
+  background: rgb(21 23 29 / 0.72);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text-2);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease), opacity var(--dur) var(--ease);
+  opacity: 0.72;
+}
+.tab > :first-child { width: 36px; flex-shrink: 0; }
+.tab:hover { opacity: 1; color: var(--color-text); border-color: var(--color-border-strong); }
+.tabActive { opacity: 1; color: var(--color-text); border-color: rgb(217 165 74 / 0.6); }
+
+.tabLabel { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.buttons { display: flex; gap: var(--space-2); flex-shrink: 0; }
+
+.iconButton {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(21 23 29 / 0.72);
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.iconButton:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.iconButton[aria-pressed='true'] { color: var(--color-accent); }
+
+/* ---- Responsivo ---- */
+
+@media (max-width: 1100px) {
+  .tabLabel { display: none; }
+  .tab { flex: 0 0 auto; padding-right: 8px; }
+  .tab > :first-child { width: 40px; }
+}
+
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; gap: var(--space-6); padding-top: var(--space-8); min-height: 0; }
+  .poster { order: -1; justify-content: flex-start; }
+  .poster > * { width: 9rem; }
+  .scrim {
+    background:
+      linear-gradient(180deg, rgb(13 14 18 / 0.5) 0%, rgb(13 14 18 / 0.85) 45%, var(--color-bg) 100%);
+  }
+  .synopsis { -webkit-line-clamp: 3; font-size: var(--text-md); }
+  .controls { gap: var(--space-4); }
+  .counter { display: none; }
+}
+
+@media (max-width: 560px) {
+  .tabs { display: none; }
+  .controls { justify-content: space-between; }
+  .counter { display: inline; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layer { transition: none; }
+  .layerActive .image, .enter, .titleInner, .poster { animation: none; }
+  .dialNeedle { transition: none; }
+  .dialTimer { animation: none; stroke-dashoffset: 0; opacity: 0.35; }
+}

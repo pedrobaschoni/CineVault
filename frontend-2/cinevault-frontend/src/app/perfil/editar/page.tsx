@@ -3,11 +3,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '../../../components/Header'; // Ajuste o caminho se necessário
-import '../../../styles/profile.css'; // Reutiliza estilos do perfil
-import '../../../styles/edit-profile.css'; // Estilos específicos para este form
+import Header from '../../../components/Header'; 
+import '../../../styles/profile.css'; 
+import '../../../styles/edit-profile.css'; 
 
-// Dados fictícios (mesmos da página de perfil para pré-popular)
 const currentUserData = {
   name: 'Ana "CineGourmet" Silva',
   username: '@anagourmet',
@@ -16,7 +15,6 @@ const currentUserData = {
 };
 
 const EditProfilePage = () => {
-  // Estados para controlar os campos do formulário
   const [name, setName] = useState(currentUserData.name);
   const [username, setUsername] = useState(currentUserData.username);
   const [avatar, setAvatar] = useState(currentUserData.avatarUrl);
@@ -24,10 +22,7 @@ const EditProfilePage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você adicionaria a lógica para salvar os dados no backend
     console.log('Dados salvos:', { name, username, avatar, bio });
-    // Idealmente, você redirecionaria o usuário de volta para /perfil
-    // ou mostraria uma mensagem de "Salvo com sucesso!"
   };
 
   return (
@@ -37,7 +32,6 @@ const EditProfilePage = () => {
       {/* Container para centralizar o formulário */}
       <div className="edit-profile-container">
         
-        {/* Reutilizamos o .profile-card para manter a consistência */}
         <form className="profile-card edit-profile-form" onSubmit={handleSubmit}>
           
           <h2 className="edit-profile-title">Editar Perfil</h2>
@@ -99,7 +93,6 @@ const EditProfilePage = () => {
 
           {/* Seção de Ações */}
           <div className="form-actions">
-            {/* O Link "Cancelar" leva de volta à página de perfil */}
             <Link href="/perfil" className="cancel-btn">
               Cancelar
             </Link>

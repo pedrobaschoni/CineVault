@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Button } from '@/components/ui/Button';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Tag } from '@/components/ui/Tag';
-import { Poster } from '@/components/media/Poster';
-import { TrailerTextButton } from '@/components/media/TrailerButton';
-import { VaultHero } from '@/components/media/VaultHero';
+import { Highlights, type Highlight } from '@/components/media/Highlights';
 import { formatRating, MEDIA_LABEL } from '@/lib/format';
 import { getTitle, getTrending } from '@/services/catalog';
 import type { TitleSummary } from '@/types';
@@ -22,9 +19,26 @@ export default async function InicioPage() {
     getTrending('day').catch(() => [] as TitleSummary[]),
   ]);
 
-  // Destaque: o título mais visto da semana que tenha imagem de fundo (ou o primeiro).
-  const featuredSummary = week.find((t) => t.backdropUrl && t.overview) ?? week[0];
-  const featured = featuredSummary ? await getTitle(featuredSummary.kind, featuredSummary.id).catch(() => null) : null;
+  // Destaques: os cinco mais vistos da semana com imagem de fundo e sinopse
+  // (sem imagens, no modo demonstração, os cinco primeiros com sinopse).
+  const withArt = week.filter((t) => t.backdropUrl && t.overview);
+  const picks = (withArt.length >= 3 ? withArt : week.filter((t) => t.overview)).slice(0, 5);
+  const details = await Promise.all(picks.map((t) => getTitle(t.kind, t.id).catch(() => null)));
+  const highlights: Highlight[] = picks.map((t, i) => {
+    const d = details[i];
+    const genres = d?.genres.slice(0, 2).map((g) => g.name) ?? [];
+    return {
+      key: `${t.kind}-${t.id}`,
+      id: t.id,
+      title: t.title,
+      href: t.href,
+      meta: [MEDIA_LABEL[t.type], t.year, ...genres].filter(Boolean).join(' · ') + (t.score ? ` · ${formatRating(t.score)}` : ''),
+      overview: d?.overview || t.overview,
+      posterUrl: t.posterUrl,
+      backdropUrl: t.backdropUrl,
+      video: d?.videos[0],
+    };
+  });
 
   // Ranking do dia, comparado com a posição na semana.
   const weekRank = new Map(week.map((t, i) => [`${t.kind}-${t.id}`, i]));
@@ -35,38 +49,8 @@ export default async function InicioPage() {
 
   return (
     <>
-      {featured && (
-        <VaultHero backdropUrl={featured.backdropUrl} seed={featured.id} className={styles.hero} compact>
-          <div className={`container ${styles.heroGrid}`}>
-            <div className={styles.heroText}>
-              <div data-reveal style={{ '--i': 0 } as React.CSSProperties}>
-                <Tag tone="accent">Mais visto da semana</Tag>
-              </div>
-              <h1 className={styles.heroTitle} data-reveal="title">
-                <span>{featured.title}</span>
-              </h1>
-              <p className={styles.heroMeta} data-reveal style={{ '--i': 1 } as React.CSSProperties}>
-                {[MEDIA_LABEL[featured.type], featured.year, ...featured.genres.slice(0, 2).map((g) => g.name)].filter(Boolean).join(' · ')}
-                {featured.score ? ` · ${formatRating(featured.score)}` : ''}
-              </p>
-              {featured.overview && (
-                <p className={styles.heroSynopsis} data-reveal style={{ '--i': 2 } as React.CSSProperties}>
-                  {featured.overview}
-                </p>
-              )}
-              <div className={styles.actions} data-reveal style={{ '--i': 3 } as React.CSSProperties}>
-                <Button href={featured.href} variant="primary">
-                  Ver detalhes
-                </Button>
-                {featured.videos[0] && <TrailerTextButton video={featured.videos[0]} />}
-              </div>
-            </div>
-            <div className={styles.heroPoster} data-reveal="poster">
-              <Poster title={featured.title} src={featured.posterUrl} seed={featured.id} size="lg" sizes="300px" priority />
-            </div>
-          </div>
-        </VaultHero>
-      )}
+      <h1 className="visually-hidden">Início</h1>
+      <Highlights items={highlights} />
 
       <div className={`container ${styles.page}`}>
         <ContinueWatching />

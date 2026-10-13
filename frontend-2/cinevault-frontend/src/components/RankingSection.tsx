@@ -6,7 +6,6 @@ import { FaStar, FaArrowUp, FaArrowDown, FaMinus } from 'react-icons/fa';
 import '../styles/ranking.css';
 
 // --- DADOS MOCKADOS ATUALIZADOS ---
-// Agora é um array único com propriedades 'type' e 'genre'
 const allMockItems = [
   // Filmes
   { id: 'f1', pos: 1, title: 'Duna: Parte Dois', poster: 'https://images.pexels.com/photos/1210243/pexels-photo-1210243.jpeg?w=60&h=90&fit=crop', rating: 9.2, reviews: 15420, trend: 'up', type: 'filme', genre: 'ficcao' },
@@ -26,7 +25,6 @@ const allMockItems = [
 ];
 // ------------------------------------------------
 
-// Componente para um item individual do ranking (Sem alterações)
 const RankingItem = ({ item }: { item: any }) => {
   const TrendIcon = () => {
     if (item.trend === 'up') return <FaArrowUp className="trend-up" />;
@@ -58,9 +56,9 @@ const RankingItem = ({ item }: { item: any }) => {
 // Componente principal da Seção de Ranking
 const RankingSection = () => {
   // --- NOVOS ESTADOS PARA OS FILTROS ---
-  const [time, setTime] = useState('semana'); // 'semana', 'mes', 'geral'
-  const [type, setType] = useState('filme');  // 'filme', 'serie', 'anime'
-  const [genre, setGenre] = useState('geral'); // 'geral', 'acao', 'comedia', etc.
+  const [time, setTime] = useState('semana'); 
+  const [type, setType] = useState('filme');  
+  const [genre, setGenre] = useState('geral'); 
   
   // --- NOVA LÓGICA DE FILTRAGEM ---
   const filteredData = allMockItems
@@ -73,8 +71,6 @@ const RankingSection = () => {
       if (genre === 'geral') return true; // 'geral' mostra todos os gêneros
       return item.genre === genre;
     });
-    // O filtro de 'time' (semana, mes) não está sendo aplicado
-    // nos dados mockados, mas a UI está pronta para isso.
 
   return (
     <aside className="ranking-container">
