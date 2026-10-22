@@ -13,7 +13,6 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 );
 
-
 builder.Services.AddEndpointsApiExplorer();
 
 // Conexão com o SQL Server
@@ -21,6 +20,17 @@ builder.Services.AddDbContext<CineVaultDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CineVaultConnection")));
 
 builder.Services.AddHttpClient<ITmdbService, TmdbService>();
+
+// Configuração do CORS (NOVO)
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirFrontend", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 // Configuração da Autenticação JWT
 var jwtSettings = builder.Configuration.GetSection("Jwt");
@@ -77,7 +87,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
+// Ativação do CORS (NOVO)
+app.UseCors("PermitirFrontend");
 
 app.UseAuthentication();
 app.UseAuthorization();
