@@ -1,7 +1,7 @@
 .card {
   position: fixed;
   right: var(--gutter);
-  bottom: var(--space-6);
+  bottom: calc(var(--space-6) + 4.25rem); /* acima do botão do Curador */
   z-index: 70;
   width: min(26rem, calc(100vw - 2 * var(--gutter)));
   display: flex;

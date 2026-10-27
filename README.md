@@ -49,6 +49,7 @@ Cada título abre como um cofre: o fundo se revela em íris a partir do pôster,
 | 🎭 **Pessoas** | Biografia, "conhecido por" e filmografia de atores e diretores, filtrável por função. |
 | 📍 **Onde assistir** | Em quais streamings o título está disponível no Brasil, por assinatura, aluguel ou compra. |
 | ⭐ **Quero ver e favoritos** | Guarde o que quer assistir e o que mais marcou você. |
+| 💬 **Curador** | Um chat no canto da tela: peça indicações, conte o que viu e receba títulos parecidos, com link e botão de "Quero ver". |
 | ☁️ **Conta e nuvem** | Entre com o Google (ou e-mail) e seu diário aparece em qualquer aparelho. Sem conta, tudo fica salvo no navegador. |
 
 O CineVault separa o catálogo em **filmes**, **séries**, **animes** (séries animadas japonesas) e **doramas** (séries asiáticas com atores), em vez de juntar tudo como "programa de TV".

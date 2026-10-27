@@ -68,6 +68,27 @@ O **Client secret fica só no painel do Supabase**: ele nunca vai para o `.env.l
 
 > **Login por e-mail:** por padrão o Supabase pede confirmação por e-mail, e o servidor de e-mail gratuito dele envia poucas mensagens por hora. Para testar sem esperar, desligue **Confirm email** em **Authentication › Sign In / Providers › Email**.
 
+### Curador, o chat de indicações (opcional)
+
+O botão **O que ver?**, no canto da tela, abre o Curador. Ele indica títulos, encontra parecidos com algo que a pessoa viu e responde dúvidas, usando o catálogo real e o diário dela.
+
+Sem configurar nada, ele funciona no **modo simples**: entende pedidos curtos por palavras-chave ("um terror bom", "anime para começar", "parecido com Interestelar"). Para conversar de verdade, ligue uma IA no `.env.local`. Qualquer API no formato da OpenAI serve; a mais fácil de começar é o **Gemini**, que tem plano gratuito:
+
+1. Crie uma chave em [Google AI Studio](https://aistudio.google.com/apikey).
+2. Preencha no `.env.local`:
+
+   ```env
+   ASSISTANT_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai
+   ASSISTANT_API_KEY=sua-chave
+   ASSISTANT_MODEL=gemini-2.5-flash
+   ```
+
+3. Reinicie o `npm run dev`.
+
+Outras opções estão comentadas no `.env.example` (Groq, Ollama no seu PC, Claude). Se o modelo indicado não estiver mais disponível, use o nome de um modelo atual do provedor. A chave fica só no servidor; o navegador nunca a vê.
+
+Como funciona: a rota `/api/assistente` manda a conversa e um resumo do diário para a IA, junto com ferramentas que consultam o catálogo (`buscar_titulos`, `parecidos`, `descobrir`, `em_alta`, `detalhes`). A IA só pode indicar títulos que vieram dessas ferramentas, então toda sugestão existe e vira um cartão com link e botão de "Quero ver". Há um limite de 20 mensagens por minuto por IP, e, se a IA falhar, o modo simples responde no lugar.
+
 ## Rotas
 
 | Rota | O que é | Estado |
@@ -81,6 +102,7 @@ O **Client secret fica só no painel do Supabase**: ele nunca vai para o `.env.l
 | `/titulo/[tipo]/[id]-[slug]` | Página do título; séries têm temporadas e episódios | Pronta |
 | `/pessoa/[id]-[slug]` | Biografia, "conhecido por" e filmografia | Pronta |
 | `/api/busca`, `/api/catalogo` | Sugestões da busca e próximas páginas do Explorar | Pronta |
+| `/api/assistente` | Conversa com o Curador (IA ou modo simples) | Pronta |
 | `/sobre` | História e propósito do site | Pronta |
 | `/entrar`, `/criar-conta` | Login com o Google ou e-mail (Supabase) | Pronta |
 | `/auth/callback` | Volta do Google e dos links de e-mail; cria a sessão | Pronta |
@@ -104,6 +126,7 @@ src/
   services/user/
     index.ts              dados do usuário: hooks, gravação, conta (local ou nuvem)
     cloud.ts              tabelas do Supabase ↔ tipos do site
+  services/assistant/     Curador: ferramentas sobre o catálogo, cliente de IA, modo simples
   services/catalog/
     index.ts              o que as páginas usam: getTitle, discover, search…
     tmdb.ts               cliente HTTP do TMDB (só servidor)
@@ -116,6 +139,7 @@ src/
     media/                Poster, PosterCard, VaultHero, Highlights, TrailerButton, WhereToWatch, TitleActions…
     layout/               Header, MainNav, SearchField, UserMenu, Footer, DemoBanner, SyncNotice
     auth/                 AuthPanel, GoogleButton, CloudHint
+    assistant/            Curator (o chat do canto da tela)
   lib/                    media (links, imagens, datas), format, navigation, supabase
 supabase/schema.sql       tabelas e regras de segurança (rodar no SQL Editor)
   styles/                 tokens.css, globals.css
@@ -150,6 +174,7 @@ Uma assinatura, não efeitos espalhados:
 - **Destaques da semana** (`Highlights`): os cinco mais vistos giram como as posições de um cofre. O ponteiro do mostrador gira até o destaque atual e o aro se preenche como um relógio; o fundo troca só por opacidade, para ficar leve. Pausa com o mouse em cima, com o foco do teclado, com a aba escondida ou no botão de pausa; com "reduzir movimento", não gira sozinho.
 - **Mostrador da nota** (`ScoreDial animated`): gira em cliques até a nota, como a combinação de um cofre.
 - **Carregamento** (`VaultLoader`): a roda gira para um lado e para o outro.
+- **Curador**: o painel do chat abre em íris a partir do botão; a roda do mostrador gira enquanto ele procura.
 - **Respostas a ações**: o trailer abre em íris a partir do botão clicado; a busca abre como gaveta; o leque das listas abre ao passar o mouse.
 
 Tudo é CSS e respeita "reduzir movimento" do sistema (a página aparece pronta).
