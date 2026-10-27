@@ -11,6 +11,7 @@
   <img alt="Next.js 16" src="https://img.shields.io/badge/Next.js-16-0D0E12?style=for-the-badge&logo=nextdotjs&logoColor=EEE8DC">
   <img alt="React 19" src="https://img.shields.io/badge/React-19-0D0E12?style=for-the-badge&logo=react&logoColor=D9A54A">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-0D0E12?style=for-the-badge&logo=typescript&logoColor=D9A54A">
+  <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-0D0E12?style=for-the-badge&logo=dotnet&logoColor=D9A54A">
   <img alt="TMDB API" src="https://img.shields.io/badge/Dados-TMDB-0D0E12?style=for-the-badge&logo=themoviedatabase&logoColor=D9A54A">
   <img alt="Em desenvolvimento" src="https://img.shields.io/badge/status-em%20desenvolvimento-D9A54A?style=for-the-badge">
 </p>
@@ -20,7 +21,8 @@
   <a href="#telas">Telas</a> ·
   <a href="#identidade">Identidade</a> ·
   <a href="#como-rodar">Como rodar</a> ·
-  <a href="#roadmap">Roadmap</a>
+  <a href="#roadmap">Roadmap</a> ·
+  <a href="#equipe">Equipe</a>
 </p>
 
 ---
@@ -103,16 +105,27 @@ O CineVault separa o catálogo em **filmes**, **séries**, **animes** (séries a
 
 ## 🧱 Tecnologias
 
+**Frontend** (`web/`)
+
 - **[Next.js 16](https://nextjs.org)** com App Router, **React 19** e **TypeScript**
 - **CSS Modules** e design tokens próprios, sem framework de CSS. Cada componente tem seu estilo isolado.
 - **[API do TMDB](https://developer.themoviedb.org)** para o catálogo, chamada só no servidor e com cache
-- **[Supabase](https://supabase.com)** para o login com o Google e o banco (Postgres com RLS: cada pessoa só acessa os próprios dados)
+- **Curador**, o chat de indicações, com qualquer IA no formato da OpenAI (Gemini, Groq, Ollama ou Claude) e um modo simples que funciona sem IA
 - **Fontsource** para servir as fontes pelo próprio site
 - Toda a lógica do catálogo fica em `web/src/services/catalog` e a dos dados do usuário em `web/src/services/user`. As páginas nunca chamam a API diretamente.
+
+**Backend** (`CineVault.API/`)
+
+- **[ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet)** com **.NET 10** e **C#**
+- **Entity Framework Core** com **SQL Server**
+- Login com **JWT** e senhas com **BCrypt**
+- **Swagger** para testar as rotas no navegador
 
 <a id="como-rodar"></a>
 
 ## 🚀 Como rodar
+
+### Frontend
 
 Você precisa do **Node.js 20.9** ou mais novo.
 
@@ -136,17 +149,34 @@ TMDB_API_TOKEN=eyJ...
 
 **Login com o Google (opcional).** Sem configurar nada, o site funciona sem login e salva o diário no navegador. Para ativar o login e a nuvem, crie um projeto gratuito no Supabase e siga o [passo a passo do README do frontend](web/README.md#login-com-o-google-e-dados-na-nuvem-supabase-opcional).
 
+**Curador com IA (opcional).** Sem configurar nada, o chat responde no modo simples. Para conversar de verdade, siga o [passo a passo do README do frontend](web/README.md#curador-o-chat-de-indicações-opcional).
+
 Os detalhes técnicos (rotas, estrutura de pastas e convenções) estão no [README do frontend](web/README.md).
+
+### API
+
+Você precisa do **[.NET 10 SDK](https://dotnet.microsoft.com/download)** e de um **SQL Server** (o Express ou o LocalDB servem).
+
+```bash
+cd CineVault.API
+dotnet user-secrets init
+dotnet user-secrets set "ConnectionStrings:CineVaultConnection" "Server=localhost;Database=cinevault;Trusted_Connection=True;TrustServerCertificate=True;"
+dotnet user-secrets set "Jwt:Key" "uma-chave-longa-e-aleatoria"
+dotnet user-secrets set "TMDB:ApiKey" "sua-chave-do-tmdb"
+dotnet run
+```
+
+A API sobe em **http://localhost:5008**, e o Swagger fica em **http://localhost:5008/swagger**. As chaves ficam no `user-secrets`, fora do repositório: nunca as coloque no `appsettings.json`.
 
 ## 📁 Estrutura do repositório
 
 ```
 CineVault/
-├── web/          frontend atual (Next.js): é aqui que o projeto vive
-├── backend/      espaço reservado para a API, nas próximas fases
-│               (o login e o banco hoje vêm do Supabase: web/supabase/schema.sql)
-├── frontend-2/   versão antiga, mantida só como referência
-└── docs/         imagens deste README
+├── web/             frontend (Next.js)
+├── CineVault.API/   backend (ASP.NET Core)
+├── backend/         Dockerfile da API
+├── frontend-2/      versão antiga do frontend, mantida só como referência
+└── docs/            imagens deste README
 ```
 
 <a id="roadmap"></a>
@@ -155,12 +185,21 @@ CineVault/
 
 - [x] **Fase 1: fundação e identidade.** Design tokens, componentes, navegação, landing e "Sobre".
 - [x] **Fase 2: catálogo real.** TMDB, páginas de título e de pessoa, Explorar, busca e a abertura do cofre.
-- [ ] **Fase 3: dados do usuário.** Diário, opiniões, episódios, listas, login com o Google e sincronização na nuvem já funcionam. Faltam as páginas de listas e perfil.
+- [ ] **Fase 3: dados do usuário.** Diário, opiniões, episódios, listas e o Curador já funcionam no navegador. A API já tem cadastro, login, avaliações e favoritos. Faltam ligar o frontend na API e as páginas de listas e perfil.
 - [ ] **Fase 4: experiência.** Estatísticas pessoais e a comunidade, com reviews públicas e ranking de usuários.
 - [ ] **Fase 5: diferenciais.**
   - Cofre do ano, uma retrospectiva anual.
   - Compatibilidade de gosto entre amigos.
   - Importação do Letterboxd e do MyAnimeList.
+
+<a id="equipe"></a>
+
+## 👥 Equipe
+
+| | Quem | Parte |
+| --- | --- | --- |
+| 🎨 | **[Pedro Baschoni](https://github.com/pedrobaschoni)** | Frontend, identidade visual e o Curador |
+| ⚙️ | **Adryan Luis dos Santos** | Backend: API, banco de dados e autenticação |
 
 ## 🙏 Créditos
 
@@ -171,6 +210,6 @@ Os dados de filmes, séries e pessoas vêm do [TMDB](https://www.themoviedb.org)
 ---
 
 <p align="center">
-  Feito por <a href="https://github.com/pedrobaschoni">Pedro Baschoni</a>.<br>
+  Feito por <a href="https://github.com/pedrobaschoni">Pedro Baschoni</a> e Adryan Luis dos Santos.<br>
   <sub>Se o CineVault te deu uma ideia, deixe uma ⭐ no repositório.</sub>
 </p>
