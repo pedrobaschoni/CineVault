@@ -11,7 +11,13 @@
   <img alt="Next.js 16" src="https://img.shields.io/badge/Next.js-16-0D0E12?style=for-the-badge&logo=nextdotjs&logoColor=EEE8DC">
   <img alt="React 19" src="https://img.shields.io/badge/React-19-0D0E12?style=for-the-badge&logo=react&logoColor=D9A54A">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-0D0E12?style=for-the-badge&logo=typescript&logoColor=D9A54A">
+  <br>
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-0D0E12?style=for-the-badge&logo=dotnet&logoColor=D9A54A">
+  <img alt="C#" src="https://img.shields.io/badge/C%23-ASP.NET%20Core-0D0E12?style=for-the-badge">
+  <img alt="SQL Server" src="https://img.shields.io/badge/SQL%20Server-EF%20Core-0D0E12?style=for-the-badge">
+  <img alt="JWT" src="https://img.shields.io/badge/Auth-JWT-0D0E12?style=for-the-badge&logo=jsonwebtokens&logoColor=D9A54A">
+  <img alt="Swagger" src="https://img.shields.io/badge/Docs-Swagger-0D0E12?style=for-the-badge&logo=swagger&logoColor=D9A54A">
+  <br>
   <img alt="TMDB API" src="https://img.shields.io/badge/Dados-TMDB-0D0E12?style=for-the-badge&logo=themoviedatabase&logoColor=D9A54A">
   <img alt="Em desenvolvimento" src="https://img.shields.io/badge/status-em%20desenvolvimento-D9A54A?style=for-the-badge">
 </p>
@@ -199,7 +205,7 @@ CineVault/
 | | Quem | Parte |
 | --- | --- | --- |
 | 🎨 | **[Pedro Baschoni](https://github.com/pedrobaschoni)** | Frontend, identidade visual e o Curador |
-| ⚙️ | **Adryan Luis dos Santos** | Backend: API, banco de dados e autenticação |
+| ⚙️ | **[Adryan Luis dos Santos](https://github.com/AdryanLuis)** | Backend: API, banco de dados e autenticação |
 
 ## 🙏 Créditos
 
@@ -210,6 +216,6 @@ Os dados de filmes, séries e pessoas vêm do [TMDB](https://www.themoviedb.org)
 ---
 
 <p align="center">
-  Feito por <a href="https://github.com/pedrobaschoni">Pedro Baschoni</a> e Adryan Luis dos Santos.<br>
+  Feito por <a href="https://github.com/pedrobaschoni">Pedro Baschoni</a> e <a href="https://github.com/AdryanLuis">Adryan Luis dos Santos</a>.<br>
   <sub>Se o CineVault te deu uma ideia, deixe uma ⭐ no repositório.</sub>
 </p>
